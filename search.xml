@@ -3,13 +3,12 @@
   <entry>
     <title>000.exe 的修复方法及注意事项</title>
     <url>/2023/04/22/000.EXE%20%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>
-    <content><![CDATA[<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.bilibili.com/video/BV1sZ4y1q7tD</span><br></pre></td></tr></table></figure>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>对000.exe的下载地址，本UP已准备好：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://wwmp.lanzout.com/iYLPy06o00wd</span><br></pre></td></tr></table></figure>
-
-<h4 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h4><p>1.将桌面背景替换为纯黑；<br>2.在桌面上复制UR NEXT… 为名的文本文档;<br>3.将文本文档的图标替换为有UR NEXT 的红色图标;<br>4.禁用任务管理器;<br>5.开机时重复弹出弹窗;<br>6.将用户名设置为 UR NEXT;<br>7.出现OPENME的写字板的RTF文件<br>  其内容为：<br>  YOU ARE THE NEXT,I CAN SEE YOU<br>  NOW ITS TOO LATE<br>  I GOT YOU…….YOU HAVE BEEN<br>  WARNED<br>  DONT LOOK BEHIND YOU<br>  该文件的信息是“a serial killer is behind you to stab you, that is why don’t look behind you.（一个连环杀手在你背后捅你，这就是为什么不要回头看。）”</p>
-<h4 id="病毒属性"><a href="#病毒属性" class="headerlink" title="病毒属性"></a>病毒属性</h4><p>名称：000<br>版本：0.0.0.0<br>经过网络传染：否<br>大小：6.66MB (6,983,680 字节)<br>需要管理权限：是<br>语言：中性</p>
-<h2 id="清除方法"><a href="#清除方法" class="headerlink" title="清除方法"></a>清除方法</h2><p>1.使用管理员启动命令提示符<br>2.输入taskkill &#x2F;f &#x2F;im conhost.exe</p>
+    <content><![CDATA[<h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><p><a href="https://www.bilibili.com/video/BV1sZ4y1q7tD" title="Title">传送门</a></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>对000.exe的下载地址，本UP已准备好：<br> <a href="https://wwmp.lanzout.com/iYLPy06o00wd" title="Title">传送门</a> </p>
+<h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.将桌面背景替换为纯黑；<br>2.在桌面上复制UR NEXT… 为名的文本文档;<br>3.将文本文档的图标替换为有UR NEXT 的红色图标;<br>4.禁用任务管理器;<br>5.开机时重复弹出弹窗;<br>6.将用户名设置为 UR NEXT;<br>7.出现OPENME的写字板的RTF文件<br>  其内容为：<br>  YOU ARE THE NEXT,I CAN SEE YOU<br>  NOW ITS TOO LATE<br>  I GOT YOU…….YOU HAVE BEEN<br>  WARNED<br>  DONT LOOK BEHIND YOU<br>  该文件的信息是“a serial killer is behind you to stab you, that is why don’t look behind you.（一个连环杀手在你背后捅你，这就是为什么不要回头看。）”<br><img src="/favi/com_000.jpg" alt="Alt pic"></p>
+<h2 id="病毒属性"><a href="#病毒属性" class="headerlink" title="病毒属性"></a>病毒属性</h2><p>名称：000<br>版本：0.0.0.0<br>经过网络传染：否<br>大小：6.66MB (6,983,680 字节)<br>需要管理权限：是<br>语言：中性</p>
+<hr>
+<h1 id="清除方法"><a href="#清除方法" class="headerlink" title="清除方法"></a>清除方法</h1><p>1.使用管理员启动命令提示符<br>2.输入taskkill &#x2F;f &#x2F;im conhost.exe</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /f /im conhost.exe</span><br></pre></td></tr></table></figure>
 <p>  此时命令窗口应当退出<br>3.再次打开命令窗口<br>4.输入taskkill &#x2F;f &#x2F;im runaway.exe</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /f /im runaway.exe</span><br></pre></td></tr></table></figure>
@@ -17,7 +16,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd %USERPROFILE%\Desktop</span><br></pre></td></tr></table></figure>
 <p>6.输入 del UR*.txt &amp;&amp; del OPENME*.rtf</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">del UR*.txt &amp;&amp; del OPENME*.rtf</span><br></pre></td></tr></table></figure>
-<p>7.<em>WIN + R</em>打开运行框。<br> 输入 %temp%<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%temp%</span><br></pre></td></tr></table></figure><br>8.删除此文件夹下的所有文件<br>9.清除启动项<br>[此方法针对 Windows 11, Windows 10, Windows 8.1, Windows 8 有效]<br> 1）按下 <em>Ctrl + Shift + Esc</em>;<br> 2）转到“启动”页;<br> 3）找到</p>
+<p>7.<em>WIN + R</em>打开运行框。<br> 输入 %temp%<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%temp%</span><br></pre></td></tr></table></figure><br>8.删除此文件夹下的所有文件<br>9.重启<br>10.</p>
 ]]></content>
   </entry>
   <entry>
