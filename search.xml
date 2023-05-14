@@ -8,15 +8,32 @@
 <h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.将桌面背景替换为纯黑；<br>2.在桌面上复制UR NEXT… 为名的文本文档;<br>3.将文本文档的图标替换为有UR NEXT 的红色图标;<br>4.禁用任务管理器;<br>5.开机时重复弹出弹窗;<br>6.将用户名设置为 UR NEXT;<br>7.出现OPENME的写字板的RTF文件<br>  其内容为：<br>  YOU ARE THE NEXT,I CAN SEE YOU<br>  NOW ITS TOO LATE<br>  I GOT YOU…….YOU HAVE BEEN<br>  WARNED<br>  DONT LOOK BEHIND YOU<br>  该文件的信息是“a serial killer is behind you to stab you, that is why don’t look behind you.（一个连环杀手在你背后捅你，这就是为什么不要回头看。）”<br><img src="/favi/com_000.jpg" alt="Alt pic"></p>
 <h2 id="病毒属性"><a href="#病毒属性" class="headerlink" title="病毒属性"></a>病毒属性</h2><p>名称：000<br>版本：0.0.0.0<br>经过网络传染：否<br>大小：6.66MB (6,983,680 字节)<br>需要管理权限：是<br>语言：中性</p>
 <hr>
-<h1 id="清除方法"><a href="#清除方法" class="headerlink" title="清除方法"></a>清除方法</h1><p>1.使用管理员启动命令提示符<br>2.输入taskkill &#x2F;f &#x2F;im conhost.exe</p>
+<h1 id="清除方法"><a href="#清除方法" class="headerlink" title="清除方法"></a>清除方法</h1><h2 id="结束主进程"><a href="#结束主进程" class="headerlink" title="结束主进程"></a>结束主进程</h2><p>1.使用管理员启动命令提示符<br>2.输入taskkill &#x2F;f &#x2F;im conhost.exe</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /f /im conhost.exe</span><br></pre></td></tr></table></figure>
 <p>  此时命令窗口应当退出<br>3.再次打开命令窗口<br>4.输入taskkill &#x2F;f &#x2F;im runaway.exe</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /f /im runaway.exe</span><br></pre></td></tr></table></figure>
-<p>  此操作结束病毒主体<br>5.在命令窗口中输入cd %USERPROFILE%\Desktop</p>
+<p>  此操作结束病毒主体</p>
+<h2 id="删除病毒文件"><a href="#删除病毒文件" class="headerlink" title="删除病毒文件"></a>删除病毒文件</h2><p>5.在命令窗口中输入cd %USERPROFILE%\Desktop</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd %USERPROFILE%\Desktop</span><br></pre></td></tr></table></figure>
 <p>6.输入 del UR*.txt &amp;&amp; del OPENME*.rtf</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">del UR*.txt &amp;&amp; del OPENME*.rtf</span><br></pre></td></tr></table></figure>
-<p>7.<em>WIN + R</em>打开运行框。<br> 输入 %temp%<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%temp%</span><br></pre></td></tr></table></figure><br>8.删除此文件夹下的所有文件<br>9.重启<br>10.</p>
+<p>7.<em>WIN + R</em>打开运行框。<br> 输入 %temp%<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%temp%</span><br></pre></td></tr></table></figure><br>8.删除此文件夹下的所有文件</p>
+<div class="admonition warning"><p class="admonition-title">警告
+</p><p>不要删除文件夹，一定要保留‘Temp’文件夹，删除该目录下的所有文件。</p>
+</div>
+
+<p>9.右键桌面，选择个性化</p>
+<div class="admonition note"><p class="admonition-title">注意
+</p><p>此方法针对 Windows 7，8，8.1，10，11，Windows server 2011 ~ 2023 有效</p>
+</div>
+
+<div class="admonition warning"><p class="admonition-title">警告
+</p><p>需要激活 Windows 。</p>
+</div>
+
+<ol start="10">
+<li>切换至默认主题。</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
