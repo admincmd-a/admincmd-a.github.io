@@ -22,9 +22,9 @@
 </p><p>不要删除文件夹，一定要保留‘Temp’文件夹，删除该目录下的所有文件。</p>
 </div>
 
-<p>9.右键桌面，选择个性化</p>
+<h3 id="收拾病毒乱摊子"><a href="#收拾病毒乱摊子" class="headerlink" title="收拾病毒乱摊子"></a>收拾病毒乱摊子</h3><p>9.右键桌面，选择个性化</p>
 <div class="admonition note"><p class="admonition-title">注意
-</p><p>此方法针对 Windows 7，8，8.1，10，11，Windows server 2011 ~ 2023 有效</p>
+</p><p>此方法针对 Windows 7，8，8.1，10，11，Windows server 2012 ~ 2023 有效</p>
 </div>
 
 <div class="admonition warning"><p class="admonition-title">警告
@@ -34,7 +34,8 @@
 <ol start="10">
 <li>切换至默认主题。</li>
 </ol>
-]]></content>
+<h4 id="11-解除禁用-任务管理器TSK-。"><a href="#11-解除禁用-任务管理器TSK-。" class="headerlink" title="11.解除禁用 任务管理器TSK 。"></a>11.解除禁用 任务管理器TSK 。</h4><p><em>Win + R</em> 输入 regedit.exe</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
