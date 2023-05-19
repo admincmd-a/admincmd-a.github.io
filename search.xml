@@ -37,6 +37,7 @@
 <li>切换至默认主题。</li>
 </ol>
 <h4 id="11-解除禁用-任务管理器TSK-。"><a href="#11-解除禁用-任务管理器TSK-。" class="headerlink" title="11.解除禁用 任务管理器TSK 。"></a>11.解除禁用 任务管理器TSK 。</h4><p><em>Win + R</em> 输入 regedit.exe 并回车</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">regedit.<span class="hljs-keyword">exe</span><br></code></pre></td></tr></table></figure>]]></content>
+<figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">regedit.<span class="hljs-keyword">exe</span><br></code></pre></td></tr></table></figure>
+]]></content>
   </entry>
 </search>
