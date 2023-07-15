@@ -315,7 +315,7 @@ function loadArtalk () {
       pageKey: location.pathname,
       darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
       countEl: '.artalk-count'
-    },null))
+    },true))
   }
 
   if (typeof window.artalkItem === 'object') setTimeout(()=>{initArtalk()},200)
