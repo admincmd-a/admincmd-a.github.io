@@ -66,7 +66,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-07-15 16:12:41'
+  postUpdate: '2023-07-15 16:18:03'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -190,39 +190,6 @@
     return content
   }
 
-  const getComment = () => {
-    const runTwikoo = () => {
-      twikoo.getRecentComments({
-        envId: 'https://twiook-iqd9frza9-admincmd-a.vercel.app/',
-        region: 'admincmd-a',
-        pageSize: 6,
-        includeReply: true
-      }).then(function (res) {
-        const twikooArray = res.map(e => {
-          return {
-            'content': changeContent(e.comment),
-            'avatar': e.avatar,
-            'nick': e.nick,
-            'url': e.url + '#' + e.id,
-            'date': new Date(e.created).toISOString()
-          }
-        })
-
-        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
-        generateHtml(twikooArray)
-      }).catch(function (err) {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      })
-    }
-
-    if (typeof twikoo === 'object') {
-      runTwikoo()
-    } else {
-      getScript('https://cdn2.tianli0.top/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js').then(runTwikoo)
-    }
-  }
-
   const generateHtml = array => {
     let result = ''
 
@@ -234,7 +201,7 @@
           const name = 'src'
           result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
         }
-        
+
         result += `<div class='content'>
         <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
         <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
@@ -250,9 +217,30 @@
     window.pjax && window.pjax.refresh($dom)
   }
 
+  const getComment = () => {
+    fetch('https://admincmd-a.github.io/api/stat?type=latest_comments&limit=6',{method: "POST"})
+      .then(response => response.json())
+      .then(d => {
+        const artalk = d.data.map(function (e) {
+          return {
+            'avatar': 'https://sdn.geekzu.org/avatar/' + e.email_encrypted + '?d=mp',
+            'content': changeContent(e.content_marked),
+            'nick': e.nick,
+            'url': e.page_url,
+            'date': e.date,
+          }
+        })
+        saveToLocal.set('artalk-newest-comments', JSON.stringify(artalk), 10/(60*24))
+        generateHtml(artalk)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+  }
+
   const newestCommentInit = () => {
     if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('twikoo-newest-comments')
+      const data = saveToLocal.get('artalk-newest-comments')
       if (data) {
         generateHtml(JSON.parse(data))
       } else {
@@ -278,39 +266,6 @@
     return content
   }
 
-  const getComment = () => {
-    const runTwikoo = () => {
-      twikoo.getRecentComments({
-        envId: 'https://twiook-iqd9frza9-admincmd-a.vercel.app/',
-        region: 'admincmd-a',
-        pageSize: 6,
-        includeReply: true
-      }).then(function (res) {
-        const twikooArray = res.map(e => {
-          return {
-            'content': changeContent(e.comment),
-            'avatar': e.avatar,
-            'nick': e.nick,
-            'url': e.url + '#' + e.id,
-            'date': new Date(e.created).toISOString()
-          }
-        })
-
-        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
-        generateHtml(twikooArray)
-      }).catch(function (err) {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      })
-    }
-
-    if (typeof twikoo === 'object') {
-      runTwikoo()
-    } else {
-      getScript('https://cdn2.tianli0.top/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js').then(runTwikoo)
-    }
-  }
-
   const generateHtml = array => {
     let result = ''
 
@@ -322,7 +277,7 @@
           const name = 'src'
           result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
         }
-        
+
         result += `<div class='content'>
         <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
         <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
@@ -338,9 +293,30 @@
     window.pjax && window.pjax.refresh($dom)
   }
 
+  const getComment = () => {
+    fetch('https://admincmd-a.github.io/api/stat?type=latest_comments&limit=6',{method: "POST"})
+      .then(response => response.json())
+      .then(d => {
+        const artalk = d.data.map(function (e) {
+          return {
+            'avatar': 'https://sdn.geekzu.org/avatar/' + e.email_encrypted + '?d=mp',
+            'content': changeContent(e.content_marked),
+            'nick': e.nick,
+            'url': e.page_url,
+            'date': e.date,
+          }
+        })
+        saveToLocal.set('artalk-newest-comments', JSON.stringify(artalk), 10/(60*24))
+        generateHtml(artalk)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+  }
+
   const newestCommentInit = () => {
     if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('twikoo-newest-comments')
+      const data = saveToLocal.get('artalk-newest-comments')
       if (data) {
         generateHtml(JSON.parse(data))
       } else {
