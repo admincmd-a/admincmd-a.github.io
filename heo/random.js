@@ -1,1 +1,1 @@
-var posts=["openCMD/000.EXE 的修复方法和注意事项/index.html"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["openCMD/000.EXE 的修复方法和注意事项/index.html","openCMD/关于把C盘弹出去的那些事/index.html"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
