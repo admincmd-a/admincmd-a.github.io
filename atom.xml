@@ -6,7 +6,7 @@
   <link href="https://admincmd-a.github.io/atom.xml" rel="self"/>
   
   <link href="https://admincmd-a.github.io/"/>
-  <updated>2023-08-12T08:25:33.931Z</updated>
+  <updated>2023-08-13T12:56:20.413Z</updated>
   <id>https://admincmd-a.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://admincmd-a.github.io/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html"/>
     <id>https://admincmd-a.github.io/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html</id>
     <published>2023-07-29T01:42:21.221Z</published>
-    <updated>2023-08-12T08:25:33.931Z</updated>
+    <updated>2023-08-13T12:56:20.413Z</updated>
     
-    <content type="html"><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>  <p>总所周知，带热插拔的硬盘，CD呀DVD呀，都具有弹出选项。</p><p>So，系统盘能弹出去吗？</p><p>答案吧……</p><p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt;: /d</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，不带冒号</span><br></pre></td></tr></table></figure><p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p><p>此时计算机会变得卡顿，无法打开任何应用程序</p><p>要想恢复，只能重新启动计算机。</p><p>但是，</p><p>如果你又找了个WIN 10 的盘盘符更为C，</p><p>那么，</p><p>就会出现 Windows 7 + 10 &#x3D; 17 !</p><p>啊对，半Win7半Win10<br>…………</p><p> [粉丝打 UP 中…]</p>]]></content>
+    <content type="html"><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe><iframe src="//player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1" scrolling="no" border="0" frameborder="no" framespacing="100" allowfullscreen="true"> </iframe>  <p>总所周知，带热插拔的硬盘，CD呀DVD呀，都具有弹出选项。</p><p>So，系统盘能弹出去吗？</p><p>答案吧……</p><p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt;: /d</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，不带冒号</span><br></pre></td></tr></table></figure><p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p><p>此时计算机会变得卡顿，无法打开任何应用程序</p><p>要想恢复，只能重新启动计算机。</p><p>但是，</p><p>如果你又找了个WIN 10 的盘盘符更为C，</p><p>那么，</p><p>就会出现 Windows 7 + 10 &#x3D; 17 !</p><p>啊对，半Win7半Win10<br>…………</p><p> [粉丝打 UP 中…]</p>]]></content>
     
     
       
