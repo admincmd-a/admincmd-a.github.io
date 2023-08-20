@@ -1,71 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>000.exe 的修复方法及注意事项</title>
-    <url>/post/000.EXE%20%E7%9A%84%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html</url>
-    <content><![CDATA[<p><em>C:&#x2F;Windows&#x2F;System32&gt;_</em></p>
-<h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><p><a href="https://www.bilibili.com/video/BV1sZ4y1q7tD" title="Title">传送门</a></p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>对000.exe的下载地址，本UP已准备好：<br> <a href="https://wwmp.lanzout.com/iYLPy06o00wd" title="Title">传送门</a> </p>
- <span id="more"></span>
-<h2 id="病毒现象"><a href="#病毒现象" class="headerlink" title="病毒现象"></a>病毒现象</h2><p>1.将桌面背景替换为纯黑；<br>2.在桌面上复制UR NEXT… 为名的文本文档;<br>3.将文本文档的图标替换为有UR NEXT 的红色图标;<br>4.禁用任务管理器;<br>5.开机时重复弹出弹窗;<br>6.将用户名设置为 UR NEXT;<br>7.出现OPENME的写字板的RTF文件<br>  其内容为：<br>  YOU ARE THE NEXT,I CAN SEE YOU<br>  NOW ITS TOO LATE<br>  I GOT YOU…….YOU HAVE BEEN<br>  WARNED<br>  DONT LOOK BEHIND YOU<br>  该文件的信息是“a serial killer is behind you to stab you, that is why don’t look behind you.（一个连环杀手在你背后捅你，这就是为什么不要回头看。）”<br><img src="/favi/com_000.jpg" alt=" File : /favi/com_000.jpg"></p>
-<h2 id="病毒属性"><a href="#病毒属性" class="headerlink" title="病毒属性"></a>病毒属性</h2><p>名称：000<br>版本：0.0.0.0<br>经过网络传染：否<br>大小：6.66MB (6,983,680 字节)<br>需要管理权限：是<br>语言：中性</p>
-<hr>
-<h1 id="清除方法"><a href="#清除方法" class="headerlink" title="清除方法"></a>清除方法</h1><h2 id="结束主进程"><a href="#结束主进程" class="headerlink" title="结束主进程"></a>结束主进程</h2><p>1.使用管理员启动命令提示符<br>2.输入taskkill &#x2F;f &#x2F;im conhost.exe</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /f /im conhost.exe</span><br></pre></td></tr></table></figure>
-<p>  此时命令窗口应当退出<br>3.再次打开命令窗口<br>4.输入taskkill &#x2F;f &#x2F;im runaway.exe</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /f /im runaway.exe</span><br></pre></td></tr></table></figure>
-<p>  此操作结束病毒主体</p>
-<h2 id="删除病毒文件"><a href="#删除病毒文件" class="headerlink" title="删除病毒文件"></a>删除病毒文件</h2><p>5.在命令窗口中输入cd %USERPROFILE%\Desktop</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd %USERPROFILE%\Desktop</span><br></pre></td></tr></table></figure>
-<p>6.输入 del UR*.txt &amp;&amp; del OPENME*.rtf</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">del UR*.txt &amp;&amp; del OPENME*.rtf</span><br></pre></td></tr></table></figure>
-<p>7.<em>WIN + R</em>打开运行框。<br> 输入 %temp% 并回车<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%temp%</span><br></pre></td></tr></table></figure><br>8.删除此文件夹下的所有文件</p>
-<div class="admonition warning"><p class="admonition-title">警告
-</p><p>不要删除文件夹，一定要保留‘Temp’文件夹，删除该目录下的所有文件。</p>
-</div>
+    <title>测试文体 - 标题</title>
+    <url>/post/%E6%B5%8B%E8%AF%95.html</url>
+    <content><![CDATA[<p>测试文体 - 正文<br>0 1 2 3 4 5 6 7 8 9<br>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<p><em>测试文体 - 斜体</em><br><em>0 1 2 3 4 5 6 7 8 9</em><br><em>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</em><br><em>a b c d e f g h i j k l m n o p q r s t u v w x y z</em></p>
+<h1 id="测试文体-1-级标题"><a href="#测试文体-1-级标题" class="headerlink" title="测试文体 - 1 级标题"></a>测试文体 - 1 级标题</h1><h2 id="测试文体-2-级标题"><a href="#测试文体-2-级标题" class="headerlink" title="测试文体 - 2 级标题"></a>测试文体 - 2 级标题</h2><h3 id="测试文体-3-级标题"><a href="#测试文体-3-级标题" class="headerlink" title="测试文体 - 3 级标题"></a>测试文体 - 3 级标题</h3><h4 id="测试文体-4-级标题"><a href="#测试文体-4-级标题" class="headerlink" title="测试文体 - 4 级标题"></a>测试文体 - 4 级标题</h4><h5 id="测试文体-5-级标题"><a href="#测试文体-5-级标题" class="headerlink" title="测试文体 - 5 级标题"></a>测试文体 - 5 级标题</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">测试文体 - 代码块</span><br><span class="line">extends includes/layout.pug</span><br><span class="line"></span><br><span class="line">block content</span><br><span class="line">  include ./includes/mixins/article-sort.pug</span><br><span class="line">  #archive</span><br><span class="line">    - const archiveLength = findArchiveLength(fragment_cache)</span><br><span class="line">    .article-sort-title= _p(&#x27;page.articles&#x27;) + &#x27; - &#x27; + archiveLength</span><br><span class="line">    +articleSort(page.posts)</span><br><span class="line">    include includes/pagination.pug</span><br></pre></td></tr></table></figure>
 
-<h3 id="收拾病毒乱摊子"><a href="#收拾病毒乱摊子" class="headerlink" title="收拾病毒乱摊子"></a>收拾病毒乱摊子</h3><p>9.右键桌面，选择个性化</p>
-<div class="admonition note"><p class="admonition-title">注意
-</p><p>此方法针对 Windows 7，8，8.1，10，11，Windows server 2012 ~ 2023 有效</p>
-</div>
-
-<div class="admonition warning"><p class="admonition-title">警告
-</p><p>需要激活 Windows 。</p>
-</div>
-
-<ol start="10">
-<li>切换至默认主题。</li>
+<p><strong>测试文体 - 粗体</strong> 测试文体 - 正文</p>
+<p><em><strong>测试文体 - 粗体 + 斜体</strong></em></p>
+<blockquote>
+<p>测试文体 - 块</p>
+</blockquote>
+<blockquote>
+<p>测试文体 - 父块</p>
+<p>测试文体</p>
+<blockquote>
+<p>测试文体 - 子块</p>
+</blockquote>
+</blockquote>
+<p>测试文体 - 数字列表</p>
+<ol>
+<li>测试文体 - 数字列表</li>
+<li>测试文体 - 父数字列表<ol>
+<li>测试文体 - 子数字列表</li>
 </ol>
-<h4 id="11-解除禁用-任务管理器TSK-。"><a href="#11-解除禁用-任务管理器TSK-。" class="headerlink" title="11.解除禁用 任务管理器TSK 。"></a>11.解除禁用 任务管理器TSK 。</h4><p><em>Win + R</em> 输入 regedit.exe 并回车</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">regedit.exe</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>盘点把C盘弹出去的那些事</title>
-    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html</url>
-    <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
-<!-- <iframe src="//player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1" scrolling="no" border="0" frameborder="no" framespacing="100" allowfullscreen="true"> </iframe>   -->
-
-<p>总所周知，带热插拔的硬盘，CD呀DVD呀，都具有弹出选项。</p>
-<p>So，系统盘能弹出去吗？</p>
-<p>答案吧……</p>
-<p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt;: /d</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，不带冒号</span><br></pre></td></tr></table></figure>
-
-<p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
-<p>此时计算机会变得卡顿，无法打开任何应用程序</p>
-<p>要想恢复，只能重新启动计算机。</p>
-<p>但是，</p>
-<p>如果你又找了个WIN 10 的盘盘符更为C，</p>
-<p>那么，</p>
-<p>就会出现 Windows 7 + 10 &#x3D; 17 !</p>
-<p>啊对，半Win7半Win10<br>…………</p>
-<p> [粉丝打 UP 中…]</p>
-]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
+</li>
+<li>测试文体 - Admincmd</li>
+</ol>
+<p>测试文体 - 无序列表</p>
+<ul>
+<li>测试文体 - 无序列表</li>
+<li>测试文体 - 父无序列表<ul>
+<li>测试文体 - 子无序列表</li>
+</ul>
+</li>
+<li>测试文体 - Admincmd</li>
+</ul>
+<p>图片测试 - 图片引入</p>
+<p><img src="/img/%E6%B5%8B%E8%AF%95.png" alt="图片测试 图片：/img/测试.png"></p>
+<p>测试文体 - 正文 <code>测试文体 - 代码</code> Admincmd</p>
+<p>测试文体 - 分割线</p>
+<hr>
+<p>^^^</p>
+<p>测试 - 链接</p>
+<p>测试文体 - 标题 <a href="https://admincmd-a.github.io/" title="测试文体 - 表述">测试文体 - 文体</a>。</p>
+<p><a href="https://github.com/">https://github.com</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 测试文体 - 标题</span><br><span class="line">cover: /img/测试.png</span><br><span class="line">color: #49b1a1</span><br><span class="line">categories: </span><br><span class="line">---</span><br><span class="line">测试文体 - 正文</span><br><span class="line">0 1 2 3 4 5 6 7 8 9</span><br><span class="line">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span><br><span class="line">a b c d e f g h i j k l m n o p q r s t u v w x y z</span><br><span class="line"></span><br><span class="line">*测试文体 - 斜体*</span><br><span class="line">*0 1 2 3 4 5 6 7 8 9*</span><br><span class="line">*A B C D E F G H I J K L M N O P Q R S T U V W X Y Z*</span><br><span class="line">*a b c d e f g h i j k l m n o p q r s t u v w x y z*</span><br><span class="line"></span><br><span class="line"># 测试文体 - 1 级标题</span><br><span class="line"></span><br><span class="line">## 测试文体 - 2 级标题</span><br><span class="line"></span><br><span class="line">### 测试文体 - 3 级标题</span><br><span class="line"></span><br><span class="line">#### 测试文体 - 4 级标题</span><br><span class="line"></span><br><span class="line">##### 测试文体 - 5 级标题</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**测试文体 - 粗体** 测试文体 - 正文</span><br><span class="line"></span><br><span class="line">***测试文体 - 粗体 + 斜体***</span><br><span class="line"></span><br><span class="line">&gt; 测试文体 - 块</span><br><span class="line"></span><br><span class="line">&gt; 测试文体 - 父块</span><br><span class="line">&gt;</span><br><span class="line">&gt; 测试文体</span><br><span class="line">&gt;&gt; 测试文体 - 子块</span><br><span class="line"></span><br><span class="line">测试文体 - 数字列表</span><br><span class="line">1. 测试文体 - 数字列表</span><br><span class="line">2. 测试文体 - 父数字列表</span><br><span class="line">    1. 测试文体 - 子数字列表</span><br><span class="line">3. 测试文体 - Admincmd</span><br><span class="line"></span><br><span class="line">测试文体 - 无序列表</span><br><span class="line">- 测试文体 - 无序列表</span><br><span class="line">- 测试文体 - 父无序列表</span><br><span class="line">    - 测试文体 - 子无序列表</span><br><span class="line">- 测试文体 - Admincmd</span><br><span class="line"></span><br><span class="line">图片测试 - 图片引入</span><br><span class="line"></span><br><span class="line">![图片测试 图片：/img/测试.png](/img/测试.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">测试文体 - 正文 `测试文体 - 代码` Admincmd</span><br><span class="line"></span><br><span class="line">测试文体 - 分割线</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">^^^</span><br><span class="line"></span><br><span class="line">测试 - 链接</span><br><span class="line"></span><br><span class="line">测试文体 - 标题 [测试文体 - 文体](https://admincmd-a.github.io/ &quot;测试文体 - 表述&quot;)。</span><br><span class="line"></span><br><span class="line">&lt;https://github.com&gt;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
