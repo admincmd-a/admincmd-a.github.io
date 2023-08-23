@@ -1,51 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>测试文体 - 标题</title>
-    <url>/post/%E6%B5%8B%E8%AF%95.html</url>
-    <content><![CDATA[<p>测试文体 - 正文<br>0 1 2 3 4 5 6 7 8 9<br>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-<p><em>测试文体 - 斜体</em><br><em>0 1 2 3 4 5 6 7 8 9</em><br><em>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</em><br><em>a b c d e f g h i j k l m n o p q r s t u v w x y z</em></p>
-<h1 id="测试文体-1-级标题"><a href="#测试文体-1-级标题" class="headerlink" title="测试文体 - 1 级标题"></a>测试文体 - 1 级标题</h1><h2 id="测试文体-2-级标题"><a href="#测试文体-2-级标题" class="headerlink" title="测试文体 - 2 级标题"></a>测试文体 - 2 级标题</h2><h3 id="测试文体-3-级标题"><a href="#测试文体-3-级标题" class="headerlink" title="测试文体 - 3 级标题"></a>测试文体 - 3 级标题</h3><h4 id="测试文体-4-级标题"><a href="#测试文体-4-级标题" class="headerlink" title="测试文体 - 4 级标题"></a>测试文体 - 4 级标题</h4><h5 id="测试文体-5-级标题"><a href="#测试文体-5-级标题" class="headerlink" title="测试文体 - 5 级标题"></a>测试文体 - 5 级标题</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">测试文体 - 代码块</span><br><span class="line">extends includes/layout.pug</span><br><span class="line"></span><br><span class="line">block content</span><br><span class="line">  include ./includes/mixins/article-sort.pug</span><br><span class="line">  #archive</span><br><span class="line">    - const archiveLength = findArchiveLength(fragment_cache)</span><br><span class="line">    .article-sort-title= _p(&#x27;page.articles&#x27;) + &#x27; - &#x27; + archiveLength</span><br><span class="line">    +articleSort(page.posts)</span><br><span class="line">    include includes/pagination.pug</span><br></pre></td></tr></table></figure>
+    <title>盘点把C盘弹出去的那些事</title>
+    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html</url>
+    <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
+<!-- <iframe src="//player.bilibili.com/player.html?aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&page=1" scrolling="no" border="0" frameborder="no" framespacing="100" allowfullscreen="true"> </iframe>   -->
 
-<p><strong>测试文体 - 粗体</strong> 测试文体 - 正文</p>
-<p><em><strong>测试文体 - 粗体 + 斜体</strong></em></p>
-<blockquote>
-<p>测试文体 - 块</p>
-</blockquote>
-<blockquote>
-<p>测试文体 - 父块</p>
-<p>测试文体</p>
-<blockquote>
-<p>测试文体 - 子块</p>
-</blockquote>
-</blockquote>
-<p>测试文体 - 数字列表</p>
-<ol>
-<li>测试文体 - 数字列表</li>
-<li>测试文体 - 父数字列表<ol>
-<li>测试文体 - 子数字列表</li>
-</ol>
-</li>
-<li>测试文体 - Admincmd</li>
-</ol>
-<p>测试文体 - 无序列表</p>
-<ul>
-<li>测试文体 - 无序列表</li>
-<li>测试文体 - 父无序列表<ul>
-<li>测试文体 - 子无序列表</li>
-</ul>
-</li>
-<li>测试文体 - Admincmd</li>
-</ul>
-<p>图片测试 - 图片引入</p>
-<p><img src="/img/%E6%B5%8B%E8%AF%95.png" alt="图片测试 图片：/img/测试.png"></p>
-<p>测试文体 - 正文 <code>测试文体 - 代码</code> Admincmd</p>
-<p>测试文体 - 分割线</p>
-<hr>
-<p>^^^</p>
-<p>测试 - 链接</p>
-<p>测试文体 - 标题 <a href="https://admincmd-a.github.io/" title="测试文体 - 表述">测试文体 - 文体</a>。</p>
-<p><a href="https://github.com/">https://github.com</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 测试文体 - 标题</span><br><span class="line">cover: /img/测试.png</span><br><span class="line">color: #49b1a1</span><br><span class="line">categories: </span><br><span class="line">---</span><br><span class="line">测试文体 - 正文</span><br><span class="line">0 1 2 3 4 5 6 7 8 9</span><br><span class="line">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span><br><span class="line">a b c d e f g h i j k l m n o p q r s t u v w x y z</span><br><span class="line"></span><br><span class="line">*测试文体 - 斜体*</span><br><span class="line">*0 1 2 3 4 5 6 7 8 9*</span><br><span class="line">*A B C D E F G H I J K L M N O P Q R S T U V W X Y Z*</span><br><span class="line">*a b c d e f g h i j k l m n o p q r s t u v w x y z*</span><br><span class="line"></span><br><span class="line"># 测试文体 - 1 级标题</span><br><span class="line"></span><br><span class="line">## 测试文体 - 2 级标题</span><br><span class="line"></span><br><span class="line">### 测试文体 - 3 级标题</span><br><span class="line"></span><br><span class="line">#### 测试文体 - 4 级标题</span><br><span class="line"></span><br><span class="line">##### 测试文体 - 5 级标题</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**测试文体 - 粗体** 测试文体 - 正文</span><br><span class="line"></span><br><span class="line">***测试文体 - 粗体 + 斜体***</span><br><span class="line"></span><br><span class="line">&gt; 测试文体 - 块</span><br><span class="line"></span><br><span class="line">&gt; 测试文体 - 父块</span><br><span class="line">&gt;</span><br><span class="line">&gt; 测试文体</span><br><span class="line">&gt;&gt; 测试文体 - 子块</span><br><span class="line"></span><br><span class="line">测试文体 - 数字列表</span><br><span class="line">1. 测试文体 - 数字列表</span><br><span class="line">2. 测试文体 - 父数字列表</span><br><span class="line">    1. 测试文体 - 子数字列表</span><br><span class="line">3. 测试文体 - Admincmd</span><br><span class="line"></span><br><span class="line">测试文体 - 无序列表</span><br><span class="line">- 测试文体 - 无序列表</span><br><span class="line">- 测试文体 - 父无序列表</span><br><span class="line">    - 测试文体 - 子无序列表</span><br><span class="line">- 测试文体 - Admincmd</span><br><span class="line"></span><br><span class="line">图片测试 - 图片引入</span><br><span class="line"></span><br><span class="line">![图片测试 图片：/img/测试.png](/img/测试.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">测试文体 - 正文 `测试文体 - 代码` Admincmd</span><br><span class="line"></span><br><span class="line">测试文体 - 分割线</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">^^^</span><br><span class="line"></span><br><span class="line">测试 - 链接</span><br><span class="line"></span><br><span class="line">测试文体 - 标题 [测试文体 - 文体](https://admincmd-a.github.io/ &quot;测试文体 - 表述&quot;)。</span><br><span class="line"></span><br><span class="line">&lt;https://github.com&gt;</span><br></pre></td></tr></table></figure>]]></content>
+<p>总所周知，带热插拔的硬盘，CD呀DVD呀，都具有弹出选项。</p>
+<p>So，系统盘能弹出去吗？</p>
+<p>答案吧……</p>
+<p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt;: /d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，不带冒号</span><br></pre></td></tr></table></figure>
+
+<p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
+<p>此时计算机会变得卡顿，无法打开任何应用程序</p>
+<p>要想恢复，只能重新启动计算机。</p>
+<p>但是，</p>
+<p>如果你又找了个WIN 10 的盘盘符更为C，</p>
+<p>那么，</p>
+<p>就会出现 Windows 7 + 10 &#x3D; 17 !</p>
+<p>啊对，半Win7半Win10<br>…………</p>
+<p> [粉丝打 UP 中…]</p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
   </entry>
 </search>
