@@ -11,7 +11,7 @@
 <p>So，系统盘能弹出去吗？</p>
 <p>答案吧……</p>
 <p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt;: /d</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt;: /d</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，不带冒号</span><br></pre></td></tr></table></figure>
 
 <p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
@@ -27,5 +27,10 @@
       <categories>
         <category>玩转系统</category>
       </categories>
+  </entry>
+  <entry>
+    <title>站长...</title>
+    <url>/post/%E7%AB%99%E9%95%BF%E7%9A%84....html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
