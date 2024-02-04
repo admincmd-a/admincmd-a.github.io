@@ -13,6 +13,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
 
 <p>更改这些注册表，可以强制修改计算机名。</p>
+<hr>
 <h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
 <p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
 <p>使用此程序可以强制性修改计算机名</p>
@@ -46,5 +47,53 @@
       <categories>
         <category>玩转系统</category>
       </categories>
+  </entry>
+  <entry>
+    <title>测试 ABCDEFG abcdefg 0123456789 ~_+{}:&quot;&lt;&gt;?| `-=[];&#39;&#92;,./!@#$%^&amp;*()</title>
+    <url>/post/%E6%B5%8B%E8%AF%95.html</url>
+    <content><![CDATA[<p>标题文本</p>
+<h1 id="一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h1><h2 id="二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h2><h3 id="三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h3><h4 id="四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h4><h5 id="五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h5><h6 id="六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h6><h1 id="一级测试"><a href="#一级测试" class="headerlink" title="一级测试"></a>一级测试</h1><h2 id="二级测试"><a href="#二级测试" class="headerlink" title="二级测试"></a>二级测试</h2><p>测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| <code>-=[];&#39;\,./!@#$%^&amp;*()   测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| </code>-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
+<p><em>斜体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;</em>()*</p>
+<p><strong>粗体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</strong></p>
+<p>或 <strong>x</strong> A<strong>b</strong>c</p>
+<p><strong><em>斜粗测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;</em>()</strong>*</p>
+<blockquote>
+<p>引用测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
+<blockquote>
+<p>套娃引用测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
+</blockquote>
+</blockquote>
+<p>(可包含其他方式)</p>
+<ol>
+<li>有序列表测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+<li>A</li>
+<li>b</li>
+</ol>
+<p>(要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。)</p>
+<ul>
+<li>无序列表测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</li>
+<li>A</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<p>（代码块通常采用四个空格或一个制表符缩进。当它们被放在列表中时，请将它们缩进八个空格或两个制表符。）</p>
+<pre><code>    代码块测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| `-=[];&#39;\,./!@#$%^&amp;*()
+    2
+</code></pre>
+<p>图片<br> <img src="/img/%E6%B5%8B%E8%AF%95.png" alt="1"></p>
+<p>代码 <code>测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| -=[];\,./!@#$%^&amp;*()</code> scc</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">围栏代码块测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| `-=[];&#x27;\,./!@#$%^&amp;*()</span><br></pre></td></tr></table></figure>
+
+<p>分割线</p>
+<hr>
+<p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#97;&#107;&#x65;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;">&#102;&#97;&#107;&#x65;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
+<p>(字符前插入反斜杠 \ )</p>
+]]></content>
   </entry>
 </search>
