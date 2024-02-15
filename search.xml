@@ -96,4 +96,40 @@
         <category>玩转系统</category>
       </categories>
   </entry>
+  <entry>
+    <title>当你吧电脑时间调至一万年？！</title>
+    <url>/post/%E5%BD%93%E4%BD%A0%E5%90%A7%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81.html</url>
+    <content><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">BiliBili</a></p>
+<h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br> 控制面板最多可到 2099 年:</p>
+<p> ！</p>
+<p> data 命令最多可以修改 8099 年:</p>
+<p> !</p>
+<h1 id="Windows-启动选项"><a href="#Windows-启动选项" class="headerlink" title="Windows 启动选项"></a>Windows 启动选项</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p>
+<p>用法:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/YEAR=[YEAR]</span><br></pre></td></tr></table></figure>
+<p>据测试，启动选项可以修改范围是 1602-9999 年，超出此范围则卡死在第一启动阶段。</p>
+<p>&lt;!–理论上不是 1601~9999 年吗?–&gt;</p>
+<blockquote>
+<p>[ i ] 个人推测,不代表权威观点。</p>
+</blockquote>
+<h1 id="调整方式"><a href="#调整方式" class="headerlink" title="调整方式"></a>调整方式</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h2 id="正式进行"><a href="#正式进行" class="headerlink" title="正式进行"></a>正式进行</h2><h3 id="启动编辑"><a href="#启动编辑" class="headerlink" title="启动编辑"></a>启动编辑</h3><p>使用管理员执行 <code>BCDEDIT /SET OPTIONSEDIT 1</code> 以进入启动选项编辑模式。</p>
+<p>重启计算机，会出现下图:</p>
+<blockquote>
+<p>如果没有出现该界面，请重试 1.2.1 步骤 (该步骤)</p>
+</blockquote>
+<p>!</p>
+<p>插入空格后，输入 <code>/YEAR=9999</code> 后，按下 Enter 提交更改。</p>
+<blockquote>
+<p>再次重启后，计算机不会应用本次修改.</p>
+</blockquote>
+<h3 id="编辑完成"><a href="#编辑完成" class="headerlink" title="编辑完成"></a>编辑完成</h3><p><em>建议提前将时间设置为 23:59:00</em></p>
+<p>在日期更为10000年时，系统不会发生太多错误 </p>
+<p>&lt;!–WIN10 11咋这么卡呀？–&gt;</p>
+<p>新建文件夹没有任何问题，Windows media player 因年份过高无法启动，系统基本应用程序正常运行。</p>
+<p>重启后系统时间退回至 1988 年</p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
+  </entry>
 </search>
