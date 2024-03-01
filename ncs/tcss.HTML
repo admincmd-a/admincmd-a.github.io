@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog</title>
+</head>
+<body>
+    <div id="footer">
+        This blog has been running for <span id="running-time"></span>.
+    </div>
+
+    <script>
+        function getRunningTime() {
+            const startDate = new Date('2024-01-01'); // 设置博客开始运行的日期
+            const currentDate = new Date();
+            const diff = currentDate.getTime() - startDate.getTime();
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+        }
+
+        function updateRunningTime() {
+            const runningTimeElement = document.getElementById('running-time');
+            runningTimeElement.textContent = getRunningTime();
+        }
+
+        updateRunningTime();
+        setInterval(updateRunningTime, 1000); // 每秒更新一次已运行时间
+    </script>
+</body>
+</html>
+
+<html>
+  <body>
+    
+  </body>
+</html>

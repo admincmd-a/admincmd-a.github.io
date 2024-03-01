@@ -4,7 +4,7 @@
     <title>当你吧电脑时间乱调？！</title>
     <url>/post/%E5%BD%93%E4%BD%A0%E5%90%A7%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81.html</url>
     <content><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">当你吧电脑时间调至一万年？！</a><br><a href="https://www.bilibili.com/video/---/" title="https://www.bilibili.com/video/---/"></a></p>
-<h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br> 控制面板最多可到 2099 年<br> data 命令最多可以修改 8099 年</p>
+<h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br>，控制面板最多可到 2099 年<br>，data 命令最多可以修改 8099 年</p>
 <h1 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p>
 <p>用法:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/YEAR=[YEAR]</span><br></pre></td></tr></table></figure>
@@ -43,11 +43,8 @@
 <p>对了，VMTool咋坏了？</p>
 <h1 id="调整方式（把系统时间调回明朝会发生什么？）"><a href="#调整方式（把系统时间调回明朝会发生什么？）" class="headerlink" title="调整方式（把系统时间调回明朝会发生什么？）"></a>调整方式（把系统时间调回明朝会发生什么？）</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;Windows.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	// 获取当前系统时间</span><br><span class="line">	SYSTEMTIME sysTime;</span><br><span class="line">	GetLocalTime(&amp;sysTime);</span><br><span class="line"></span><br><span class="line">	// 用户输入新的系统时间信息</span><br><span class="line">	std::cout &lt;&lt; &quot;请输入新的系统时间：&quot; &lt;&lt; std::endl;</span><br><span class="line">	std::cout &lt;&lt; &quot;年份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wYear;</span><br><span class="line">	std::cout &lt;&lt; &quot;月份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMonth;</span><br><span class="line">	std::cout &lt;&lt; &quot;日期: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wDay;</span><br><span class="line">	std::cout &lt;&lt; &quot;小时: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wHour;</span><br><span class="line">	std::cout &lt;&lt; &quot;分钟: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMinute;</span><br><span class="line">	std::cout &lt;&lt; &quot;秒数: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wSecond;</span><br><span class="line">	std::cout &lt;&lt; &quot;毫秒: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMilliseconds;</span><br><span class="line"></span><br><span class="line">	// 调用SetSystemTime函数设置系统时间</span><br><span class="line">	if (SetSystemTime(&amp;sysTime)) &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;系统时间已成功设置！&quot; &lt;&lt; std::endl;</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;设置系统时间失败！错误码：&quot; &lt;&lt; GetLastError() &lt;&lt; std::endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>!!! note “”<br>    这是一段 C++ 代码。</p>
-<div class="admonition note"><p>注意要用管理员启动</p>
-<h3>编辑完成</h3>
-</div>
-
-<p>在日期更为 1601 年时，系统不会发生太多错误 </p>
+<p>!!! war “”<br>    注意要用管理员启动</p>
+<h3 id="编辑完成-1"><a href="#编辑完成-1" class="headerlink" title="编辑完成"></a>编辑完成</h3><p>在日期更为 1601 年时，系统不会发生太多错误 </p>
 <p>新建文件夹没有任何问题，Windows media player 正常运行，系统基本应用程序正常运行。</p>
 <p>重启后系统时间至 2024 年</p>
 <div class="admonition note"><p class="admonition-title">推测
@@ -103,7 +100,7 @@
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#97;&#x6b;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;">&#x66;&#97;&#x6b;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#46;&#x63;&#111;&#109;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#97;&#107;&#101;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">&#x66;&#97;&#107;&#101;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 ]]></content>
