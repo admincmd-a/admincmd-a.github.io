@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Blog</title>
 </head>
 <body>
     <div id="footer">
-        This blog has been running for <span id="running-time"></span>.
+        本站艰难的运行了：<br><span id="running-time"></span>
     </div>
 
     <script>
@@ -16,12 +14,19 @@
             const currentDate = new Date();
             const diff = currentDate.getTime() - startDate.getTime();
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+            const remainingDays = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+            const hours = currentDate.getHours();
+            const minutes = currentDate.getMinutes();
+            const seconds = currentDate.getSeconds();
 
-            return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+            let timeString = '';
+            if (years > 0) {
+                timeString += `${years}年`;
+            }
+            timeString += `${remainingDays}日${hours}时${minutes}分${seconds}秒`;
+
+            return timeString;
         }
 
         function updateRunningTime() {
@@ -29,14 +34,10 @@
             runningTimeElement.textContent = getRunningTime();
         }
 
-        updateRunningTime();
-        setInterval(updateRunningTime, 1000); // 每秒更新一次已运行时间
+        window.onload = function() {
+            updateRunningTime();
+            setInterval(updateRunningTime, 1000);
+        };
     </script>
 </body>
-</html>
-
-<html>
-  <body>
-    
-  </body>
 </html>
