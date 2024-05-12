@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>管理员 - 命令提示符</title>
+  
+  
+  <link href="https://admincmd-a.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://admincmd-a.github.io/"/>
+  <updated>2024-02-24T08:22:58.412Z</updated>
+  <id>https://admincmd-a.github.io/</id>
+  
+  <author>
+    <name>管理员 - 命令提示符</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>当你吧电脑时间乱调？！</title>
+    <link href="https://admincmd-a.github.io/post/%E5%BD%93%E4%BD%A0%E5%90%A7%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81.html"/>
+    <id>https://admincmd-a.github.io/post/%E5%BD%93%E4%BD%A0%E5%90%A7%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81.html</id>
+    <published>2024-02-14T01:52:39.195Z</published>
+    <updated>2024-02-24T08:22:58.412Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">当你吧电脑时间调至一万年？！</a><br><a href="https://www.bilibili.com/video/---/" title="https://www.bilibili.com/video/---/"></a></p><h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br>，控制面板最多可到 2099 年<br>，data 命令最多可以修改 8099 年</p><h1 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p><p>用法:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/YEAR=[YEAR]</span><br></pre></td></tr></table></figure><p>YEAR 整数型，定义启动后年份</p><p>据测试，启动选项可以修改范围是 1601-9999 年，超出此范围则卡死在第一启动阶段。</p><blockquote><p>[ i ] 个人推测,不代表权威观点。</p></blockquote><h2 id="SetSystemTime-函数"><a href="#SetSystemTime-函数" class="headerlink" title="SetSystemTime 函数"></a>SetSystemTime 函数</h2><p>设置当前系统时间和日期。 系统时间以协调世界时 (UTC) 表示。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BOOL SetSystemTime(</span><br><span class="line">  [in] const SYSTEMTIME *lpSystemTime</span><br><span class="line">);</span><br></pre></td></tr></table></figure><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>[in] lpSystemTime</code><br>指向包含新系统日期和时间的 SYSTEMTIME 结构的指针。</p><p>将忽略 SYSTEMTIME 结构的 wDayOfWeek 成员。</p><h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>如果该函数成功，则返回值为非零值。</p><p>如果函数失败，则返回值为零。 </p><hr><h1 id="调整方式（当你吧电脑时间调至一万年？！）"><a href="#调整方式（当你吧电脑时间调至一万年？！）" class="headerlink" title="调整方式（当你吧电脑时间调至一万年？！）"></a>调整方式（当你吧电脑时间调至一万年？！）</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一台 Windwos 7-11 电脑</p><h2 id="正式进行"><a href="#正式进行" class="headerlink" title="正式进行"></a>正式进行</h2><h3 id="启动编辑"><a href="#启动编辑" class="headerlink" title="启动编辑"></a>启动编辑</h3><p>使用管理员执行 <code>BCDEDIT /SET OPTIONSEDIT 1</code> 以进入启动选项编辑模式。</p><p>重启计算机，会出现下图:</p><blockquote><p>如果没有出现该界面，请重试 1.2.1 步骤 (该步骤)</p></blockquote><p>!</p><p>插入空格后，输入 <code>/YEAR=9999</code> 后，按下 Enter 提交更改。</p><blockquote><p>再次重启后，计算机不会应用本次修改.</p></blockquote><h3 id="编辑完成"><a href="#编辑完成" class="headerlink" title="编辑完成"></a>编辑完成</h3><p><em>建议提前将时间设置为 23:59:00</em></p><p>在日期更为10000年时，系统不会发生太多错误 </p><p>&lt;!–WIN10 11咋这么卡呀？–&gt;</p><p>新建文件夹没有任何问题，Windows media player 因年份过高无法启动，系统基本应用程序正常运行。</p><p>重启后系统时间退回至 1988 年</p><div class="admonition note"><p class="admonition-title">推测</p><p>推测: 系统时间保存失败。</p></div><p>对了，VMTool咋坏了？</p><h1 id="调整方式（把系统时间调回明朝会发生什么？）"><a href="#调整方式（把系统时间调回明朝会发生什么？）" class="headerlink" title="调整方式（把系统时间调回明朝会发生什么？）"></a>调整方式（把系统时间调回明朝会发生什么？）</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;Windows.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">// 获取当前系统时间</span><br><span class="line">SYSTEMTIME sysTime;</span><br><span class="line">GetLocalTime(&amp;sysTime);</span><br><span class="line"></span><br><span class="line">// 用户输入新的系统时间信息</span><br><span class="line">std::cout &lt;&lt; &quot;请输入新的系统时间：&quot; &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; &quot;年份: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wYear;</span><br><span class="line">std::cout &lt;&lt; &quot;月份: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wMonth;</span><br><span class="line">std::cout &lt;&lt; &quot;日期: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wDay;</span><br><span class="line">std::cout &lt;&lt; &quot;小时: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wHour;</span><br><span class="line">std::cout &lt;&lt; &quot;分钟: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wMinute;</span><br><span class="line">std::cout &lt;&lt; &quot;秒数: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wSecond;</span><br><span class="line">std::cout &lt;&lt; &quot;毫秒: &quot;;</span><br><span class="line">std::cin &gt;&gt; sysTime.wMilliseconds;</span><br><span class="line"></span><br><span class="line">// 调用SetSystemTime函数设置系统时间</span><br><span class="line">if (SetSystemTime(&amp;sysTime)) &#123;</span><br><span class="line">std::cout &lt;&lt; &quot;系统时间已成功设置！&quot; &lt;&lt; std::endl;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">std::cout &lt;&lt; &quot;设置系统时间失败！错误码：&quot; &lt;&lt; GetLastError() &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>!!! note “”<br>    这是一段 C++ 代码。</p><p>!!! war “”<br>    注意要用管理员启动</p><h3 id="编辑完成-1"><a href="#编辑完成-1" class="headerlink" title="编辑完成"></a>编辑完成</h3><p>在日期更为 1601 年时，系统不会发生太多错误 </p><p>新建文件夹没有任何问题，Windows media player 正常运行，系统基本应用程序正常运行。</p><p>重启后系统时间至 2024 年</p><div class="admonition note"><p class="admonition-title">推测</p><p>推测: 系统时间保存失败，且系统与时间服务器同步。</p></div><p>对了，VMTool双坏了？</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV154421F7nA/&quot; title=&quot;https://</summary>
+      
+    
+    
+    
+    <category term="玩转系统" scheme="https://admincmd-a.github.io/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>测试 ABCDEFG abcdefg 0123456789 ~_+{}:&quot;&lt;&gt;?| `-=[];&#39;&#92;,./!@#$%^&amp;*()</title>
+    <link href="https://admincmd-a.github.io/post/%E6%B5%8B%E8%AF%95.html"/>
+    <id>https://admincmd-a.github.io/post/%E6%B5%8B%E8%AF%95.html</id>
+    <published>2024-02-04T12:58:26.921Z</published>
+    <updated>2024-02-15T11:24:18.626Z</updated>
+    
+    <content type="html"><![CDATA[<p>标题文本</p><h1 id="一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h1><h2 id="二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h2><h3 id="三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h3><h4 id="四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h4><h5 id="五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h5><h6 id="六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h6><h1 id="一级测试"><a href="#一级测试" class="headerlink" title="一级测试"></a>一级测试</h1><h2 id="二级测试"><a href="#二级测试" class="headerlink" title="二级测试"></a>二级测试</h2><p>测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| <code>-=[];&#39;\,./!@#$%^&amp;*()   测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| </code>-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p><p><em>斜体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;</em>()*</p><p><strong>粗体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</strong></p><p>或 <strong>x</strong> A<strong>b</strong>c</p><p><strong><em>斜粗测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;</em>()</strong>*</p><blockquote><p>引用测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p><blockquote><p>套娃引用测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p></blockquote></blockquote><p>(可包含其他方式)</p><ol><li>有序列表测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</li><li><ul><li></li></ul></li><li>A</li><li>b</li></ol><p>(要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。)</p><ul><li>无序列表测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</li><li>A</li><li>b</li><li>c</li></ul><p>（代码块通常采用四个空格或一个制表符缩进。当它们被放在列表中时，请将它们缩进八个空格或两个制表符。）</p><pre><code>    代码块测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| `-=[];&#39;\,./!@#$%^&amp;*()    2</code></pre><p>图片<br> <img src="/img/%E6%B5%8B%E8%AF%95.png" alt="1"></p><p>代码 <code>测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| -=[];\,./!@#$%^&amp;*()</code> scc</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">围栏代码块测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| `-=[];&#x27;\,./!@#$%^&amp;*()</span><br></pre></td></tr></table></figure><p>分割线</p><hr><p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p><p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#97;&#x6b;&#x65;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;">&#102;&#97;&#x6b;&#x65;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;</a></p><p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p><p>(字符前插入反斜杠 \ )</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;标题文本&lt;/p&gt;
+&lt;h1 id=&quot;一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp&quot;&gt;&lt;a href=&quot;#一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机名：你是来找茬的吧</title>
+    <link href="https://admincmd-a.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7.html"/>
+    <id>https://admincmd-a.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7.html</id>
+    <published>2024-02-01T01:21:24.003Z</published>
+    <updated>2024-02-04T11:35:58.935Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p><h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p><h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p><p>计算机名一般与 hostname (主机名)相同</p><p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p><p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p><p>计算机名位于注册表以下的几个位置: (经过筛选)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure><p>更改这些注册表，可以强制修改计算机名。</p><hr><h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p><p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p><p>使用此程序可以强制性修改计算机名</p><p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p><div class="admonition warning"><p class="admonition-title">警告</p><p>一定要用管理员启动！请在打开前关闭杀毒软件。在实体机上运行导致系统损坏，自行负责。</p></div><h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p><p>重启试逝</p><p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p><pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;</code></pre><h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p><p>应用程序因’无足够内存’而无法打开</p><p>电源选项失效</p><p>命令提示符正常，但 shutdown 无法重启、关机</p><pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作</code></pre><p>重启后蓝屏</p><pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏</code></pre><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol><li>CSDN - haiross - windows 通过修改注册表来修改主机名</li></ol><p><em>已复制</em>     <em>1 个文件。</em></p><p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;em&gt;X:&#92;Users&#92;Admin-cmd&#92;Hexo-Files&#92;003&amp;gt;copy con title.md&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h1&gt;&lt;p</summary>
+      
+    
+    
+    
+    <category term="玩转系统" scheme="https://admincmd-a.github.io/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+</feed>

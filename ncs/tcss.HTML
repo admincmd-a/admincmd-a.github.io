@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <style>
+    #footer {
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="footer">
+    本站艰难的运行了：<br>
+    <span id="running-time"></span>
+  </div>
+  <script>
+    // JavaScript 代码保持不变
+    function getRunningTime() {
+      const startDate = new Date('2024-02-01'); // 设置博客开始运行的日期
+      const currentDate = new Date();
+      const diff = currentDate.getTime() - startDate.getTime();
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      const remainingDays = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+      const hours = currentDate.getHours();
+      const minutes = currentDate.getMinutes();
+      const seconds = currentDate.getSeconds();
+      let timeString = '';
+      if (years > 0) {
+        timeString += `${years}年`;
+      }
+      timeString += `${remainingDays}日${hours}时${minutes}分${seconds}秒`;
+      return timeString;
+    }
+    function updateRunningTime() {
+      const runningTimeElement = document.getElementById('running-time');
+      runningTimeElement.textContent = getRunningTime();
+    }
+    window.onload = function() {
+      updateRunningTime();
+      setInterval(updateRunningTime, 1000);
+    };
+  </script>
+</body>
+</html>
