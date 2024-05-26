@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>如何使用 Windows PE 安装操作系统(BIOS)</title>
-    <url>/post/winsetup-Winpe_BIOS/index.html</url>
+    <url>/post/winsetup-Winpe_BIOS/INDEX.html</url>
     <content><![CDATA[<p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
 <div class="note warning modern"><p>本文中所适用的启动方式为 BIOS (Legacy)</p>
 </div>
@@ -126,7 +126,7 @@
   </entry>
   <entry>
     <title>盘点把C盘弹出去的那些事</title>
-    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html</url>
+    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/INDEX.html</url>
     <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
 
@@ -180,7 +180,7 @@ VolumeName  指定装入点的目标的卷名称。
   </entry>
   <entry>
     <title>如何使用 Windows PE 安装操作系统(EFI/UEFI)</title>
-    <url>/post/winsetup-Winpe_EFI/index.html</url>
+    <url>/post/winsetup-Winpe_EFI/INDEX.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
 <div class="note warning modern"><p>本文中所适用的启动方式为 BIOS (Legacy)</p>
 </div>
@@ -311,7 +311,7 @@ VolumeName  指定装入点的目标的卷名称。
   </entry>
   <entry>
     <title>当你把电脑时间乱调？！</title>
-    <url>/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</url>
+    <url>/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/INDEX.html</url>
     <content><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">当你把电脑时间调至一万年？！</a><br><a href="https://www.bilibili.com/video/---/" title="https://www.bilibili.com/video/---/"></a></p>
 <h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br>，控制面板最多可到 2099 年<br>，data 命令最多可以修改 8099 年</p>
 <h1 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p>
@@ -373,7 +373,7 @@ VolumeName  指定装入点的目标的卷名称。
   </entry>
   <entry>
     <title>计算机名：你是来找茬的吧</title>
-    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</url>
+    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/INDEX.html</url>
     <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
 <h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
 <h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
