@@ -1,26 +1,19 @@
-#welcome-info {
-  overflow: hidden;
-  --icat-card-welcome: #49b1f5;
-}
-#welcome-info .welcome-time {
-  width: 100%;
-  margin: 12px 0 0;
-  display: inline-flex;
-}
-#welcome-info .welcome-message {
-  width: 100%;
-  margin-bottom: 8px;
-  display: inline-flex;
-}
-#welcome-info .welcome-region {
-  background: var(--icat-background);
-  border: var(--style-border);
-  color: var(--icat-fontcolor);
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  margin: 6px 0;
+:root {
+  --ichika-color: #49A6E9;
 }
 
-/* 欢迎信息栏样式 */
+/* 公告&欢迎页 */
+.card-announcement {
+  line-height:30px;
+  font-size:16px;
+}
+
+.card-announcement .item-headline span{
+  margin-left:0!important;
+}
+
+.card-announcement span{
+  font-weight:bold;
+  font-size:20px!important;
+  color:var(--ichika-color);
+}
