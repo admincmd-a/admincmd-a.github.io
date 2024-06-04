@@ -35,7 +35,7 @@ function getDistance(e1, n1, e2, n2) {
 function showWelcome() {
     if (!document.getElementById("welcome-info")) return
 
-    let dist = getDistance(114.305000, 30.592800, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
+    let dist = getDistance(114.274218, 30.544745, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
 
     let pos = ipLoacation.result.ad_info.nation;
     let posdesc;

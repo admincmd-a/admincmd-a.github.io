@@ -195,6 +195,8 @@ VolumeName  指定装入点的目标的卷名称。
 </div>
 <div class="note success modern"><p>建议你先将文章过一遍，这样可以更清楚的知道自己下一步要干什么。</p>
 </div>
+
+<p>啥时候才有人看到注意的启动方式是 BIOS (Legacy) (错误的)呢？</p>
 <h1 id="分配磁盘"><a href="#分配磁盘" class="headerlink" title="分配磁盘"></a>分配磁盘</h1><p>使用 CMD 运行以下命令</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">DiskPart</span><br><span class="line">List Disk</span><br></pre></td></tr></table></figure>
 <div class="note default simple"><p>如果你已经完成此操作(或已经分区)，请移步左侧目录‘安装系统’</p>
