@@ -79,7 +79,7 @@ function showWelcome() {
                     break;
                 case "重庆市":
                     pos = "重庆市";
-                    posdesc = "高德地图:已到达重庆，下面交给百度地图导航。百度地图：已到达重庆，下面交给高德地图导航。"
+                    posdesc = "高德地图:已到达重庆，下面切换百度地图导航。百度地图：已到达重庆，下面切换高德地图导航。"
                     break;
                 case "河北省":
                     posdesc = "山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山。";
@@ -97,7 +97,7 @@ function showWelcome() {
                     posdesc = "状元阁就是东北烧烤之王。";
                     break;
                 case "黑龙江省":
-                    posdesc = "很喜欢哈尔滨大剧院。";
+                    posdesc = "哈尔滨红肠";
                     break;
                 case "上海市":
                     pos = "上海市";
