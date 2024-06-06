@@ -125,60 +125,6 @@
       </tags>
   </entry>
   <entry>
-    <title>盘点把C盘弹出去的那些事</title>
-    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html</url>
-    <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
-
-<p><em>这里使用的是 Windows 7</em><br>总所周知，带热插拔的硬盘，CD呀DVD呀，U盘，都具有弹出选项。</p>
-<p>So，系统盘能弹出去吗？</p>
-<p>答案吧……</p>
-<p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt; /d</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，带冒号</span><br></pre></td></tr></table></figure>
-
-<p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
-<p>此时计算机会变得卡顿，无法打开任何应用程序</p>
-<p>要想恢复，只能强制重新启动计算机。</p>
-<p>但是，</p>
-<p>如果你又找了个WIN 10 的盘盘符更为C，</p>
-<p>那么，</p>
-<p>就会出现 Windows 7 + 10 &#x3D; 17 !</p>
-<p>啊对，半Win7半Win10</p>
-<pre><code>创建、删除或列出卷装入点。
-
-MOUNTVOL [drive:]path VolumeName
-MOUNTVOL [drive:]path /D
-MOUNTVOL [drive:]path /L
-MOUNTVOL [drive:]path /P
-MOUNTVOL /R
-MOUNTVOL /N
-MOUNTVOL /E
-MOUNTVOL drive: /S
-
-path        指定装入点将驻留的现有 NTFS 目录。
-VolumeName  指定装入点的目标的卷名称。
-/D          从指定的目录中删除卷装入点。
-/L          列出指定目录的已装入的卷名称。
-/P          从指定目录删除卷装入点，卸下此卷并使此卷无法装入。你可以创建
-            一个卷来再次使此卷可以装入。
-/R          删除不在系统中的、卷的装入点目录和注册表设置。
-/N          禁用新卷的自动装入。
-/E          再次启用新卷的自动装入。
-/S          将 EFI 系统分区装载到提供的驱动器。
-</code></pre>
-<p>这里用的是 mountvol 功能的删除载入点功能。</p>
-]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
-      <tags>
-        <tag>tags</tag>
-        <tag>windows</tag>
-        <tag>胡改</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何使用 Windows PE 安装操作系统(EFI/UEFI)</title>
     <url>/post/winsetup-Winpe_EFI.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
@@ -309,6 +255,60 @@ VolumeName  指定装入点的目标的卷名称。
         <tag>教程</tag>
         <tag>Windows 欲安装环境</tag>
         <tag>安装 Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>盘点把C盘弹出去的那些事</title>
+    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html</url>
+    <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
+
+<p><em>这里使用的是 Windows 7</em><br>总所周知，带热插拔的硬盘，CD呀DVD呀，U盘，都具有弹出选项。</p>
+<p>So，系统盘能弹出去吗？</p>
+<p>答案吧……</p>
+<p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt; /d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，带冒号</span><br></pre></td></tr></table></figure>
+
+<p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
+<p>此时计算机会变得卡顿，无法打开任何应用程序</p>
+<p>要想恢复，只能强制重新启动计算机。</p>
+<p>但是，</p>
+<p>如果你又找了个WIN 10 的盘盘符更为C，</p>
+<p>那么，</p>
+<p>就会出现 Windows 7 + 10 &#x3D; 17 !</p>
+<p>啊对，半Win7半Win10</p>
+<pre><code>创建、删除或列出卷装入点。
+
+MOUNTVOL [drive:]path VolumeName
+MOUNTVOL [drive:]path /D
+MOUNTVOL [drive:]path /L
+MOUNTVOL [drive:]path /P
+MOUNTVOL /R
+MOUNTVOL /N
+MOUNTVOL /E
+MOUNTVOL drive: /S
+
+path        指定装入点将驻留的现有 NTFS 目录。
+VolumeName  指定装入点的目标的卷名称。
+/D          从指定的目录中删除卷装入点。
+/L          列出指定目录的已装入的卷名称。
+/P          从指定目录删除卷装入点，卸下此卷并使此卷无法装入。你可以创建
+            一个卷来再次使此卷可以装入。
+/R          删除不在系统中的、卷的装入点目录和注册表设置。
+/N          禁用新卷的自动装入。
+/E          再次启用新卷的自动装入。
+/S          将 EFI 系统分区装载到提供的驱动器。
+</code></pre>
+<p>这里用的是 mountvol 功能的删除载入点功能。</p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
+      <tags>
+        <tag>tags</tag>
+        <tag>windows</tag>
+        <tag>胡改</tag>
       </tags>
   </entry>
   <entry>
@@ -470,7 +470,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#x6b;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#102;&#x61;&#x6b;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#x61;&#x6b;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#x66;&#x61;&#x6b;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题
