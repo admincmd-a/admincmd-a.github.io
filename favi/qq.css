@@ -12,10 +12,10 @@ body
   overflow: hidden;
 }
 .progress-bar-inner {
-  height: 20px;
+  height: 15px;
   background-color: #4caf50;
   text-align: center;
   color: white;
   line-height: 20px;
-  transition: width 0.5s;
+  transition: width 1.5s;
 }
