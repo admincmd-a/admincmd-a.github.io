@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>如何使用 Windows PE 安装操作系统(BIOS)</title>
-    <url>/post/winsetup-Winpe_BIOS.html</url>
+    <url>/post/winsetup-Winpe_BIOS/index.html</url>
     <content><![CDATA[<p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
 <div class="note warning modern"><p>本文中所适用的启动方式为 BIOS (Legacy)</p>
 </div>
@@ -126,7 +126,7 @@
   </entry>
   <entry>
     <title>如何使用 Windows PE 安装操作系统(EFI/UEFI)</title>
-    <url>/post/winsetup-Winpe_EFI.html</url>
+    <url>/post/winsetup-Winpe_EFI/index.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
 <div class="note warning modern"><p>本文中所适用的启动方式为 BIOS (Legacy)</p>
 </div>
@@ -259,7 +259,7 @@
   </entry>
   <entry>
     <title>盘点把C盘弹出去的那些事</title>
-    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html</url>
+    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html</url>
     <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
 
@@ -313,7 +313,7 @@ VolumeName  指定装入点的目标的卷名称。
   </entry>
   <entry>
     <title>当你把电脑时间乱调？！</title>
-    <url>/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81.html</url>
+    <url>/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</url>
     <content><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">当你把电脑时间调至一万年？！</a><br><a href="https://www.bilibili.com/video/---/" title="https://www.bilibili.com/video/---/"></a></p>
 <h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br>，控制面板最多可到 2099 年<br>，data 命令最多可以修改 8099 年</p>
 <h1 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p>
@@ -374,61 +374,8 @@ VolumeName  指定装入点的目标的卷名称。
       </tags>
   </entry>
   <entry>
-    <title>计算机名：你是来找茬的吧</title>
-    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7.html</url>
-    <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
-<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
-<h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
-<p>计算机名一般与 hostname (主机名)相同</p>
-<p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p>
-<p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p>
-<p>计算机名位于注册表以下的几个位置: (经过筛选)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
-
-<p>更改这些注册表，可以强制修改计算机名。</p>
-<hr>
-<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
-<p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
-<p>使用此程序可以强制性修改计算机名</p>
-<p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
-<div class="admonition warning"><p class="admonition-title">警告
-</p><p>一定要用管理员启动！
-请在打开前关闭杀毒软件。
-在实体机上运行导致系统损坏，自行负责。</p>
-</div>
-
-<h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p>
-<p>重启试逝</p>
-<p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
-<pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;
-</code></pre>
-<h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p>
-<p>应用程序因’无足够内存’而无法打开</p>
-<p>电源选项失效</p>
-<p>命令提示符正常，但 shutdown 无法重启、关机</p>
-<pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作
-</code></pre>
-<p>重启后蓝屏</p>
-<pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏
-</code></pre>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li>CSDN - haiross - windows 通过修改注册表来修改主机名</li>
-</ol>
-<p><em>已复制</em>     <em>1 个文件。</em></p>
-<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>
-]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
-      <tags>
-        <tag>tags</tag>
-        <tag>windows</tag>
-        <tag>胡改</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文体样式表</title>
-    <url>/post/%E6%B5%8B%E8%AF%95.html</url>
+    <url>/post/%E6%B5%8B%E8%AF%95/index.html</url>
     <content><![CDATA[<p>标题文本</p>
 <h1 id="一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h1><h2 id="二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h2><h3 id="三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h3><h4 id="四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h4><h5 id="五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h5><h6 id="六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h6><h1 id="一级测试"><a href="#一级测试" class="headerlink" title="一级测试"></a>一级测试</h1><h2 id="二级测试"><a href="#二级测试" class="headerlink" title="二级测试"></a>二级测试</h2><p>测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| <code>-=[];&#39;\,./!@#$%^&amp;*()   测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| </code>-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p><em>斜体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;</em>()*</p>
@@ -470,7 +417,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#x61;&#x6b;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#x66;&#x61;&#x6b;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#97;&#x6b;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#102;&#97;&#x6b;&#101;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题
@@ -877,6 +824,59 @@ VolumeName  指定装入点的目标的卷名称。
 </tbody></table>
 <p>脚注测试<a href="HElp">^1</a><br>大脚注测试<a href="%E8%84%9A%E6%B3%A8%E6%B5%8B%E8%AF%952">^bignote</a></p>
 ]]></content>
+      <tags>
+        <tag>tags</tag>
+        <tag>windows</tag>
+        <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机名：你是来找茬的吧</title>
+    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</url>
+    <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
+<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
+<h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
+<p>计算机名一般与 hostname (主机名)相同</p>
+<p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p>
+<p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p>
+<p>计算机名位于注册表以下的几个位置: (经过筛选)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
+
+<p>更改这些注册表，可以强制修改计算机名。</p>
+<hr>
+<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
+<p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
+<p>使用此程序可以强制性修改计算机名</p>
+<p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
+<div class="admonition warning"><p class="admonition-title">警告
+</p><p>一定要用管理员启动！
+请在打开前关闭杀毒软件。
+在实体机上运行导致系统损坏，自行负责。</p>
+</div>
+
+<h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p>
+<p>重启试逝</p>
+<p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
+<pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;
+</code></pre>
+<h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p>
+<p>应用程序因’无足够内存’而无法打开</p>
+<p>电源选项失效</p>
+<p>命令提示符正常，但 shutdown 无法重启、关机</p>
+<pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作
+</code></pre>
+<p>重启后蓝屏</p>
+<pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏
+</code></pre>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li>CSDN - haiross - windows 通过修改注册表来修改主机名</li>
+</ol>
+<p><em>已复制</em>     <em>1 个文件。</em></p>
+<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
       <tags>
         <tag>tags</tag>
         <tag>windows</tag>

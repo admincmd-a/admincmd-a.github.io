@@ -121,7 +121,7 @@ if(m==6&&dd==1){//儿童节
         sessionStorage.setItem("isPopupWindow","1");
     }
 }
-if(m==6&&dd==1){//域名生效
+if(m==6&&dd==7){//域名生效
     console.log("今天，域名生效了！");
     if(sessionStorage.getItem("isPopupWindow")!="1"){
         Swal.fire("今天，域名生效了！");
