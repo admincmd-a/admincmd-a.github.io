@@ -1,7 +1,8 @@
+https://admincmd.xyz/charts/index.html
+https://admincmd.xyz/about/index.html
 https://admincmd.xyz/server/index.html
 https://admincmd.xyz/license/index.html
 https://admincmd.xyz/log/index.html
-https://admincmd.xyz/about/index.html
 https://admincmd.xyz/favi/qq.html
 https://admincmd.xyz/favi/email.html
 https://admincmd.xyz/post/winsetup-Winpe_EFI/index.html

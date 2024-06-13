@@ -1,0 +1,6 @@
+#article-container .flink .flink-list {
+    text-align: left!important;
+}
+.flink-item-name, .flink-item-desc {
+    color: white!important;
+}
