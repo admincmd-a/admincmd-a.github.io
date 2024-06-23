@@ -2,7 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://admincmd.xyz/charts/index.html</loc>
+    <loc>https://blog.admincmd.xyz/favi/index.html</loc>
+    
+    <lastmod>2024-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/lyb_files/index.html</loc>
+    
+    <lastmod>2024-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/post/Setup-system-com-vm2dm/index.html</loc>
+    
+    <lastmod>2024-06-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/license/index.html</loc>
+    
+    <lastmod>2024-06-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/charts/index.html</loc>
     
     <lastmod>2024-06-11</lastmod>
     
@@ -11,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/about/index.html</loc>
+    <loc>https://blog.admincmd.xyz/about/index.html</loc>
     
     <lastmod>2024-06-11</lastmod>
     
@@ -20,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/server/index.html</loc>
+    <loc>https://blog.admincmd.xyz/server/index.html</loc>
     
     <lastmod>2024-06-11</lastmod>
     
@@ -29,16 +65,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/license/index.html</loc>
-    
-    <lastmod>2024-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://admincmd.xyz/log/index.html</loc>
+    <loc>https://blog.admincmd.xyz/log/index.html</loc>
     
     <lastmod>2024-06-10</lastmod>
     
@@ -47,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/favi/qq.html</loc>
+    <loc>https://blog.admincmd.xyz/favi/qq.html</loc>
     
     <lastmod>2024-06-06</lastmod>
     
@@ -56,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/favi/email.html</loc>
+    <loc>https://blog.admincmd.xyz/favi/email.html</loc>
     
     <lastmod>2024-06-06</lastmod>
     
@@ -65,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/post/winsetup-Winpe_EFI/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_EFI/index.html</loc>
     
     <lastmod>2024-06-04</lastmod>
     
@@ -74,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/bd_LINK/index.html</loc>
+    <loc>https://blog.admincmd.xyz/bd_LINK/index.html</loc>
     
     <lastmod>2024-06-04</lastmod>
     
@@ -83,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/link/index.html</loc>
+    <loc>https://blog.admincmd.xyz/link/index.html</loc>
     
     <lastmod>2024-06-04</lastmod>
     
@@ -92,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/favi/time.html</loc>
+    <loc>https://blog.admincmd.xyz/favi/time.html</loc>
     
     <lastmod>2024-06-03</lastmod>
     
@@ -101,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html</loc>
     
     <lastmod>2024-06-02</lastmod>
     
@@ -110,16 +137,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/lyb_files/index.html</loc>
-    
-    <lastmod>2024-05-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://admincmd.xyz/essay/index.html</loc>
+    <loc>https://blog.admincmd.xyz/essay/index.html</loc>
     
     <lastmod>2024-05-26</lastmod>
     
@@ -128,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/post/winsetup-Winpe_BIOS/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_BIOS/index.html</loc>
     
     <lastmod>2024-05-22</lastmod>
     
@@ -137,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/zy/www/index.html</loc>
+    <loc>https://blog.admincmd.xyz/zy/www/index.html</loc>
     
     <lastmod>2024-05-21</lastmod>
     
@@ -146,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</loc>
     
     <lastmod>2024-05-20</lastmod>
     
@@ -155,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html</loc>
     
     <lastmod>2024-05-20</lastmod>
     
@@ -164,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</loc>
     
     <lastmod>2024-05-20</lastmod>
     
@@ -173,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/index.html</loc>
+    <loc>https://blog.admincmd.xyz/tags/index.html</loc>
     
     <lastmod>2024-05-20</lastmod>
     
@@ -182,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/zy/index.html</loc>
+    <loc>https://blog.admincmd.xyz/zy/index.html</loc>
     
     <lastmod>2024-05-19</lastmod>
     
@@ -191,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/zy/app/index.html</loc>
+    <loc>https://blog.admincmd.xyz/zy/app/index.html</loc>
     
     <lastmod>2024-05-19</lastmod>
     
@@ -200,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/cb_scn_gb/index.html</loc>
+    <loc>https://blog.admincmd.xyz/cb_scn_gb/index.html</loc>
     
     <lastmod>2024-03-02</lastmod>
     
@@ -209,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/categories/index-1.html</loc>
+    <loc>https://blog.admincmd.xyz/categories/index-1.html</loc>
     
     <lastmod>2024-02-01</lastmod>
     
@@ -218,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/categories/index.html</loc>
+    <loc>https://blog.admincmd.xyz/categories/index.html</loc>
     
     <lastmod>2023-08-13</lastmod>
     
@@ -227,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/sud/snue_sdg_0.html</loc>
+    <loc>https://blog.admincmd.xyz/sud/snue_sdg_0.html</loc>
     
     <lastmod>2023-07-30</lastmod>
     
@@ -236,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/sud/git.html</loc>
+    <loc>https://blog.admincmd.xyz/sud/git.html</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -246,58 +264,58 @@
   
 
   <url>
-    <loc>https://admincmd.xyz/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://admincmd.xyz/tags/Windows/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/Windows/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/Windows-%E6%AC%B2%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/Windows-%E6%AC%B2%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/%E5%AE%89%E8%A3%85-Windows/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/%E5%AE%89%E8%A3%85-Windows/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/tags/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/tags/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/windows/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/windows/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/tags/%E8%83%A1%E6%94%B9/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/tags/%E8%83%A1%E6%94%B9/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -305,15 +323,15 @@
 
   
   <url>
-    <loc>https://admincmd.xyz/categories/Windows-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/categories/Windows-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2024-06-13</lastmod>
+    <loc>https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2024-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

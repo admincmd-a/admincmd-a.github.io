@@ -66,6 +66,15 @@ function showWelcome() {
         case "加拿大":
             posdesc = "拾起一片枫叶赠予你";
             break;
+        case "南极洲":
+            posdesc = "南极洲的风很大，你一定记得要带伞！";
+            break;
+        case "巴西":
+            posdesc = "巴西足球";
+            break;
+        case "加拿大":
+            posdesc = "加拿大不大";
+            break;
         case "中国":
             pos = ipLoacation.result.ad_info.province + " " + ipLoacation.result.ad_info.city;
             switch (ipLoacation.result.ad_info.province) {

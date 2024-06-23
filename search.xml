@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用虚拟机对实体机安装操作系统</title>
+    <url>/post/Setup-system-com-vm2dm/index.html</url>
+    <content><![CDATA[<div class="note danger modern"><p>如果您使用此方法，请务必备份好数据，操作后无法恢复，</p>
+<p>未备份数据，造成硬盘内文件丢失，作者不承担任何责任。</p>
+<p>按照下列方法，如您继续，则默认您同意我们的声明。</p>
+</div>
+<h1 id="前絮"><a href="#前絮" class="headerlink" title="前絮"></a>前絮</h1><p>这台电脑是我家里的一台老电脑，已经很久没有使用了，但是我想在上面安个 Windows Server，整个服务器使</p>
+<p>这台电脑没有任何东东，除了一张PCI网卡，没有任何其他的东西（对，TM 连显卡都没有），所以装系统肯定会有很多麻烦<del>根本就没法装系统</del>。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先,我们要找台可以跑虚拟机的电脑<br>然后找张固态盘,拉来装系统<br>然后在准备一个系统镜像,可以从 这里下载 &lt;<br>其他东西应该不用说吧</p>
+<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p>如果想直接在磁盘上进行分区并应用镜像,其参考本文章</p>
+<!-- 如果想使用虚拟磁盘进行启动,请参考 <https://admincmd.xyz/post/Setup-system-com-no-vhd> -->
+
+<p>首先我们需要准备一个虚拟机，这里使用 VMware Workstation</p>
+<!-- <div class="note warning simple"><p> –&gt;</p>
+<!-- 如果想要用其他的虚拟机软件，请转到 <https://admincmd.xyz/post/Setup-system-com-no-vhd> 参考虚拟磁盘安装方法 -->
+<!-- </div> -->
+
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><p>装 VMware<br>打开 VMware Workstation，选择新建虚拟机<br>这一步应该不用说吧？</p>
+<ol>
+<li><p>到<code>安装操作系统</code>这一步,请在<code>安装程序光盘映像文件</code>这一栏选择你选下载的系统镜像</p>
+</li>
+<li><p>客户端系统自己选你的版本</p>
+</li>
+<li><p>名称和位置随意</p>
+</li>
+<li><p>固件类型,一定要注意,以你要安装的电脑相符</p>
+<div class="note warning simple"><p>一定要注意,以你要安装的电脑相符,否则操作系统 99% 无法启动</p>
+<p>一般来讲,uefi 的电脑,其安全启动默认开启,所以是 uefi 的电脑最好把安全启动也给勾上,免得出一些奇怪的问题</p>
+</div>
+<div class="note simple"><p>如果你的电脑比较老,比如是 11 年的,那基本确定是 BIOS ,如果电脑很新,比如是 23 年的,那基本确定是 UEFI </p>
+<p>不过如果你不知道,自己去问度娘,或者去bing找一下</p>
+</div>
+</li>
+<li><p>处理器,以你跑虚拟机的电脑为准<br>内存,以你跑虚拟机的电脑为准<br>网络适配器,默认就行<br>I&#x2F;O 控制器,默认就行<br>虚拟磁盘类型,<del>按你准备的盘插口决定</del>其实无所谓,选个 SATA 就行</p>
+</li>
+<li><p>磁盘请选<code>使用物理磁盘</code><strong>啊这一步挺重要的</strong></p>
+</li>
+<li><p>设备<br>这一步有点复杂</p>
+</li>
+</ol>
+<div class="hide-block"><button type="button" class="hide-button" style="">选择方法
+    </button><div class="hide-content"><p>很简单,一个一个猜去</p>
+</div></div>
+<details class="toggle" ><summary class="toggle-button" style="">......</summary><div class="toggle-content"><ol>
+<li><p>按下 Win + R 打开运行框<br><del>啊没错,就是被营销号玩坏的那个运行框</del></p>
+</li>
+<li><p>输入<code>diskmgmt.msc</code>回车打开磁盘管理</p>
+</li>
+<li><p>然后你会看到你的磁盘,左边有一栏,写这<code>磁盘 0</code>等等等等,找到你要安装的盘,记下它的编号,比如<code>磁盘 2</code></p>
+</li>
+<li><p>然后回到 VMware Workstation,依照上面的例子,你的磁盘就是<code>PhysicalDrive 2</code></p>
+</li>
+</ol>
+<p><code>磁盘 3</code> 就是 <code>PhysicalDrive 3</code> 等等</p>
+<ol start="5">
+<li>使用情况就选<code>整个磁盘</code>即可</li>
+</ol>
+</div></details>
+
+<p>其他的不用管</p>
+<h2 id="安装系统-1"><a href="#安装系统-1" class="headerlink" title="安装系统"></a>安装系统</h2><ol>
+<li>启动虚拟机,进入安装程序</li>
+</ol>
+<div class="note info no-icon flat"><p>一般来说,vmware 都会自动识别系统镜像并加载无人值守程序,所以这一步应该不用你操心</p>
+</div>
+<h3 id="MBR、GPT-分区表转换"><a href="#MBR、GPT-分区表转换" class="headerlink" title="MBR、GPT 分区表转换"></a>MBR、GPT 分区表转换</h3><p>安装过程出现以下情况,请按照提示操作:</p>
+<details class="toggle" ><summary class="toggle-button" style="">说什么 GPT 分区表，什么 mbr 分区表不适用什么 EFI 啥的</summary><div class="toggle-content"><p>以下操作位于虚拟机。</p>
+<div class="note warning modern"><p>进行该操作之前,请先备份好数据,因为操作后无法恢复</p>
+<p>若要将磁盘转换为 GPT&#x2F;MBR 磁盘,请在转换磁盘前备份数据，因为会删除所有分区或卷。</p>
+</div>
+
+<ol>
+<li>按下 Shift + F10 打开命令提示符</li>
+<li>输入<code>DISKPART</code>回车进入磁盘管理命令行</li>
+<li>输入<code>list disk</code>查看磁盘列表</li>
+<li>输入<code>select disk 0</code>选择第一个磁盘</li>
+<li>输入<code>clean</code>清除所有分区</li>
+</ol>
+<p>如果是 mbr 分区表,不适用 efi<br>请参考</p>
+<ol start="6">
+<li>输入<code>convert gpt</code>转换为 gpt 分区表</li>
+</ol>
+<p>如果是 GPT 分区表,说什么不适用 legacy,请参考</p>
+<ol start="6">
+<li>输入<code>convert mbr</code>转换为 mbr 分区表</li>
+</ol>
+<p>然后<br>7. 输入<code>exit</code>退出命令行</p>
+</div></details>
+
+<p>然后等就可以了！</p>
+<p>系统装完了？ou，那就下一步吧</p>
+<h2 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h2><p>Windows Server 需要你在初次启动时设置内置管理员密码，对密码安全性要求很高，</p>
+<p>由于本次装系统是在一台没有任何外围设备的电脑上，所以需要在装系统后在虚拟机里配置好系统。</p>
+<h3 id="允许远程连接"><a href="#允许远程连接" class="headerlink" title="允许远程连接"></a>允许远程连接</h3><p>进入系统后</p>
+]]></content>
+  </entry>
+  <entry>
     <title>如何使用 Windows PE 安装操作系统(BIOS)</title>
     <url>/post/winsetup-Winpe_BIOS/index.html</url>
     <content><![CDATA[<p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
@@ -374,6 +471,59 @@ VolumeName  指定装入点的目标的卷名称。
       </tags>
   </entry>
   <entry>
+    <title>计算机名：你是来找茬的吧</title>
+    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</url>
+    <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
+<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
+<h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
+<p>计算机名一般与 hostname (主机名)相同</p>
+<p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p>
+<p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p>
+<p>计算机名位于注册表以下的几个位置: (经过筛选)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
+
+<p>更改这些注册表，可以强制修改计算机名。</p>
+<hr>
+<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
+<p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
+<p>使用此程序可以强制性修改计算机名</p>
+<p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
+<div class="admonition warning"><p class="admonition-title">警告
+</p><p>一定要用管理员启动！
+请在打开前关闭杀毒软件。
+在实体机上运行导致系统损坏，自行负责。</p>
+</div>
+
+<h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p>
+<p>重启试逝</p>
+<p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
+<pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;
+</code></pre>
+<h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p>
+<p>应用程序因’无足够内存’而无法打开</p>
+<p>电源选项失效</p>
+<p>命令提示符正常，但 shutdown 无法重启、关机</p>
+<pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作
+</code></pre>
+<p>重启后蓝屏</p>
+<pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏
+</code></pre>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li>CSDN - haiross - windows 通过修改注册表来修改主机名</li>
+</ol>
+<p><em>已复制</em>     <em>1 个文件。</em></p>
+<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
+      <tags>
+        <tag>tags</tag>
+        <tag>windows</tag>
+        <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文体样式表</title>
     <url>/post/%E6%B5%8B%E8%AF%95/index.html</url>
     <content><![CDATA[<p>标题文本</p>
@@ -417,7 +567,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#x6b;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;">&#102;&#x61;&#x6b;&#x65;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#x61;&#x6b;&#101;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x66;&#x61;&#x6b;&#101;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题
@@ -824,59 +974,6 @@ VolumeName  指定装入点的目标的卷名称。
 </tbody></table>
 <p>脚注测试<a href="HElp">^1</a><br>大脚注测试<a href="%E8%84%9A%E6%B3%A8%E6%B5%8B%E8%AF%952">^bignote</a></p>
 ]]></content>
-      <tags>
-        <tag>tags</tag>
-        <tag>windows</tag>
-        <tag>胡改</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机名：你是来找茬的吧</title>
-    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</url>
-    <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
-<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
-<h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
-<p>计算机名一般与 hostname (主机名)相同</p>
-<p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p>
-<p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p>
-<p>计算机名位于注册表以下的几个位置: (经过筛选)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
-
-<p>更改这些注册表，可以强制修改计算机名。</p>
-<hr>
-<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
-<p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
-<p>使用此程序可以强制性修改计算机名</p>
-<p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
-<div class="admonition warning"><p class="admonition-title">警告
-</p><p>一定要用管理员启动！
-请在打开前关闭杀毒软件。
-在实体机上运行导致系统损坏，自行负责。</p>
-</div>
-
-<h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p>
-<p>重启试逝</p>
-<p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
-<pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;
-</code></pre>
-<h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p>
-<p>应用程序因’无足够内存’而无法打开</p>
-<p>电源选项失效</p>
-<p>命令提示符正常，但 shutdown 无法重启、关机</p>
-<pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作
-</code></pre>
-<p>重启后蓝屏</p>
-<pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏
-</code></pre>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li>CSDN - haiross - windows 通过修改注册表来修改主机名</li>
-</ol>
-<p><em>已复制</em>     <em>1 个文件。</em></p>
-<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>
-]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
       <tags>
         <tag>tags</tag>
         <tag>windows</tag>

@@ -1,36 +1,99 @@
+setTimeout(function () {
+    Snackbar.show({
+        text: '正在加载文件...',
+        pos: 'top-center',
+        actionText: "",
+        onActionClick: function (element) {
+            window.open("")
+        },
+    })
+}, 2500)
 //首次访问弹窗
 if (localStorage.getItem("popWelcomeWindow") != "0") {
-    if(document.referrer==undefined||document.referrer.indexOf("yisous.xyz")!=-1||document.referrer.indexOf("ariasaka.top")!=-1){ //改成自己域名，注意是referrer!!! qwq
+    if(document.referrer==undefined||document.referrer.indexOf("blog.admincmd.xyz")!=-1||document.referrer.indexOf("blog.admincmd.xyz")!=-1){ //改成自己域名，注意是referrer!!! qwq
         Snackbar.show({
             pos: "top-right",
             showAction: false,
-            text: '欢迎访问本站！'
+            text: '欢迎访问本站！ 您正在使用 默认 部署源，如速度不合适，请 线路 > 切源'
         })
     }else{
-        Snackbar.show({
+        if(document.referrer==undefined||document.referrer.indexOf("vercel-blog.admincmd.xyz")!=-1){
+            Snackbar.show({
                 pos: "top-right",
                 showAction: false,
-                text: `欢迎访问本站！`
-                //text: `欢迎来自${document.referrer.split("://")[1].split("/")[0]}的访问本站！`
+                text: '欢迎访问本站！ 您正在使用 Vercel 部署源，如速度不合适，请 线路 > 切源'
             })
-        localStorage.setItem("popWelcomeWindow", "0");
+        }else{
+            if(document.referrer==undefined||document.referrer.indexOf("netlify-blog.admincmd.xyz")!=-1){
+                Snackbar.show({
+                    pos: "top-right",
+                    showAction: false,
+                    text: '欢迎访问本站！ 您正在使用 Netlify 部署源，如速度不合适，请 线路 > 切源'
+                })
+            }else{
+                if(document.referrer==undefined||document.referrer.indexOf("localhost:4000")!=-1){
+                    Snackbar.show({
+                        pos: "top-right",
+                        showAction: false,
+                        text: '您正在使用调试环境'
+                    })
+                }else{
+                    Snackbar.show({
+                            pos: "top-right",
+                            showAction: false,
+                            // text: `欢迎访问本站！`
+                            text: `欢迎从来自${document.referrer.split("://")[1].split("/")[0]}的访问本站！`
+                        })
+    localStorage.setItem("popWelcomeWindow", "0");
+        }
     }
 }
 if (sessionStorage.getItem("popCookieWindow") != "0") {
     setTimeout(function () {
         Snackbar.show({
-            text: 'INFO:本站使用 Cookie 和本地/会话存储 保证浏览体验和网站统计',
-            pos: 'bottom-right',
+            text: 'INFO 本站使用 Cookie 和本地 会话存储 保证浏览体验和网站统计',
+            pos: 'top-right',
             actionText: "查看博客声明",
             onActionClick: function (element) {
                 window.open("/license")
             },
         })
-    }, 3000)
+    }, 3500)
+    // setTimeout(function () {
+        // Snackbar.show({
+            // text: '控制面板位于 杂项 > 控制面板',
+            // pos: 'top-right',
+           //- // pos: 'bottom-right',
+            // actionText: "单击此处打开控制面板",
+            // onActionClick: function (element) {
+                // window.open("javascript:toggleWinbox()")
+            // },
+        // })
+    // }, 7500)
+    // setTimeout(function () {
+        // Snackbar.show({
+            // text: '控制面板位于 杂项 > 控制面板',
+            // pos: 'top-right',
+            // actionText: "单击此处打开控制面板",
+            // onActionClick: function (element) {
+                // window.open("javascript:toggleWinbox();")
+            // },
+        // })
+    // }, 7500)
 }
 //不在弹出Cookie提醒
 sessionStorage.setItem("popCookieWindow", "0");
 
+setTimeout(function () {
+    Snackbar.show({
+        text: '作者从不更新！',
+        pos: 'top-center',
+        actionText: "",
+        onActionClick: function (element) {
+            window.open("")
+        },
+    })
+}, 2500)
 //自带上文浏览器提示
 
 function browserTC() {
@@ -38,7 +101,13 @@ function browserTC() {
     Snackbar.show({
         text: '浏览器版本较低，网站样式可能错乱',
         actionText: 'OK',
-        duration: '6000',
+        duration: '16000',
+        pos: 'bottom-right'
+    });
+    Snackbar.show({
+        text: '调用失败',
+        actionText: '',
+        duration: '999999999',
         pos: 'bottom-right'
     });
 }

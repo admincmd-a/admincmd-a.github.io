@@ -6892,11 +6892,11 @@ blockquote.pullquote.right {
   
   .author-content-item.comic-content {
     width: 39%;
-    background: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/violet.jpg) no-repeat top;
+    background: url(https://s2.loli.net/2024/06/15/6uTkKIBWFCVcHAs.png) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
-    color: violet;
+    color: rgb(0, 0, 0);
   }
   .author-content-item.comic-content::after {
     box-shadow: 0 -48px 203px 11px #fbe9b8 inset;

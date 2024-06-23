@@ -1,5 +1,6 @@
 function browserTC() {
     btf.snackbarShow("");
+    window.location.href = '/ie_error.html';
     Snackbar.show({
         text: 'WARE: 不支持老旧浏览器，请更新浏览器，如您坚持使用，网站可能无法正常显示。',
         actionText: '关闭',

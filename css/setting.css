@@ -1,0 +1,276 @@
+/* 使用了Chrome105新特性has，兼容性不好 qwq */
+.con-rightside{
+    height:50px!important;  /* 设置高度为50px */
+    width: 50px!important;  /* 设置宽度为50px */
+    border-radius: 30px;  /* 设置边界圆角为30px */
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    margin:10px;  /* 设置外边距为10px */
+    transition: all .3s;  /* 设置所有属性的过渡效果 */
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.con-rightside:hover{
+    background-color: rgba(129, 129, 129, 0.568);  /* 鼠标悬浮时改变背景颜色 */
+}
+
+.con-rightside i::before{
+    font-size:30px;  /* 设置伪元素内容的字体大小为30px */
+}
+
+[data-theme="dark"] .con-rightside i::before{
+    color:rgb(0, 0, 0);  /* 在暗主题下伪元素内容的颜色为黑色 */
+}
+
+@media screen and (max-width:600px){
+    .con-rightside i::before{
+        font-size: 16px;  /* 在屏幕宽度小于600px时，伪元素内容的字体大小为16px */
+    }
+    .con-rightside{
+        height:20px!important;  /* 设置高度为20px */
+        width:20px!important;  /* 设置宽度为20px */
+    }
+}
+
+@media screen and (max-width:768px){
+    #con-barrage{
+        display: none!important;  /* 在屏幕宽度小于768px时隐藏元素 */
+    }   
+}
+
+#setting-buttons{
+    display: flex;  /* 使用弹性布局 */
+    flex-wrap: wrap;  /* 允许子元素换行 */
+}
+
+.setting-title{
+    text-align: center;  /* 文本居中 */
+    font-size: 30px;  /* 设置字体大小为30px */
+    display: flex;  /* 使用弹性布局 */
+}
+
+#setting-sides{
+    margin-left: auto;  /* 设置左边外边距自动 */
+}
+
+#setting-sides{
+    white-space: nowrap;  /* 禁止自动换行 */
+}
+
+#setting-sidesl{
+    display: flex;  /* 使用弹性布局 */
+}
+
+.settings .content{
+    margin-left:20px;  /* 设置左边外边距为20px */
+}
+
+.settings{
+    margin:15px;  /* 设置外边距为15px */
+    overflow: scroll;  /* 设置内容溢出为可滚动 */
+    width: 100%;  /* 设置宽度为100% */
+}
+
+/* 开关样式 */
+.settings input[type="checkbox"] {
+    width: 38px;  /* 设置宽度为38px */
+    height: 20px;  /* 设置高度为20px */
+    position: relative;  /* 设置相对定位 */
+    border: 1px solid #000000;  /* 设置边框颜色 */
+    background-color: transparent;  /* 设置背景色为透明 */
+    border-radius: 12px;  /* 设置边界圆角为12px */
+    background-clip: content-box;  /* 背景裁剪模式 */
+    display: inline-block;  /* 设置为内联块元素 */
+    -webkit-appearance: none;  /* 禁用默认样式 */
+    user-select: none;  /* 禁止文本选择 */
+    outline: none;  /* 禁用轮廓 */
+    transform: translateY(5px);  /* 垂直平移5px */
+}
+
+[data-theme="dark"] .settings input[type="checkbox"] {
+    border: 1px solid rgb(61, 61, 61);  /* 在暗主题下设置边框颜色 */
+}
+
+.settings input[type="checkbox"]:before {
+    content: '';  /* 插入空内容 */
+    width: 12px;  /* 设置宽度为12px */
+    height: 12px;  /* 设置高度为12px */
+    position: absolute;  /* 设置绝对定位 */
+    top: 3px;  /* 设置顶部位置 */
+    left: 5px;  /* 设置左侧位置 */
+    border-radius: 10px;  /* 设置边界圆角为10px */
+    background-color: #000;  /* 设置背景色为黑色 */
+}
+
+[data-theme="dark"] .settings input[type="checkbox"]:before {
+    background-color: rgb(61, 61, 61);  /* 在暗主题下设置背景色 */
+}
+
+.settings input[type="checkbox"]:checked {
+    background-color: var(--lyx-theme);  /* 选中时的背景色 */
+    border-color:var(--lyx-theme);  /* 选中时的边框颜色 */
+}
+
+.settings input[type="checkbox"]:checked:before {
+    left: 19px;  /* 改变伪元素位置 */
+    background-color: rgb(0, 0, 0)!important;  /* 选中时伪元素的背景颜色 */
+}
+
+.settings input[type="checkbox"] {
+    transition: border background-color box-shadow;  /* 设置过渡效果 */
+}
+
+.settings input[type="checkbox"]:before {
+    transition: left 0.2s;  /* 设置伪元素位置的过渡效果 */
+}
+
+.settings input[type="checkbox"]:checked {
+    background-color: var(--lyx-theme);  /* 选中时的背景色 */
+}
+
+.settings input[type="checkbox"]:checked:before {
+    transition: left 0.2s;  /* 设置伪元素位置的过渡效果 */
+}
+
+.settings input[type="checkbox"]:checked:hover {
+    opacity: 0.8;  /* 鼠标悬浮时改变透明度 */
+}
+
+.settings input[type="checkbox"]:active {
+    background-color: #666666!important;  /* 激活时的背景色 */
+    border-color:#666666!important;  /* 激活时的边框颜色 */
+}
+
+.settings input[type="checkbox"]:active::before {
+    background-color:rgb(153, 153, 153)!important;  /* 激活时伪元素的背景颜色 */
+}
+
+#settingWindow{
+    position: fixed;  /* 固定定位 */
+    display: block;  /* 设置为块级元素 */
+    width: 80%;  /* 设置宽度为80% */
+    max-width: 800px;  /* 最大宽度800px */
+    left: 50%;  /* 水平居中 */
+    top: 50%;  /* 垂直居中 */
+    max-height: 80%;  /* 最大高度80% */
+    background-color: #999999dd;  /* 设置背景色 */
+    border-radius: 20px;  /* 设置边界圆角为20px */
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 1px solid var(--lyx-border);  /* 设置边框颜色 */
+    padding:30px;  /* 设置内边距为30px */
+    backdrop-filter: blur(10px);  /* 设置背景模糊效果 */
+    -ms-transform-origin-y: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    z-index: 514;  /* 设置堆叠顺序 */
+    display: none;  /* 设置为不显示 */
+}
+
+#settingWindow{
+    display: none;  /* 设置为不显示 */
+    flex-direction: column;  /* 设置为列方向的弹性布局 */
+}
+
+.settingx{
+    width: 46%;  /* 设置宽度为46% */
+    text-align: left;  /* 左对齐文本 */
+    font-size: 28px;  /* 设置字体大小为28px */
+    padding: 10px;  /* 设置内边距为10px */
+    margin: 10px;  /* 设置外边距为10px */
+    background-color: var(--lyx-light-grey);  /* 设置背景色 */
+    opacity: 0.8;  /* 设置透明度 */
+    border-radius: 10px;  /* 设置边界圆角为10px */
+}
+
+.settingx:hover{
+    background-color: var(--lyx-gray);  /* 鼠标悬浮时改变背景色 */
+}
+
+.settingx i{
+    margin: 5px;  /* 设置外边距为5px */
+}
+
+@media screen and (max-width:768px){
+    .settingx{
+        width:100%!important;  /* 在屏幕宽度小于768px时宽度为100% */
+    }
+}
+
+.setting-title{
+    text-align: start;  /* 左对齐文本 */
+    font-size: 30px;  /* 设置字体大小为30px */
+    display: flex;  /* 使用弹性布局 */
+    color: #000000;
+}
+
+#close-console{
+    text-align: right;  /* 右对齐文本 */
+}
+
+#stt, #close-console{
+    margin-left: auto;  /* 左外边距自动 */
+}
+
+#close-console:not(#close-console:hover){
+    color: var(--global-font-color);  /* 设置颜色 */
+}
+
+@font-face {
+    font-family: 'DDJB';  /* 定义字体名称 */
+    src: url('/font/DingTalk_JinBuTi.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'HMBO';  /* 定义字体名称 */
+    src: url('/font/HARMONYOS_SANS_SC_BOLD.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'SHBO';  /* 定义字体名称 */
+    src: url('/font/SourceHanSansHWSC-Bold.otf') format('otf');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'SHRE';  /* 定义字体名称 */
+    src: url('/font/SourceHanSansHWSC-Regular.otf') format('otf'); /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'HMLI';  /* 定义字体名称 */
+    src: url('/font/HARMONYOS_SANS_SC_LIGHT.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'HMME';  /* 定义字体名称 */
+    src: url('/font/HARMONYOS_SANS_SC_MEDIUM.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'ALSH';  /* 定义字体名称 */
+    src: url('/font/AlimamaShuHeiTi-Bold.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'ALSI';  /* 定义字体名称 */
+    src: url('/font/AlimamaShuHeiTi-Regular.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'ALSM';  /* 定义字体名称 */
+    src: url('/font/AlimamaShuHeiTi-Medium.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
+
+@font-face {
+    font-family: 'FZXS';  /* 定义字体名称 */
+    src: url('/font/HYPixel-11px-U.woff') format('woff');  /* 定义字体文件路径和格式 */
+}
