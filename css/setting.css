@@ -224,53 +224,53 @@
 #close-console:not(#close-console:hover){
     color: var(--global-font-color);  /* 设置颜色 */
 }
-
-@font-face {
-    font-family: 'DDJB';  /* 定义字体名称 */
-    src: url('/font/DingTalk_JinBuTi.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'HMBO';  /* 定义字体名称 */
-    src: url('/font/HARMONYOS_SANS_SC_BOLD.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'SHBO';  /* 定义字体名称 */
-    src: url('/font/SourceHanSansHWSC-Bold.otf') format('otf');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'SHRE';  /* 定义字体名称 */
-    src: url('/font/SourceHanSansHWSC-Regular.otf') format('otf'); /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'HMLI';  /* 定义字体名称 */
-    src: url('/font/HARMONYOS_SANS_SC_LIGHT.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'HMME';  /* 定义字体名称 */
-    src: url('/font/HARMONYOS_SANS_SC_MEDIUM.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'ALSH';  /* 定义字体名称 */
-    src: url('/font/AlimamaShuHeiTi-Bold.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'ALSI';  /* 定义字体名称 */
-    src: url('/font/AlimamaShuHeiTi-Regular.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'ALSM';  /* 定义字体名称 */
-    src: url('/font/AlimamaShuHeiTi-Medium.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
-
-@font-face {
-    font-family: 'FZXS';  /* 定义字体名称 */
-    src: url('/font/HYPixel-11px-U.woff') format('woff');  /* 定义字体文件路径和格式 */
-}
+/*  */
+/* @font-face { */
+    font-family: 'DDJB';  定义字体名称
+    src: url('/font/DingTalk_JinBuTi.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'HMBO';  定义字体名称
+    src: url('/font/HARMONYOS_SANS_SC_BOLD.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'SHBO';  定义字体名称
+    src: url('/font/SourceHanSansHWSC-Bold.otf') format('otf');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'SHRE';  定义字体名称
+    src: url('/font/SourceHanSansHWSC-Regular.otf') format('otf'); 定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'HMLI';  定义字体名称
+    src: url('/font/HARMONYOS_SANS_SC_LIGHT.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'HMME';  定义字体名称
+    src: url('/font/HARMONYOS_SANS_SC_MEDIUM.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'ALSH';  定义字体名称
+    src: url('/font/AlimamaShuHeiTi-Bold.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'ALSI';  定义字体名称
+    src: url('/font/AlimamaShuHeiTi-Regular.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'ALSM';  定义字体名称
+    src: url('/font/AlimamaShuHeiTi-Medium.woff') format('woff');  定义字体文件路径和格式
+/* } */
+/*  */
+/* @font-face { */
+    font-family: 'FZXS';  定义字体名称
+    src: url('/font/HYPixel-11px-U.woff') format('woff');  定义字体文件路径和格式
+/* } */
