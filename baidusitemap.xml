@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.admincmd.xyz/post/hexo-butterfiy-cb-sgfs/index.html</loc>
+    <lastmod>2024-06-24</lastmod>
+  </url>
+  <url>
     <loc>https://blog.admincmd.xyz/post/Setup-system-com-vm2dm/index.html</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
   </url>
   <url>
     <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_BIOS/index.html</loc>

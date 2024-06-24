@@ -7,15 +7,15 @@ body
 }
 .progress-bar {
   width: 100%;
-  background-color: #ddd;
-  border-radius: 5px;
+  background-color: #ddd;/*进度条背景色*/
+  border-radius: 5px;/*圆角*/
   overflow: hidden;
 }
 .progress-bar-inner {
-  height: 15px;
-  background-color: #4caf50;
+  height: 15px;/*进度条高度*/
+  background-color: #4caf50;/*进度条颜色*/
   text-align: center;
-  color: white;
+  color: white;/*背景颜色*/
   line-height: 20px;
-  transition: width 1.5s;
+  transition: width 1.5s;/*一次到目标位置的速度*/
 }

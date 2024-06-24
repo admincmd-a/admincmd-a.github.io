@@ -1,3 +1,4 @@
+// 史山一坨
 function updateProgressBars() {
   const now = new Date();
   // const yearProgress = (now.getTime() / new Date(now.getFullYear(), 0, 1).getTime()) * 100;
@@ -20,13 +21,13 @@ function updateProgressBars() {
   const hourProgress = ((now.getTime() - hourStart) / (hourEnd - hourStart)) * 100;
 
 
-  const minuteProgress = (now.getSeconds() / 60) * 100;
+  const minuteProgress = (now.getSeconds() / 60) * 100;// 计算已过分钟百分比
 
   document.getElementById('year-progress').textContent = yearProgress.toFixed(5) + '%';
-  document.getElementById('year-progress-bar').style.width = yearProgress.toFixed(5) + '%';
+  document.getElementById('year-progress-bar').style.width = yearProgress.toFixed(5) + '%';// 宽度百分比
 
   document.getElementById('month-progress').textContent = monthProgress.toFixed(5) + '%';
-  document.getElementById('month-progress-bar').style.width = monthProgress.toFixed(5) + '%';
+  document.getElementById('month-progress-bar').style.width = monthProgress.toFixed(5) + '%';// 同上
 
   document.getElementById('day-progress').textContent = dayProgress.toFixed(5) + '%';
   document.getElementById('day-progress-bar').style.width = dayProgress.toFixed(5) + '%';
@@ -36,6 +37,7 @@ function updateProgressBars() {
 
   document.getElementById('minute-progress').textContent = minuteProgress.toFixed(5) + '%';
   document.getElementById('minute-progress-bar').style.width = minuteProgress.toFixed(5) + '%';
+
 }
 
-setInterval(updateProgressBars, 1000);
+setInterval(updateProgressBars, 1000);//每秒更新一次
