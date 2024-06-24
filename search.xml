@@ -7,9 +7,13 @@
 <p>未备份数据，造成硬盘内文件丢失，作者不承担任何责任。</p>
 <p>按照下列方法，如您继续，则默认您同意我们的声明。</p>
 </div>
+<div class="note info modern"><p>建议你先将文章过一遍，这样可以更清楚的知道自己下一步要干什么。</p>
+<p>注意：本文配图与代码框内有出入，请以围栏代码框内为准</p>
+</div>
 <h1 id="前絮"><a href="#前絮" class="headerlink" title="前絮"></a>前絮</h1><p>这台电脑是我家里的一台老电脑，已经很久没有使用了，但是我想在上面安个 Windows Server，整个服务器使</p>
 <p>这台电脑没有任何东东，除了一张PCI网卡，没有任何其他的东西（对，TM 连显卡都没有），所以装系统肯定会有很多麻烦<del>根本就没法装系统</del>。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先,我们要找台可以跑虚拟机的电脑<br>然后找张固态盘,拉来装系统<br>然后在准备一个系统镜像,可以从 这里下载 &lt;<br>其他东西应该不用说吧</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>首先,我们要找台可以跑虚拟机的电脑<br>然后找张固态盘（机械盘也行<del>，不过——太——慢——了</del>）,拉来装系统<br>然后在准备一个系统镜像,可以从 <a class="btn-beautify " href="/zy/www/" 
+  title="这个页面"><span>这个页面</span></a> 下载。<br>其他东西应该不用说吧</p>
 <h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p>如果想直接在磁盘上进行分区并应用镜像,其参考本文章</p>
 <!-- 如果想使用虚拟磁盘进行启动,请参考 <https://admincmd.xyz/post/Setup-system-com-no-vhd> -->
 
@@ -18,7 +22,7 @@
 <!-- 如果想要用其他的虚拟机软件，请转到 <https://admincmd.xyz/post/Setup-system-com-no-vhd> 参考虚拟磁盘安装方法 -->
 <!-- </div> -->
 
-<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><p>装 VMware<br>打开 VMware Workstation，选择新建虚拟机<br>这一步应该不用说吧？</p>
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><p>装 VMware<br>打开 VMware Workstation，选择新建虚拟机<br>上面这几步应该不用说吧？</p>
 <ol>
 <li><p>到<code>安装操作系统</code>这一步,请在<code>安装程序光盘映像文件</code>这一栏选择你选下载的系统镜像</p>
 </li>
@@ -30,7 +34,7 @@
 <div class="note warning simple"><p>一定要注意,以你要安装的电脑相符,否则操作系统 99% 无法启动</p>
 <p>一般来讲,uefi 的电脑,其安全启动默认开启,所以是 uefi 的电脑最好把安全启动也给勾上,免得出一些奇怪的问题</p>
 </div>
-<div class="note simple"><p>如果你的电脑比较老,比如是 11 年的,那基本确定是 BIOS ,如果电脑很新,比如是 23 年的,那基本确定是 UEFI </p>
+<div class="note simple"><p>如果你的电脑比较老,比如是 11 年的,那基本确定是 BIOS ,如果电脑很新,比如是 21 年的,那基本确定是 UEFI </p>
 <p>不过如果你不知道,自己去问度娘,或者去bing找一下</p>
 </div>
 </li>
@@ -45,7 +49,7 @@
     </button><div class="hide-content"><p>很简单,一个一个猜去</p>
 </div></div>
 <details class="toggle" ><summary class="toggle-button" style="">......</summary><div class="toggle-content"><ol>
-<li><p>按下 Win + R 打开运行框<br><del>啊没错,就是被营销号玩坏的那个运行框</del></p>
+<li><p>按下 Win + R 打开运行框</p>
 </li>
 <li><p>输入<code>diskmgmt.msc</code>回车打开磁盘管理</p>
 </li>
@@ -55,12 +59,13 @@
 </li>
 </ol>
 <p><code>磁盘 3</code> 就是 <code>PhysicalDrive 3</code> 等等</p>
+<p>没有就退出重进</p>
 <ol start="5">
 <li>使用情况就选<code>整个磁盘</code>即可</li>
 </ol>
 </div></details>
 
-<p>其他的不用管</p>
+<p>其他的不用管，下一步完成即可</p>
 <h2 id="安装系统-1"><a href="#安装系统-1" class="headerlink" title="安装系统"></a>安装系统</h2><ol>
 <li>启动虚拟机,进入安装程序</li>
 </ol>
@@ -73,12 +78,17 @@
 </div>
 
 <ol>
-<li>按下 Shift + F10 打开命令提示符</li>
+<li>按下 <code>Shift + F10</code> 打开命令提示符</li>
 <li>输入<code>DISKPART</code>回车进入磁盘管理命令行</li>
 <li>输入<code>list disk</code>查看磁盘列表</li>
 <li>输入<code>select disk 0</code>选择第一个磁盘</li>
 <li>输入<code>clean</code>清除所有分区</li>
 </ol>
+<div class="note info modern"><p>若要删除受保护的磁盘（如类型为“系统”与“保留”），则需要在 Delete Partition 命令后添加 Override 参数<br>如果需要一次性将磁盘上所有分区删除，请使用 Clean 命令</p>
+<p>例如直接使用<code>Delete Partition</code>命令删除则会返回<br>    虚拟磁盘服务错误:<br>    如果不设置强制保护参数设置，则无法删除受保护的分区</p>
+<p>而使用<code>Delete Partition Override</code>命令删除则会返回<br>    DISKPART 成功删除了所选分区</p>
+</div>
+
 <p>如果是 mbr 分区表,不适用 efi<br>请参考</p>
 <ol start="6">
 <li>输入<code>convert gpt</code>转换为 gpt 分区表</li>
@@ -89,13 +99,39 @@
 </ol>
 <p>然后<br>7. 输入<code>exit</code>退出命令行</p>
 </div></details>
-
+<p>下一步即可</p>
 <p>然后等就可以了！</p>
 <p>系统装完了？ou，那就下一步吧</p>
 <h2 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h2><p>Windows Server 需要你在初次启动时设置内置管理员密码，对密码安全性要求很高，</p>
-<p>由于本次装系统是在一台没有任何外围设备的电脑上，所以需要在装系统后在虚拟机里配置好系统。</p>
-<h3 id="允许远程连接"><a href="#允许远程连接" class="headerlink" title="允许远程连接"></a>允许远程连接</h3><p>进入系统后</p>
+<p>本次装系统是在一台没有任何外围设备的电脑上，所以需要在装系统后在虚拟机里配置好系统。</p>
+<p>此处省略该段，以你使用它的方式决定，列如允许远程连接、自定启动项……</p>
+<h1 id="物理机调配"><a href="#物理机调配" class="headerlink" title="物理机调配"></a>物理机调配</h1><p>把跑虚拟机的电脑关机</p>
+<p>将你插上去的那张盘拔下来，咋装的咋拔<br>然后将盘插回之前的那台电脑</p>
+<p>开机<br>要检测你的电脑是否已进入系统，有一个很简单的方法</p>
+<p>把网线插入到电脑，看看指示灯是否亮起</p>
+<div class="note warning modern"><p>请确保网卡驱动已正确安装！网线已正确插入<br>虚拟机内好了不代表现在就好</p>
+</div>
+
+<h2 id="如果没好……"><a href="#如果没好……" class="headerlink" title="如果没好……"></a>如果没好……</h2><p>将电脑关机</p>
+<p>把除系统盘以外的盘全部断开数据线连接<br>好，再开机</p>
+<p>把网线插入到电脑，看看指示灯是否亮起</p>
+<div class="note warning modern"><p>请确保网卡驱动已正确安装！网线已正确插入</p>
+</div>
+
+<div class="hide-block"><button type="button" class="hide-button" style="">如果还没好
+    </button><div class="hide-content"><p>把电脑砸了！</p>
+<p>找张显卡吧……</p>
+</div></div>
+
+<p>好了，就这样了。</p>
 ]]></content>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Windows 安装</tag>
+        <tag>VMware</tag>
+        <tag>虚拟机</tag>
+        <tag>物理机</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何使用 Windows PE 安装操作系统(BIOS)</title>
@@ -111,11 +147,12 @@
 </div>
 
 <div class="note success modern"><p>建议你先将文章过一遍，这样可以更清楚的知道自己下一步要干什么。</p>
+<p>注意：本文大部配图与代码框内有出入，请以围栏代码框内为准</p>
 </div>
 <h1 id="分配磁盘"><a href="#分配磁盘" class="headerlink" title="分配磁盘"></a>分配磁盘</h1><p>使用 CMD 运行以下命令</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">DiskPart</span><br><span class="line">List Disk</span><br></pre></td></tr></table></figure>
-<div class="note default simple"><p>如果你已经完成此操作(或已经分区)，请移步左侧目录‘安装系统’</p>
-<p>如果你的磁盘已经准备好了，(空白的)就请移步左侧目录‘创建分区’</p>
+<div class="note default simple"><p>如果你已经完成此操作(或已经分区)，请移步右侧目录‘安装系统’</p>
+<p>如果你的磁盘已经准备好了，(空白的)就请移步右侧目录‘创建分区’</p>
 </div>
 
 <p>使用 DISKPART 查看当前计算机的磁盘</p>
@@ -126,6 +163,7 @@
 </code></pre>
 <p>确定好需要的磁盘，输入命令，将其设为选中状态</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="comment">rem Select Disk &lt;磁盘编号&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem 例如如果你需要选择磁盘 0 则命令如下</span></span><br><span class="line"></span><br><span class="line">Select Disk <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.loli.net/2024/06/23/mgvUPYh6VMtuWbx.png" alt="QQ20240619210151.png"></p>
 <h2 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h2><p>如果你的磁盘上有其他分区，想删除它们，请参照以下步骤：</p>
 <p>首先列出磁盘上已有分区</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">List Partition</span><br></pre></td></tr></table></figure>
@@ -155,9 +193,10 @@
 </div>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Create Partition Primary Size=&lt;分区大小&gt;</span><br><span class="line">Convert MBR</span><br><span class="line">REM Convert MBR 将磁盘转换为 MBR</span><br><span class="line">REM 分区大小以 MiB 为单位，（微软常常写成‘MB、GB’，事实上MB、GB和MiB、GiB是两种不同的单位）</span><br><span class="line">REM 1GiB=1024MiB 1GB=1000MB 以此类推，所以系统所报告的硬盘大小与硬盘标称大小通常要小。</span><br><span class="line"></span><br><span class="line">REM 例如我需要创建一个大小为 50GiB 的主分区作为系统盘，9GiB 的主分区作为其它盘则命令如下</span><br><span class="line"></span><br><span class="line">Create Partition Primary Size=51200</span><br><span class="line">Create Partition Primary Size=9216</span><br></pre></td></tr></table></figure>
 
+<p><img src="https://s2.loli.net/2024/06/23/PLvy5iSRh3jNYGu.png" alt="QQ20240619210234.png"></p>
 <h2 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h2><p>使用以下命令格式化主分区</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">REM List Partition</span><br><span class="line">REM Select Partition &lt;分区编号&gt;</span><br><span class="line">REM Format fs=NTFS Quick</span><br><span class="line">REM Assign Letter=&lt;盘符&gt;</span><br><span class="line"></span><br><span class="line">REM 例如需要格式化第 1 个分区，文件系统为 NTFS 并快速格式化，盘符为 C，则命令如下(将盘 1 作为系统安装盘)</span><br><span class="line"></span><br><span class="line">List Partition</span><br><span class="line">Select Partition 1</span><br><span class="line">Format fs=NTFS Quick</span><br><span class="line">Assign Letter=C</span><br><span class="line">Active</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>看着都完成，没出错，就可以按<code>exit</code>退出DISKPART了</p>
+<p><img src="https://s2.loli.net/2024/06/23/phNKtHLiz1emgWE.png" alt="QQ20240619210747.png"><br>看着都完成，没出错，就可以按<code>exit</code>退出DISKPART了</p>
 <h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p>首先确定你要安装啥系统</p>
 <div class="note info modern"><p>如果不知道原版系统从哪下，到<a class="btn-beautify " href="/zy/www/" 
   title="这个页面"><span>这个页面</span></a>找到原版系统资源分区找个站去下。</p>
@@ -210,15 +249,19 @@
 
 <p>把上面命令跑一下就可以重启了</p>
 <div class="note info modern"><p>重启后进入 OOBE 开箱体验阶段</p>
-</div>]]></content>
+</div>
+<p><img src="https://s2.loli.net/2024/06/23/mb8qRaZf4o6t3s5.png" alt="QQ20240619211645.png"></p>
+]]></content>
       <categories>
+        <category>教程</category>
         <category>Windows 安装</category>
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>教程</tag>
         <tag>Windows 欲安装环境</tag>
         <tag>安装 Windows</tag>
+        <tag>BIOS</tag>
+        <tag>Legacy</tag>
       </tags>
   </entry>
   <entry>
@@ -229,17 +272,16 @@
 </div>
 <div class="note success modern"><p>本文中所使用安装系统可以为 Windows 8 、Windows 8.1 、Windows 10、WIndows 11  即 wim \ esd 映像的Windows操作系统。(不过需要支持 EFI)</p>
 </div>
-
-<div class="admonition error"><p class="admonition-title">不支持的操作系统
-</p><p>该教程不适用于 Windows 7 及以下的操作系统</p>
+<div class="note danger modern"><p>不支持的操作系统<br>该教程不适用于 Windows 7 及以下的操作系统</p>
 </div>
-
 <div class="note warning modern"><p>尽管 Windows 7 支持 EFI 环境，但是鉴于其安装复杂，因此这里标不支持<br><del>我装过，关安全启动、关大小核、关这关那，还不能急着打驱动，麻烦，适合装逼，还成功了</del></p>
 </div>
-<div class="note success modern"><p>建议你先将文章过一遍，这样可以更清楚的知道自己下一步要干什么。</p>
+<div class="note info modern"><p>建议你先将文章过一遍，这样可以更清楚的知道自己下一步要干什么。</p>
+<p>注意：本文大部配图与代码框内有出入，请以围栏代码框内为准</p>
 </div>
 
 <p>啥时候才有人看到注意的启动方式是 BIOS (Legacy) (错误的)呢？</p>
+<hr>
 <h1 id="分配磁盘"><a href="#分配磁盘" class="headerlink" title="分配磁盘"></a>分配磁盘</h1><p>使用 CMD 运行以下命令</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">DiskPart</span><br><span class="line">List Disk</span><br></pre></td></tr></table></figure>
 <div class="note default simple"><p>如果你已经完成此操作(或已经分区)，请移步左侧目录‘安装系统’</p>
@@ -254,6 +296,7 @@
 </code></pre>
 <p>确定好需要的磁盘，输入命令，将其设为选中状态</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="comment">rem Select Disk &lt;磁盘编号&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">rem 例如如果你需要选择磁盘 0 则命令如下</span></span><br><span class="line"></span><br><span class="line">Select Disk <span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.loli.net/2024/06/23/mgvUPYh6VMtuWbx.png" alt="QQ20240619210151.png"></p>
 <h2 id="删除分区"><a href="#删除分区" class="headerlink" title="删除分区"></a>删除分区</h2><p>如果你的磁盘上有其他分区，想删除它们，请参照以下步骤：</p>
 <p>首先列出磁盘上已有分区</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">List Partition</span><br></pre></td></tr></table></figure>
@@ -284,10 +327,10 @@
 <p>如果将 Size&#x3D;&lt;分区大小&gt; 这个参数去掉，则会默认将该磁盘的所有可用的空间创建为一个分区</p>
 </div>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rem Create Partition Primary Size=&lt;分区大小&gt;</span><br><span class="line"></span><br><span class="line">REM 分区大小以 MiB 为单位，（微软常常写成‘MB、GB’，事实上MB、GB和MiB、GiB是两种不同的单位）</span><br><span class="line">REM 1GiB=1024MiB 1GB=1000MB 以此类推，所以系统所报告的硬盘大小与硬盘标称大小通常要小。</span><br><span class="line"></span><br><span class="line">REM 例如我需要创建一个大小为 50GiB 的主分区作为系统盘，9GiB 的主分区作为其它盘则命令如下</span><br><span class="line"></span><br><span class="line">Create Partition Primary Size=51200</span><br><span class="line">Create Partition Primary Size=9216</span><br></pre></td></tr></table></figure>
-
+<p>再举个例子：<br><img src="https://s2.loli.net/2024/06/23/PLvy5iSRh3jNYGu.png" alt="QQ20240619210234.png"></p>
 <h2 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h2><p>使用以下命令格式化主分区</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">REM List Partition</span><br><span class="line">REM Select Partition &lt;分区编号&gt;</span><br><span class="line">REM Format fs=NTFS Quick</span><br><span class="line">REM Assign Letter=&lt;盘符&gt;</span><br><span class="line"></span><br><span class="line">REM 例如需要格式化第 2 个分区，文件系统为 NTFS 并快速格式化，盘符为 C，则命令如下(将盘 1 作为系统安装盘)</span><br><span class="line"></span><br><span class="line">List Partition</span><br><span class="line">Select Partition 2</span><br><span class="line">Format fs=NTFS Quick</span><br><span class="line">Assign Letter=C</span><br><span class="line">Active</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>与 BIOS 不同的是，EFI 需要格式化 EFI 分区</p>
+<p><img src="https://s2.loli.net/2024/06/23/phNKtHLiz1emgWE.png" alt="QQ20240619210747.png"><br>与 BIOS 不同的是，EFI 需要格式化 EFI 分区</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">REM List Partition</span><br><span class="line">REM Select Partition &lt;分区编号&gt;</span><br><span class="line">REM Format fs=FAT32 Quick Label=System</span><br><span class="line">REM Assign Letter=Z</span><br><span class="line"></span><br><span class="line">REM 若我 EFI 分区是第 1 个，需要将 EFI 分区格式化为 FAT32，盘符为 Z，则命令如下</span><br><span class="line"></span><br><span class="line">List Partition</span><br><span class="line">Select Partition 1</span><br><span class="line">Format fs=FAT32 Quick Label=System</span><br><span class="line">Assign Letter=Z</span><br></pre></td></tr></table></figure>
 <p>看着都完成，没出错，就可以按<code>exit</code>退出DISKPART了</p>
 <h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p>首先确定你要安装啥系统</p>
@@ -333,7 +376,7 @@
 <h2 id="安装映像"><a href="#安装映像" class="headerlink" title="安装映像"></a>安装映像</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">REM DISM.exe /Apply-Image /ImageFile:&lt;WIM/ESD 路径&gt; /Index:&lt;映像版本&gt; /ApplyDir:&lt;安装盘符&gt;:\</span><br><span class="line"></span><br><span class="line">REM 假如我存放在 E 盘下的 \Sources\install.wim，需要安装第一个版本，并安装在 C 盘，则命令如下</span><br><span class="line"></span><br><span class="line">DISM.exe /Apply-Image /ImageFile:E:\Sources\install.wim /Index:1 /ApplyDir:C:\</span><br></pre></td></tr></table></figure>
 
 <p>由于刚才我们已经为系统盘设置盘符，所以 <code>&lt;安装盘符&gt;</code> 可以不用改<br>&lt;映像版本&gt; 请根据 ‘查看版本’那一步的索引进行选择</p>
-<p>看到下面这个东东就说明正在部署</p>
+<p>看到下面这个东东就说明正在应用</p>
 <pre><code>正在应用镜像
 [                     0.0%                     ]
 </code></pre>
@@ -343,8 +386,12 @@
 <pre><code>把上面命令跑一下就可以重启了
 </code></pre>
 <div class="note info modern"><p>重启后进入 OOBE 开箱体验阶段</p>
-</div>]]></content>
+</div>
+
+<p><img src="https://s2.loli.net/2024/06/23/mb8qRaZf4o6t3s5.png" alt="QQ20240619211645.png"></p>
+]]></content>
       <categories>
+        <category>教程</category>
         <category>Windows 安装</category>
       </categories>
       <tags>
@@ -352,6 +399,8 @@
         <tag>教程</tag>
         <tag>Windows 欲安装环境</tag>
         <tag>安装 Windows</tag>
+        <tag>EFI</tag>
+        <tag>UEFI</tag>
       </tags>
   </entry>
   <entry>

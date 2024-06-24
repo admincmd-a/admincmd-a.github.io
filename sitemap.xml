@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.admincmd.xyz/favi/index.html</loc>
+    <loc>https://blog.admincmd.xyz/post/Setup-system-com-vm2dm/index.html</loc>
+    
+    <lastmod>2024-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_BIOS/index.html</loc>
+    
+    <lastmod>2024-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_EFI/index.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -20,9 +38,9 @@
   </url>
   
   <url>
-    <loc>https://blog.admincmd.xyz/post/Setup-system-com-vm2dm/index.html</loc>
+    <loc>https://blog.admincmd.xyz/favi/index.html</loc>
     
-    <lastmod>2024-06-22</lastmod>
+    <lastmod>2024-06-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -92,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_EFI/index.html</loc>
-    
-    <lastmod>2024-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.admincmd.xyz/bd_LINK/index.html</loc>
     
     <lastmod>2024-06-04</lastmod>
@@ -140,15 +149,6 @@
     <loc>https://blog.admincmd.xyz/essay/index.html</loc>
     
     <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_BIOS/index.html</loc>
-    
-    <lastmod>2024-05-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -265,7 +265,7 @@
 
   <url>
     <loc>https://blog.admincmd.xyz/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -273,49 +273,105 @@
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/Windows/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/Windows-%E6%AC%B2%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/%E5%AE%89%E8%A3%85-Windows/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/tags/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/windows/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/%E8%83%A1%E6%94%B9/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/BIOS/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/Legacy/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/EFI/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/UEFI/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/Windows-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/VMware/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/%E7%89%A9%E7%90%86%E6%9C%BA/</loc>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -323,15 +379,22 @@
 
   
   <url>
-    <loc>https://blog.admincmd.xyz/categories/Windows-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <loc>https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2024-06-23</lastmod>
+    <loc>https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/Windows-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
