@@ -135,6 +135,14 @@ if(m==7&&dd==1){//建党节
         sessionStorage.setItem("isPopupWindow","1");
     }
 }
+if(m==6&&dd==25){//建党节
+    console.log("中国共产党"+(y-1921).toString()+"岁生日快乐");
+    if(sessionStorage.getItem("isPopupWindow")!="1"){
+        Swal.fire("中国共产党"+(y-1921).toString()+"岁生日快乐");
+        sessionStorage.setItem("isPopupWindow","1");
+    }
+}
+
 
 //传统节日部分
 

@@ -1,4 +1,5 @@
 https://blog.admincmd.xyz/post/hexo-butterfiy-cb-sgfs/index.html
+https://blog.admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html
 https://blog.admincmd.xyz/log/index.html
 https://blog.admincmd.xyz/license/index.html
 https://blog.admincmd.xyz/post/Setup-system-com-vm2dm/index.html
@@ -14,7 +15,6 @@ https://blog.admincmd.xyz/favi/email.html
 https://blog.admincmd.xyz/bd_LINK/index.html
 https://blog.admincmd.xyz/link/index.html
 https://blog.admincmd.xyz/favi/time.html
-https://blog.admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html
 https://blog.admincmd.xyz/essay/index.html
 https://blog.admincmd.xyz/zy/www/index.html
 https://blog.admincmd.xyz/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html

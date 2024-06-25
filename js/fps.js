@@ -1,4 +1,4 @@
-// if(window.localStorage.getItem("fpson")=="1"){
+if(window.localStorage.getItem("fpson")=="1"){
 //如果要使博客设置上面的设置项能生效，就把上面一行取消注释
 var rAF = function () {
     return (

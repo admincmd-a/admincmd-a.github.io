@@ -633,7 +633,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#97;&#x6b;&#x65;&#64;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#46;&#x63;&#x6f;&#109;">&#x66;&#97;&#x6b;&#x65;&#64;&#x65;&#120;&#97;&#109;&#x70;&#108;&#x65;&#46;&#x63;&#x6f;&#109;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#x61;&#x6b;&#101;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x66;&#x61;&#x6b;&#101;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题
@@ -1039,6 +1039,13 @@ VolumeName  指定装入点的目标的卷名称。
 </tr>
 </tbody></table>
 <p>脚注测试<a href="HElp">^1</a><br>大脚注测试<a href="%E8%84%9A%E6%B3%A8%E6%B5%8B%E8%AF%952">^bignote</a></p>
+<p>Text prior to footnote reference.[^2]<br>[^2]: Comment to include in footnote.</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> wcnm</li>
+<li><input checked="" disabled="" type="checkbox"> Write the press release</li>
+<li><input disabled="" type="checkbox"> Update the website</li>
+<li><input disabled="" type="checkbox"> Contact the media</li>
+</ul>
 ]]></content>
       <tags>
         <tag>tags</tag>

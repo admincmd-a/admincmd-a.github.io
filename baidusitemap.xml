@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.admincmd.xyz/post/hexo-butterfiy-cb-sgfs/index.html</loc>
-    <lastmod>2024-06-24</lastmod>
+    <lastmod>2024-06-25</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html</loc>
+    <lastmod>2024-06-25</lastmod>
   </url>
   <url>
     <loc>https://blog.admincmd.xyz/post/Setup-system-com-vm2dm/index.html</loc>
@@ -15,10 +19,6 @@
   <url>
     <loc>https://blog.admincmd.xyz/post/winsetup-Winpe_EFI/index.html</loc>
     <lastmod>2024-06-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html</loc>
-    <lastmod>2024-06-02</lastmod>
   </url>
   <url>
     <loc>https://blog.admincmd.xyz/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</loc>
