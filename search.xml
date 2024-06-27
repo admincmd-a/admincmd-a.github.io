@@ -633,7 +633,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#x61;&#x6b;&#101;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x66;&#x61;&#x6b;&#101;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#97;&#107;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">&#x66;&#97;&#107;&#x65;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题
@@ -819,9 +819,9 @@ VolumeName  指定装入点的目标的卷名称。
 </div></div>
 
 <details class="toggle" ><summary class="toggle-button" style="">Butterfly安装方法</summary><div class="toggle-content"><p>在你的博客根目录里</p>
-<p>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
+<p>git clone -b master <a href="https://blog.admincmd.xyz/url.html?url=https://github.com/jerryc127/hexo-theme-butterfly.git">https://blog.admincmd.xyz/url.html?url=https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
 <p>如果想要安装比较新的dev分支，可以</p>
-<p>git clone -b dev <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
+<p>git clone -b dev <a href="https://blog.admincmd.xyz/url.html?url=https://github.com/jerryc127/hexo-theme-butterfly.git">https://blog.admincmd.xyz/url.html?url=https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes&#x2F;Butterfly</p>
 </div></details>
 
 <!-- <div class="tabs" id="unique-name"><ul class="nav-tabs no-default"></ul><div class="tab-contents"></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div> -->
@@ -1046,7 +1046,11 @@ VolumeName  指定装入点的目标的卷名称。
 <li><input disabled="" type="checkbox"> Update the website</li>
 <li><input disabled="" type="checkbox"> Contact the media</li>
 </ul>
-]]></content>
+<figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><figcaption><span>[title] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>tags</tag>
         <tag>windows</tag>
