@@ -1,9 +1,19 @@
-del{
-    border-radius:2px;
-    background-color:black;
-    color:black;
-    }
-    del:hover{
-    background-color:transparent;
-    color:rgb(0, 0, 0);
-    }
+:root {
+    --ichika-color: #49A6E9;
+}
+
+/* 公告&欢迎页 */
+.card-announcement {
+    line-height:30px;
+    font-size:16px;
+}
+
+.card-announcement .item-headline span{
+    margin-left:0!important;
+}
+
+.card-announcement span{
+    font-weight:bold;
+    font-size:20px!important;
+    color:var(--ichika-color);
+}

@@ -7,28 +7,38 @@ setTimeout(function () {
             window.open("")
         },
     })
-}, 2500)
+}, 2500)// 延迟2.5秒
+if (document.referrer==undefined||document.referrer.indexOf("www.travellings.cn")!=-1||document.referrer.indexOf("www.travellings.cn")!=-1)
+{
+    Snackbar.show({
+        text: '欢迎来自 开往 的穿梭者！如速度不合适，请 杂项 > 切源',
+        pos: 'top-right',
+        showAction: false,
+    }
+    else{
+
+
 //首次访问弹窗
 if (localStorage.getItem("popWelcomeWindow") != "0") {
     if(document.referrer==undefined||document.referrer.indexOf("blog.admincmd.xyz")!=-1||document.referrer.indexOf("blog.admincmd.xyz")!=-1){ //改成自己域名，注意是referrer!!! qwq
         Snackbar.show({
             pos: "top-right",
             showAction: false,
-            text: '欢迎访问本站！ 您正在使用 默认 部署源，如速度不合适，请 线路 > 切源'
+            text: '欢迎访问本站！ 您正在使用 默认 部署源，如速度不合适，请 杂项 > 切源'
         })
     }else{
         if(document.referrer==undefined||document.referrer.indexOf("vercel-blog.admincmd.xyz")!=-1){
             Snackbar.show({
                 pos: "top-right",
                 showAction: false,
-                text: '欢迎访问本站！ 您正在使用 Vercel 部署源，如速度不合适，请 线路 > 切源'
+                text: '欢迎访问本站！ 您正在使用 Vercel 部署源，如速度不合适，请 杂项 > 切源'
             })
         }else{
             if(document.referrer==undefined||document.referrer.indexOf("netlify-blog.admincmd.xyz")!=-1){
                 Snackbar.show({
                     pos: "top-right",
                     showAction: false,
-                    text: '欢迎访问本站！ 您正在使用 Netlify 部署源，如速度不合适，请 线路 > 切源'
+                    text: '欢迎访问本站！ 您正在使用 Netlify 部署源，如速度不合适，请 杂项 > 切源'
                 })
             }else{
                 if(document.referrer==undefined||document.referrer.indexOf("localhost:4000")!=-1){
@@ -41,10 +51,9 @@ if (localStorage.getItem("popWelcomeWindow") != "0") {
                     Snackbar.show({
                             pos: "top-right",
                             showAction: false,
-                            // text: `欢迎访问本站！`
-                            text: `欢迎从来自${document.referrer.split("://")[1].split("/")[0]}的访问本站！`
+                            text: `欢迎从来自${document.referrer.split("://")[1].split("")[0]}的访问本站！`
                         })
-    localStorage.setItem("popWelcomeWindow", "0");
+    localStorage.setItem("popWelcomeWindow", "0");// 不再弹出欢迎窗口
         }
     }
 }
@@ -59,27 +68,6 @@ if (sessionStorage.getItem("popCookieWindow") != "0") {
             },
         })
     }, 3500)
-    // setTimeout(function () {
-        // Snackbar.show({
-            // text: '控制面板位于 杂项 > 控制面板',
-            // pos: 'top-right',
-           //- // pos: 'bottom-right',
-            // actionText: "单击此处打开控制面板",
-            // onActionClick: function (element) {
-                // window.open("javascript:toggleWinbox()")
-            // },
-        // })
-    // }, 7500)
-    // setTimeout(function () {
-        // Snackbar.show({
-            // text: '控制面板位于 杂项 > 控制面板',
-            // pos: 'top-right',
-            // actionText: "单击此处打开控制面板",
-            // onActionClick: function (element) {
-                // window.open("javascript:toggleWinbox();")
-            // },
-        // })
-    // }, 7500)
 }
 //不在弹出Cookie提醒
 sessionStorage.setItem("popCookieWindow", "0");

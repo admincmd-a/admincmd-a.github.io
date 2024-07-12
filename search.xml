@@ -156,7 +156,7 @@
       </tags>
   </entry>
   <entry>
-    <title>为你的博客添加一个时光飞逝的侧边栏</title>
+    <title>为你的博客添加一个时光飞逝的页面</title>
     <url>/post/hexo-butterfiy-cb-sgfs/index.html</url>
     <content><![CDATA[<h1 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h1><p>忘了在哪看到的这个东西，总之看到了一次就忘不掉了<br>然后就拿我那差的要命的技术写了个这</p>
 <p><del>屎山</del>这个东西还没到这个程度</p>
@@ -174,12 +174,11 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">updateProgressBars</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">  <span class="comment">// const yearProgress = (now.getTime() / new Date(now.getFullYear(), 0, 1).getTime()) * 100;</span></span><br><span class="line">  <span class="keyword">const</span> yearStart = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> yearEnd = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>() + <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> yearProgress = ((now.<span class="title function_">getTime</span>() - yearStart) / (yearEnd - yearStart)) * <span class="number">100</span>;</span><br><span class="line">  <span class="comment">// 计算本月已过百分比</span></span><br><span class="line">  <span class="keyword">const</span> monthStart = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), now.<span class="title function_">getMonth</span>(), <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> monthEnd = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), now.<span class="title function_">getMonth</span>() + <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> monthProgress = ((now.<span class="title function_">getTime</span>() - monthStart) / (monthEnd - monthStart)) * <span class="number">100</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 计算本天已过百分比</span></span><br><span class="line">  <span class="keyword">const</span> dayStart = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), now.<span class="title function_">getMonth</span>(), now.<span class="title function_">getDate</span>(), <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> dayEnd = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), now.<span class="title function_">getMonth</span>(), now.<span class="title function_">getDate</span>() + <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> dayProgress = ((now.<span class="title function_">getTime</span>() - dayStart) / (dayEnd - dayStart)) * <span class="number">100</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 计算已过小时百分比</span></span><br><span class="line">  <span class="keyword">const</span> hourStart = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), now.<span class="title function_">getMonth</span>(), now.<span class="title function_">getDate</span>(), now.<span class="title function_">getHours</span>(), <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> hourEnd = <span class="keyword">new</span> <span class="title class_">Date</span>(now.<span class="title function_">getFullYear</span>(), now.<span class="title function_">getMonth</span>(), now.<span class="title function_">getDate</span>(), now.<span class="title function_">getHours</span>() + <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>).<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> hourProgress = ((now.<span class="title function_">getTime</span>() - hourStart) / (hourEnd - hourStart)) * <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> minuteProgress = (now.<span class="title function_">getSeconds</span>() / <span class="number">60</span>) * <span class="number">100</span>;<span class="comment">// 计算已过分钟百分比</span></span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;year-progress&#x27;</span>).<span class="property">textContent</span> = yearProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;year-progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = yearProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;<span class="comment">// 宽度百分比</span></span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;month-progress&#x27;</span>).<span class="property">textContent</span> = monthProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;month-progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = monthProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;<span class="comment">// 同上</span></span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;day-progress&#x27;</span>).<span class="property">textContent</span> = dayProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;day-progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = dayProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;hour-progress&#x27;</span>).<span class="property">textContent</span> = hourProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;hour-progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = hourProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;minute-progress&#x27;</span>).<span class="property">textContent</span> = minuteProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;minute-progress-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = minuteProgress.<span class="title function_">toFixed</span>(<span class="number">5</span>) + <span class="string">&#x27;%&#x27;</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setInterval</span>(updateProgressBars, <span class="number">1000</span>);<span class="comment">//每秒更新一次</span></span><br></pre></td></tr></table></figure>
 <h2 id="引入-CSS"><a href="#引入-CSS" class="headerlink" title="引入 CSS"></a>引入 CSS</h2><p>将下面的CSS丢到<code>%ThemeSource%\css\time.css</code></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> </span><br><span class="line"><span class="selector-class">.progress-container</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.progress-label</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.progress-bar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ddd</span>;<span class="comment">/*进度条背景色*/</span></span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;<span class="comment">/*圆角*/</span></span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.progress-bar-inner</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">15px</span>;<span class="comment">/*进度条高度*/</span></span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#4caf50</span>;<span class="comment">/*进度条颜色*/</span></span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: white;<span class="comment">/*背景颜色*/</span></span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">transition</span>: width <span class="number">1.5s</span>;<span class="comment">/*一次到目标位置的速度*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="引入配置"><a href="#引入配置" class="headerlink" title="引入配置"></a>引入配置</h2><p>在主题配置文件里写</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/time.css&quot;&gt;</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">src=&quot;/js/time.js&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h1 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h1><p>自己看不过去了<br><del>不想改了</del></p>
-<details class="toggle" ><summary class="toggle-button" style="">刚写好的样子</summary><div class="toggle-content"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span> <span class="attr">id</span>=<span class="string">&quot;time-flies&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本年过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;year-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;year-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本月过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;month-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;month-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本天过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;day-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;day-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本小时过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;hour-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;hour-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本分钟过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;minute-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;minute-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div></details>
+<details class="toggle" ><summary class="toggle-button" style="">刚写好的样子</summary><div class="toggle-content"><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/css/time.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span> <span class="attr">id</span>=<span class="string">&quot;time-flies&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本年过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;year-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;year-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本月过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;month-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;month-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本天过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;day-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;day-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本小时过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;hour-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;hour-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-label&quot;</span>&gt;</span>本分钟过了 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;minute-progress&quot;</span>&gt;</span>0.00000%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar-inner&quot;</span> <span class="attr">id</span>=<span class="string">&quot;minute-progress-bar&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/js/time.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div></details>
 <h2 id="单独页面"><a href="#单独页面" class="headerlink" title="单独页面"></a>单独页面</h2><p>创建<code>%ThemeLayout%\includes\page\time.pug</code><br>放入以下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">html</span><br><span class="line">  head</span><br><span class="line">    meta(name=&quot;viewport&quot;, content=&quot;width=device-width, initial-scale=1.0&quot;)</span><br><span class="line">  body</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本年过了 </span><br><span class="line">        span#year-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#year-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本月过了 </span><br><span class="line">        span#month-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#month-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本天过了 </span><br><span class="line">        span#day-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#day-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本小时过了 </span><br><span class="line">        span#hour-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#hour-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本分钟过了 </span><br><span class="line">        span#minute-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#minute-progress-bar</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">html</span><br><span class="line">  head</span><br><span class="line">    meta(name=&quot;viewport&quot;, content=&quot;width=device-width, initial-scale=1.0&quot;)</span><br><span class="line">    link(</span><br><span class="line">    href=&quot;/css/time.css&quot; </span><br><span class="line">    rel=&quot;stylesheet&quot;</span><br><span class="line">    )</span><br><span class="line">  body</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本年过了 </span><br><span class="line">        span#year-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#year-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本月过了 </span><br><span class="line">        span#month-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#month-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本天过了 </span><br><span class="line">        span#day-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#day-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本小时过了 </span><br><span class="line">        span#hour-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#hour-progress-bar</span><br><span class="line">    .progress-container</span><br><span class="line">      .progress-label 本分钟过了 </span><br><span class="line">        span#minute-progress 0.00000%</span><br><span class="line">      .progress-bar</span><br><span class="line">        .progress-bar-inner#minute-progress-bar</span><br><span class="line">    script(src=&quot;/js/time.js&quot;)</span><br></pre></td></tr></table></figure>
 <p>创建<code>%ThemeLayout%\page.pug</code><br>放入以下内容</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">extends includes/layout.pug</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line">      when &#x27;about&#x27;</span><br><span class="line">        include includes/page/about.pug</span><br><span class="line">+      when &#x27;time&#x27;</span><br><span class="line">+        include includes/page/time.pug</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">    comments/index&#x27;, &#123;&#125;, &#123;cache: true&#125;)</span><br></pre></td></tr></table></figure>
 <div class="note info modern"><p>插入 + 后面的内容即可，删除 + 号后无需添加空格</p>
@@ -189,51 +188,13 @@
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 时光飞逝</span><br><span class="line">date: 2021-03-30 15:57:51</span><br><span class="line">aside: false</span><br><span class="line">top<span class="emphasis">_img: false</span></span><br><span class="line"><span class="emphasis">comments: false</span></span><br><span class="line"><span class="emphasis">type: &quot;time&quot;</span></span><br><span class="line"><span class="emphasis">---</span></span><br></pre></td></tr></table></figure>
 
 <p>hexo g + s 即可看到效果</p>
-<!-- <html> -->
-<!-- <head> -->
-<pre><code>&lt;!-- &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; --&gt;
-</code></pre>
-<!-- </head> -->
-<!-- <body> -->
-<pre><code>&lt;!-- &lt;div class=&quot;progress-container&quot; id=&quot;time-flies&quot;&gt; --&gt;
-    &lt;!-- &lt;!-- &lt;div class=&quot;progress-label&quot;&gt;本年过了 &lt;span id=&quot;year-progress&quot;&gt;0.00000%&lt;/span&gt;&lt;/div&gt; --&gt; --&gt;
-    &lt;!-- &lt;div class=&quot;progress-bar&quot;&gt; --&gt;
-        &lt;!-- &lt;div class=&quot;progress-bar-inner&quot; id=&quot;year-progress-bar&quot;&gt;&lt;/div&gt; --&gt;
-    &lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;div class=&quot;progress-container&quot;&gt; --&gt;
-    &lt;!-- &lt;!-- &lt;div class=&quot;progress-label&quot;&gt;本月过了 &lt;span id=&quot;month-progress&quot;&gt;0.00000%&lt;/span&gt;&lt;/div&gt; --&gt; --&gt;
-    &lt;!-- &lt;div class=&quot;progress-bar&quot;&gt; --&gt;
-        &lt;!-- &lt;div class=&quot;progress-bar-inner&quot; id=&quot;month-progress-bar&quot;&gt;&lt;/div&gt; --&gt;
-    &lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;div class=&quot;progress-container&quot;&gt; --&gt;
-    &lt;!-- &lt;!-- &lt;div class=&quot;progress-label&quot;&gt;本天过了 &lt;span id=&quot;day-progress&quot;&gt;0.00000%&lt;/span&gt;&lt;/div&gt; --&gt; --&gt;
-    &lt;!-- &lt;div class=&quot;progress-bar&quot;&gt; --&gt;
-        &lt;!-- &lt;div class=&quot;progress-bar-inner&quot; id=&quot;day-progress-bar&quot;&gt;&lt;/div&gt; --&gt;
-    &lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;div class=&quot;progress-container&quot;&gt; --&gt;
-    &lt;!-- &lt;!-- &lt;div class=&quot;progress-label&quot;&gt;本小时过了 &lt;span id=&quot;hour-progress&quot;&gt;0.00000%&lt;/span&gt;&lt;/div&gt; --&gt; --&gt;
-    &lt;!-- &lt;div class=&quot;progress-bar&quot;&gt; --&gt;
-        &lt;!-- &lt;div class=&quot;progress-bar-inner&quot; id=&quot;hour-progress-bar&quot;&gt;&lt;/div&gt; --&gt;
-    &lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;div class=&quot;progress-container&quot;&gt; --&gt;
-    &lt;!-- &lt;!-- &lt;div class=&quot;progress-label&quot;&gt;本分钟过了 &lt;span id=&quot;minute-progress&quot;&gt;0.00000%&lt;/span&gt;&lt;/div&gt; --&gt; --&gt;
-    &lt;!-- &lt;div class=&quot;progress-bar&quot;&gt; --&gt;
-        &lt;!-- &lt;div class=&quot;progress-bar-inner&quot; id=&quot;minute-progress-bar&quot;&gt;&lt;/div&gt; --&gt;
-    &lt;!-- &lt;/div&gt; --&gt;
-&lt;!-- &lt;/div&gt; --&gt;
-</code></pre>
-<!-- </body> -->
-<!-- </html> -->]]></content>
+<hr>
+]]></content>
       <categories>
         <category>教程</category>
         <category>博客</category>
       </categories>
       <tags>
-        <tag>侧边栏</tag>
         <tag>魔改</tag>
         <tag>hexo</tag>
         <tag>Butterfly</tag>
@@ -368,122 +329,6 @@
         <tag>安装 Windows</tag>
         <tag>BIOS</tag>
         <tag>Legacy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>当你把电脑时间乱调？！</title>
-    <url>/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</url>
-    <content><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">当你把电脑时间调至一万年？！</a><br><a href="https://www.bilibili.com/video/---/" title="https://www.bilibili.com/video/---/"></a></p>
-<h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br>，控制面板最多可到 2099 年<br>，data 命令最多可以修改 8099 年</p>
-<h1 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p>
-<p>用法:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/YEAR=[YEAR]</span><br></pre></td></tr></table></figure>
-<p>YEAR 整数型，定义启动后年份</p>
-<p>据测试，启动选项可以修改范围是 1601-9999 年，超出此范围则卡死在第一启动阶段。</p>
-<blockquote>
-<p>[ i ] 个人推测,不代表权威观点。</p>
-</blockquote>
-<h2 id="SetSystemTime-函数"><a href="#SetSystemTime-函数" class="headerlink" title="SetSystemTime 函数"></a>SetSystemTime 函数</h2><p>设置当前系统时间和日期。 系统时间以协调世界时 (UTC) 表示。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BOOL SetSystemTime(</span><br><span class="line">  [in] const SYSTEMTIME *lpSystemTime</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>[in] lpSystemTime</code><br>指向包含新系统日期和时间的 SYSTEMTIME 结构的指针。</p>
-<p>将忽略 SYSTEMTIME 结构的 wDayOfWeek 成员。</p>
-<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>如果该函数成功，则返回值为非零值。</p>
-<p>如果函数失败，则返回值为零。 </p>
-<hr>
-<h1 id="调整方式（当你吧电脑时间调至一万年？！）"><a href="#调整方式（当你吧电脑时间调至一万年？！）" class="headerlink" title="调整方式（当你吧电脑时间调至一万年？！）"></a>调整方式（当你吧电脑时间调至一万年？！）</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一台 Windwos 7-11 电脑</p>
-<h2 id="正式进行"><a href="#正式进行" class="headerlink" title="正式进行"></a>正式进行</h2><h3 id="启动编辑"><a href="#启动编辑" class="headerlink" title="启动编辑"></a>启动编辑</h3><p>使用管理员执行 <code>BCDEDIT /SET OPTIONSEDIT 1</code> 以进入启动选项编辑模式。</p>
-<p>重启计算机，会出现下图:</p>
-<blockquote>
-<p>如果没有出现该界面，请重试 1.2.1 步骤 (该步骤)</p>
-</blockquote>
-<p>!</p>
-<p>插入空格后，输入 <code>/YEAR=9999</code> 后，按下 Enter 提交更改。</p>
-<blockquote>
-<p>再次重启后，计算机不会应用本次修改.</p>
-</blockquote>
-<h3 id="编辑完成"><a href="#编辑完成" class="headerlink" title="编辑完成"></a>编辑完成</h3><p><em>建议提前将时间设置为 23:59:00</em></p>
-<p>在日期更为10000年时，系统不会发生太多错误 </p>
-<p>&lt;!–WIN10 11咋这么卡呀？–&gt;</p>
-<p>新建文件夹没有任何问题，Windows media player 因年份过高无法启动，系统基本应用程序正常运行。</p>
-<p>重启后系统时间退回至 1988 年</p>
-<div class="admonition note"><p class="admonition-title">推测
-</p><p>推测: 系统时间保存失败。</p>
-</div>
-
-<p>对了，VMTool咋坏了？</p>
-<h1 id="调整方式（把系统时间调回明朝会发生什么？）"><a href="#调整方式（把系统时间调回明朝会发生什么？）" class="headerlink" title="调整方式（把系统时间调回明朝会发生什么？）"></a>调整方式（把系统时间调回明朝会发生什么？）</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;Windows.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	// 获取当前系统时间</span><br><span class="line">	SYSTEMTIME sysTime;</span><br><span class="line">	GetLocalTime(&amp;sysTime);</span><br><span class="line"></span><br><span class="line">	// 用户输入新的系统时间信息</span><br><span class="line">	std::cout &lt;&lt; &quot;请输入新的系统时间：&quot; &lt;&lt; std::endl;</span><br><span class="line">	std::cout &lt;&lt; &quot;年份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wYear;</span><br><span class="line">	std::cout &lt;&lt; &quot;月份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMonth;</span><br><span class="line">	std::cout &lt;&lt; &quot;日期: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wDay;</span><br><span class="line">	std::cout &lt;&lt; &quot;小时: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wHour;</span><br><span class="line">	std::cout &lt;&lt; &quot;分钟: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMinute;</span><br><span class="line">	std::cout &lt;&lt; &quot;秒数: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wSecond;</span><br><span class="line">	std::cout &lt;&lt; &quot;毫秒: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMilliseconds;</span><br><span class="line"></span><br><span class="line">	// 调用SetSystemTime函数设置系统时间</span><br><span class="line">	if (SetSystemTime(&amp;sysTime)) &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;系统时间已成功设置！&quot; &lt;&lt; std::endl;</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;设置系统时间失败！错误码：&quot; &lt;&lt; GetLastError() &lt;&lt; std::endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>!!! note “”<br>    这是一段 C++ 代码。</p>
-<p>!!! war “”<br>    注意要用管理员启动</p>
-<h3 id="编辑完成-1"><a href="#编辑完成-1" class="headerlink" title="编辑完成"></a>编辑完成</h3><p>在日期更为 1601 年时，系统不会发生太多错误 </p>
-<p>新建文件夹没有任何问题，Windows media player 正常运行，系统基本应用程序正常运行。</p>
-<p>重启后系统时间至 2024 年</p>
-<div class="admonition note"><p class="admonition-title">推测
-</p><p>推测: 系统时间保存失败，且系统与时间服务器同步。</p>
-</div>
-
-<p>对了，VMTool双坏了？</p>
-]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
-      <tags>
-        <tag>tags</tag>
-        <tag>windows</tag>
-        <tag>胡改</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>盘点把C盘弹出去的那些事</title>
-    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html</url>
-    <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
-
-<p><em>这里使用的是 Windows 7</em><br>总所周知，带热插拔的硬盘，CD呀DVD呀，U盘，都具有弹出选项。</p>
-<p>So，系统盘能弹出去吗？</p>
-<p>答案吧……</p>
-<p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt; /d</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，带冒号</span><br></pre></td></tr></table></figure>
-
-<p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
-<p>此时计算机会变得卡顿，无法打开任何应用程序</p>
-<p>要想恢复，只能强制重新启动计算机。</p>
-<p>但是，</p>
-<p>如果你又找了个WIN 10 的盘盘符更为C，</p>
-<p>那么，</p>
-<p>就会出现 Windows 7 + 10 &#x3D; 17 !</p>
-<p>啊对，半Win7半Win10</p>
-<pre><code>创建、删除或列出卷装入点。
-
-MOUNTVOL [drive:]path VolumeName
-MOUNTVOL [drive:]path /D
-MOUNTVOL [drive:]path /L
-MOUNTVOL [drive:]path /P
-MOUNTVOL /R
-MOUNTVOL /N
-MOUNTVOL /E
-MOUNTVOL drive: /S
-
-path        指定装入点将驻留的现有 NTFS 目录。
-VolumeName  指定装入点的目标的卷名称。
-/D          从指定的目录中删除卷装入点。
-/L          列出指定目录的已装入的卷名称。
-/P          从指定目录删除卷装入点，卸下此卷并使此卷无法装入。你可以创建
-            一个卷来再次使此卷可以装入。
-/R          删除不在系统中的、卷的装入点目录和注册表设置。
-/N          禁用新卷的自动装入。
-/E          再次启用新卷的自动装入。
-/S          将 EFI 系统分区装载到提供的驱动器。
-</code></pre>
-<p>这里用的是 mountvol 功能的删除载入点功能。</p>
-]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
-      <tags>
-        <tag>tags</tag>
-        <tag>windows</tag>
-        <tag>胡改</tag>
       </tags>
   </entry>
   <entry>
@@ -626,10 +471,179 @@ VolumeName  指定装入点的目标的卷名称。
       </tags>
   </entry>
   <entry>
+    <title>盘点把C盘弹出去的那些事</title>
+    <url>/post/%E5%85%B3%E4%BA%8E%E6%8A%8AC%E7%9B%98%E5%BC%B9%E5%87%BA%E5%8E%BB%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html</url>
+    <content><![CDATA[<p><em>C:\Windows\System32&gt;_</em></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=550 height=86 src="//music.163.com/outchain/player?type=2&id=33166666&auto=1&height=66"></iframe>
+
+<p><em>这里使用的是 Windows 7</em><br>总所周知，带热插拔的硬盘，CD呀DVD呀，U盘，都具有弹出选项。</p>
+<p>So，系统盘能弹出去吗？</p>
+<p>答案吧……</p>
+<p>可以！<br>通过下面这条命令可以弹出你想要弹出的任何盘<em>（包括正在使用的盘）</em></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mountvol &lt;drive_letter&gt; /d</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Drive_letter&gt;: 指弹出的磁盘盘符，带冒号</span><br></pre></td></tr></table></figure>
+
+<p>然后你就发现，C盘没了……^_^       [UP 暗笑中…]<br>此时，你所看到的窗口，都是内存中的缓存，</p>
+<p>此时计算机会变得卡顿，无法打开任何应用程序</p>
+<p>要想恢复，只能强制重新启动计算机。</p>
+<p>但是，</p>
+<p>如果你又找了个WIN 10 的盘盘符更为C，</p>
+<p>那么，</p>
+<p>就会出现 Windows 7 + 10 &#x3D; 17 !</p>
+<p>啊对，半Win7半Win10</p>
+<pre><code>创建、删除或列出卷装入点。
+
+MOUNTVOL [drive:]path VolumeName
+MOUNTVOL [drive:]path /D
+MOUNTVOL [drive:]path /L
+MOUNTVOL [drive:]path /P
+MOUNTVOL /R
+MOUNTVOL /N
+MOUNTVOL /E
+MOUNTVOL drive: /S
+
+path        指定装入点将驻留的现有 NTFS 目录。
+VolumeName  指定装入点的目标的卷名称。
+/D          从指定的目录中删除卷装入点。
+/L          列出指定目录的已装入的卷名称。
+/P          从指定目录删除卷装入点，卸下此卷并使此卷无法装入。你可以创建
+            一个卷来再次使此卷可以装入。
+/R          删除不在系统中的、卷的装入点目录和注册表设置。
+/N          禁用新卷的自动装入。
+/E          再次启用新卷的自动装入。
+/S          将 EFI 系统分区装载到提供的驱动器。
+</code></pre>
+<p>这里用的是 mountvol 功能的删除载入点功能。</p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
+      <tags>
+        <tag>tags</tag>
+        <tag>windows</tag>
+        <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>当你把电脑时间乱调？！</title>
+    <url>/post/%E5%BD%93%E4%BD%A0%E6%8A%8A%E7%94%B5%E8%84%91%E6%97%B6%E9%97%B4%E8%B0%83%E8%87%B3%E4%B8%80%E4%B8%87%E5%B9%B4%EF%BC%9F%EF%BC%81/index.html</url>
+    <content><![CDATA[<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV154421F7nA/" title="https://www.bilibili.com/video/BV154421F7nA/">当你把电脑时间调至一万年？！</a><br><a href="https://www.bilibili.com/video/---/" title="https://www.bilibili.com/video/---/"></a></p>
+<h1 id="系统时间"><a href="#系统时间" class="headerlink" title="系统时间"></a>系统时间</h1><p>Widnows 对于系统时间的修改有限制<br>，控制面板最多可到 2099 年<br>，data 命令最多可以修改 8099 年</p>
+<h1 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h1><h2 id="YEAR-选项"><a href="#YEAR-选项" class="headerlink" title="YEAR 选项"></a>YEAR 选项</h2><p>YEAR 用于规定启动的年份</p>
+<p>用法:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/YEAR=[YEAR]</span><br></pre></td></tr></table></figure>
+<p>YEAR 整数型，定义启动后年份</p>
+<p>据测试，启动选项可以修改范围是 1601-9999 年，超出此范围则卡死在第一启动阶段。</p>
+<blockquote>
+<p>[ i ] 个人推测,不代表权威观点。</p>
+</blockquote>
+<h2 id="SetSystemTime-函数"><a href="#SetSystemTime-函数" class="headerlink" title="SetSystemTime 函数"></a>SetSystemTime 函数</h2><p>设置当前系统时间和日期。 系统时间以协调世界时 (UTC) 表示。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BOOL SetSystemTime(</span><br><span class="line">  [in] const SYSTEMTIME *lpSystemTime</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><code>[in] lpSystemTime</code><br>指向包含新系统日期和时间的 SYSTEMTIME 结构的指针。</p>
+<p>将忽略 SYSTEMTIME 结构的 wDayOfWeek 成员。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>如果该函数成功，则返回值为非零值。</p>
+<p>如果函数失败，则返回值为零。 </p>
+<hr>
+<h1 id="调整方式（当你吧电脑时间调至一万年？！）"><a href="#调整方式（当你吧电脑时间调至一万年？！）" class="headerlink" title="调整方式（当你吧电脑时间调至一万年？！）"></a>调整方式（当你吧电脑时间调至一万年？！）</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>一台 Windwos 7-11 电脑</p>
+<h2 id="正式进行"><a href="#正式进行" class="headerlink" title="正式进行"></a>正式进行</h2><h3 id="启动编辑"><a href="#启动编辑" class="headerlink" title="启动编辑"></a>启动编辑</h3><p>使用管理员执行 <code>BCDEDIT /SET OPTIONSEDIT 1</code> 以进入启动选项编辑模式。</p>
+<p>重启计算机，会出现下图:</p>
+<blockquote>
+<p>如果没有出现该界面，请重试 1.2.1 步骤 (该步骤)</p>
+</blockquote>
+<p>!</p>
+<p>插入空格后，输入 <code>/YEAR=9999</code> 后，按下 Enter 提交更改。</p>
+<blockquote>
+<p>再次重启后，计算机不会应用本次修改.</p>
+</blockquote>
+<h3 id="编辑完成"><a href="#编辑完成" class="headerlink" title="编辑完成"></a>编辑完成</h3><p><em>建议提前将时间设置为 23:59:00</em></p>
+<p>在日期更为10000年时，系统不会发生太多错误 </p>
+<p>&lt;!–WIN10 11咋这么卡呀？–&gt;</p>
+<p>新建文件夹没有任何问题，Windows media player 因年份过高无法启动，系统基本应用程序正常运行。</p>
+<p>重启后系统时间退回至 1988 年</p>
+<div class="admonition note"><p class="admonition-title">推测
+</p><p>推测: 系统时间保存失败。</p>
+</div>
+
+<p>对了，VMTool咋坏了？</p>
+<h1 id="调整方式（把系统时间调回明朝会发生什么？）"><a href="#调整方式（把系统时间调回明朝会发生什么？）" class="headerlink" title="调整方式（把系统时间调回明朝会发生什么？）"></a>调整方式（把系统时间调回明朝会发生什么？）</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;Windows.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	// 获取当前系统时间</span><br><span class="line">	SYSTEMTIME sysTime;</span><br><span class="line">	GetLocalTime(&amp;sysTime);</span><br><span class="line"></span><br><span class="line">	// 用户输入新的系统时间信息</span><br><span class="line">	std::cout &lt;&lt; &quot;请输入新的系统时间：&quot; &lt;&lt; std::endl;</span><br><span class="line">	std::cout &lt;&lt; &quot;年份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wYear;</span><br><span class="line">	std::cout &lt;&lt; &quot;月份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMonth;</span><br><span class="line">	std::cout &lt;&lt; &quot;日期: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wDay;</span><br><span class="line">	std::cout &lt;&lt; &quot;小时: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wHour;</span><br><span class="line">	std::cout &lt;&lt; &quot;分钟: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMinute;</span><br><span class="line">	std::cout &lt;&lt; &quot;秒数: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wSecond;</span><br><span class="line">	std::cout &lt;&lt; &quot;毫秒: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMilliseconds;</span><br><span class="line"></span><br><span class="line">	// 调用SetSystemTime函数设置系统时间</span><br><span class="line">	if (SetSystemTime(&amp;sysTime)) &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;系统时间已成功设置！&quot; &lt;&lt; std::endl;</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;设置系统时间失败！错误码：&quot; &lt;&lt; GetLastError() &lt;&lt; std::endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>!!! note “”<br>    这是一段 C++ 代码。</p>
+<p>!!! war “”<br>    注意要用管理员启动</p>
+<h3 id="编辑完成-1"><a href="#编辑完成-1" class="headerlink" title="编辑完成"></a>编辑完成</h3><p>在日期更为 1601 年时，系统不会发生太多错误 </p>
+<p>新建文件夹没有任何问题，Windows media player 正常运行，系统基本应用程序正常运行。</p>
+<p>重启后系统时间至 2024 年</p>
+<div class="admonition note"><p class="admonition-title">推测
+</p><p>推测: 系统时间保存失败，且系统与时间服务器同步。</p>
+</div>
+
+<p>对了，VMTool双坏了？</p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
+      <tags>
+        <tag>tags</tag>
+        <tag>windows</tag>
+        <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机名：你是来找茬的吧</title>
+    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</url>
+    <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
+<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
+<h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
+<p>计算机名一般与 hostname (主机名)相同</p>
+<p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p>
+<p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p>
+<p>计算机名位于注册表以下的几个位置: (经过筛选)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
+
+<p>更改这些注册表，可以强制修改计算机名。</p>
+<hr>
+<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
+<p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
+<p>使用此程序可以强制性修改计算机名</p>
+<p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
+<div class="admonition warning"><p class="admonition-title">警告
+</p><p>一定要用管理员启动！
+请在打开前关闭杀毒软件。
+在实体机上运行导致系统损坏，自行负责。</p>
+</div>
+
+<h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p>
+<p>重启试逝</p>
+<p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
+<pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;
+</code></pre>
+<h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p>
+<p>应用程序因’无足够内存’而无法打开</p>
+<p>电源选项失效</p>
+<p>命令提示符正常，但 shutdown 无法重启、关机</p>
+<pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作
+</code></pre>
+<p>重启后蓝屏</p>
+<pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏
+</code></pre>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li>CSDN - haiross - windows 通过修改注册表来修改主机名</li>
+</ol>
+<p><em>已复制</em>     <em>1 个文件。</em></p>
+<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>
+]]></content>
+      <categories>
+        <category>玩转系统</category>
+      </categories>
+      <tags>
+        <tag>tags</tag>
+        <tag>windows</tag>
+        <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文体样式表</title>
     <url>/post/%E6%B5%8B%E8%AF%95/index.html</url>
     <content><![CDATA[<p>标题文本</p>
-<h1 id="一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#一级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h1><h2 id="二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#二级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h2><h3 id="三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#三级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h3><h4 id="四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#四级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h4><h5 id="五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#五级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h5><h6 id="六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp"><a href="#六级测试-ABCDEFG-abcdefg-0123456789-”-lt-gt-96-x3D-’-x2F-amp" class="headerlink" title="六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h6><h1 id="一级测试"><a href="#一级测试" class="headerlink" title="一级测试"></a>一级测试</h1><h2 id="二级测试"><a href="#二级测试" class="headerlink" title="二级测试"></a>二级测试</h2><p>测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| <code>-=[];&#39;\,./!@#$%^&amp;*()   测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| </code>-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
+<h1 id="一级测试-ABCDEFG-abcdefg-0123456789-”-’"><a href="#一级测试-ABCDEFG-abcdefg-0123456789-”-’" class="headerlink" title="一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>一级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h1><h2 id="二级测试-ABCDEFG-abcdefg-0123456789-”-’"><a href="#二级测试-ABCDEFG-abcdefg-0123456789-”-’" class="headerlink" title="二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>二级测试  ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h2><h3 id="三级测试-ABCDEFG-abcdefg-0123456789-”-’"><a href="#三级测试-ABCDEFG-abcdefg-0123456789-”-’" class="headerlink" title="三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>三级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h3><h4 id="四级测试-ABCDEFG-abcdefg-0123456789-”-’"><a href="#四级测试-ABCDEFG-abcdefg-0123456789-”-’" class="headerlink" title="四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>四级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h4><h5 id="五级测试-ABCDEFG-abcdefg-0123456789-”-’"><a href="#五级测试-ABCDEFG-abcdefg-0123456789-”-’" class="headerlink" title="五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>五级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h5><h6 id="六级测试-ABCDEFG-abcdefg-0123456789-”-’"><a href="#六级测试-ABCDEFG-abcdefg-0123456789-”-’" class="headerlink" title="六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()"></a>六级测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</h6><h1 id="一级测试"><a href="#一级测试" class="headerlink" title="一级测试"></a>一级测试</h1><h2 id="二级测试"><a href="#二级测试" class="headerlink" title="二级测试"></a>二级测试</h2><p>测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| <code>-=[];&#39;\,./!@#$%^&amp;*()   测试 ABCDEFG abcdefg 0123456789 ~_+&#123;&#125;:&quot;&lt;&gt;?| </code>-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p><em>斜体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;</em>()*</p>
 <p><strong>粗体测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</strong></p>
 <p>或 <strong>x</strong> A<strong>b</strong>c</p>
@@ -669,7 +683,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#107;&#x65;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#102;&#x61;&#107;&#x65;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#107;&#x65;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;">&#102;&#x61;&#107;&#x65;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题
@@ -1086,60 +1100,9 @@ VolumeName  指定装入点的目标的卷名称。
 
 <figure class="highlight plaintext"><figcaption><span>[title] [lang:language] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><figcaption><span>[title] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>tags</tag>
-        <tag>windows</tag>
-        <tag>胡改</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机名：你是来找茬的吧</title>
-    <url>/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%EF%BC%9A%E4%BD%A0%E6%98%AF%E6%9D%A5%E6%89%BE%E8%8C%AC%E7%9A%84%E5%90%A7/index.html</url>
-    <content><![CDATA[<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;copy con title.md</em></p>
-<h1 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h1><p><a href="https://www.bilibili.com/video/BV1q7421K7zC/" title="https://www.bilibili.com/video/BV1q7421K7zC/">BiliBili</a></p>
-<h1 id="关于计算机名"><a href="#关于计算机名" class="headerlink" title="关于计算机名"></a>关于计算机名</h1><p>计算机名用于在网络中标识计算机的一种方式</p>
-<p>计算机名一般与 hostname (主机名)相同</p>
-<p>由于NETBIOS协议的限制，一般电脑的hostname不能超过15字符(十六字节的缓冲区里，第16个字符必须为NULL)。</p>
-<p>同时，计算机名仍有特殊字符限制，例如：~!@#$%^&amp;*()&lt;&gt;?:”{}[];’|&#x2F;., 等</p>
-<p>计算机名位于注册表以下的几个位置: (经过筛选)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Eventlog[ComputerName]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[NV Hostname]</span><br><span class="line">HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters[Hostname]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>[title] [url] [link text] [additional options]</span></figcaption><table><tr><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
 
-<p>更改这些注册表，可以强制修改计算机名。</p>
-<hr>
-<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><p>为此，我特意写了一个程序</p>
-<p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
-<p>使用此程序可以强制性修改计算机名</p>
-<p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
-<div class="admonition warning"><p class="admonition-title">警告
-</p><p>一定要用管理员启动！
-请在打开前关闭杀毒软件。
-在实体机上运行导致系统损坏，自行负责。</p>
-</div>
-
-<h2 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h2><p>在修改后，计算机没有任何异常。</p>
-<p>重启试逝</p>
-<p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
-<pre><code>推测原因: 计算机管理读取配置时读取到反斜杠导致用户校验失败，从而出现&#39;密码不正确&#39;
-</code></pre>
-<h2 id="2-有特殊字符，超过-15-字符限制"><a href="#2-有特殊字符，超过-15-字符限制" class="headerlink" title="2 有特殊字符，超过 15 字符限制"></a>2 有特殊字符，超过 15 字符限制</h2><p>在修改后，控制面板已经无法打开</p>
-<p>应用程序因’无足够内存’而无法打开</p>
-<p>电源选项失效</p>
-<p>命令提示符正常，但 shutdown 无法重启、关机</p>
-<pre><code>推测: shutdown 识别到错误的计算机名，导致无法对目标计算机 (本机) 进行电源操作
-</code></pre>
-<p>重启后蓝屏</p>
-<pre><code>推测: 因为 NETBIOS 协议的 15 字符限制，导致 Windows 读取计算机名时被截断，从而引发蓝屏
-</code></pre>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li>CSDN - haiross - windows 通过修改注册表来修改主机名</li>
-</ol>
-<p><em>已复制</em>     <em>1 个文件。</em></p>
-<p><em>X:\Users\Admin-cmd\Hexo-Files\003&gt;_</em></p>
 ]]></content>
-      <categories>
-        <category>玩转系统</category>
-      </categories>
       <tags>
         <tag>tags</tag>
         <tag>windows</tag>

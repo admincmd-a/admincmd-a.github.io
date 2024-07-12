@@ -1,23 +1,27 @@
-//get请求
-$.ajax({
-    type: 'get',
-    url: 'https://apis.map.qq.com/ws/location/v1/ip',
-    data: {
-        key: 'ET6BZ-DDXEN-JRBFT-SZEUP-WBLXS-V7FGJ',
-        output: 'jsonp',
-    },
-    dataType: 'jsonp',
-    success: function (res) {
-        ipLoacation = res;
-        showWelcome();
+function welcometxmap() {
+    //请求数据
+    ipLoacation = window.saveToLocal.get('ipLocation');
+    if (ipLoacation) {
+        // 使用 ipLocation
+    } else {
+        // 数据已过期或不存在
+        var script = document.createElement('script');
+        var url = `https://apis.map.qq.com/ws/location/v1/ip?key=${txkey}&output=jsonp`;
+        script.src = url;
+        window.QQmap = function (data) {
+            ipLoacation = data;
+            // 将数据保存到 localStorage，过期时间设置为 1 天
+            window.saveToLocal.set('ipLocation', ipLoacation, 1);
+            document.body.removeChild(script);
+            delete window.QQmap;
+        };
+        document.body.appendChild(script);
     }
-})
-
-//根据经纬度计算两点距离(点1经度,点1纬度,点2经度,点2纬度)
+    showWelcome();
+}
 function getDistance(e1, n1, e2, n2) {
     const R = 6371
     const { sin, cos, asin, PI, hypot } = Math
-
     let getPoint = (e, n) => {
         e *= PI / 180
         n *= PI / 180
@@ -31,14 +35,13 @@ function getDistance(e1, n1, e2, n2) {
     return Math.round(r);
 }
 
-//根据自己的需求定制
 function showWelcome() {
-    if (!document.getElementById("welcome-info")) return
 
-    let dist = getDistance(114.274218, 30.544745, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
-
+    let dist = getDistance(longitude, Latitude, ipLoacation.result.location.lng, ipLoacation.result.location.lat);
     let pos = ipLoacation.result.ad_info.nation;
+    let ip;
     let posdesc;
+
     //根据国家、省份、城市信息自定义欢迎语
     //海外地区不支持省份及城市信息
     switch (ipLoacation.result.ad_info.nation) {

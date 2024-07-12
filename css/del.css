@@ -1,0 +1,11 @@
+del {
+    border-radius: 2px;
+    background-color: black;
+    color: rgb(0, 0, 0); /* 文本颜色 */
+    text-decoration: none; /* 去除删除线 */
+}
+
+del:hover {
+    background-color: transparent;
+    color: rgb(0, 0, 0); /* 恢复默认的文本颜色 */
+}
