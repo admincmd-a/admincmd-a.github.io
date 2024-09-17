@@ -179,9 +179,10 @@
 000047D0 | 6F 00 6F 00 31 00 00 00  00 00 00 00 00 00 00 00 | o o 1           
 </code></pre>
 <p>上面的东西有一些小修改，所以不同，只要大致长一样即可</p>
+<p><img src="https://s2.loli.net/2024/09/17/ZliKSF7NPyEGj5h.png" alt="0001.png"></p>
 <p>可以修改的内容<br> \Microsoft\ </p>
-<div class="note warning simple"><p>修改此内容你需要同时修改 \EFI\boot\ [语言] \bootx64.efi.mui</p>
-<p>否则只会留下 MUI 消息表，连 HTML 都出不来<br>就像这样:</p>
+<div class="note warning modern"><p>修改此内容你需要同时修改 \EFI\boot\ [语言] \bootx64.efi.mui</p>
+<p>否则只会留下 MUI 消息表，连 HTML 都出不来<br>就像这样:<br><img src="https://s2.loli.net/2024/09/17/Q6eoTzYxHStuR17.png" alt="0002.png"></p>
 </div>
 <p>，至于 \BOOT\ 这个就可以随便改，只要保证不超过 000047D0 的范围就行了</p>
 <h2 id="修改-BCD-名称"><a href="#修改-BCD-名称" class="headerlink" title="修改 BCD 名称"></a>修改 BCD 名称</h2><p>转到偏移量 <code>00004A50</code> 的位置</p>
@@ -192,7 +193,7 @@
 <p>同理，可以修改文件名，不超过 <code>00004A5F</code> 即可</p>
 <h1 id="BOOTMGR-EFI"><a href="#BOOTMGR-EFI" class="headerlink" title="BOOTMGR.EFI"></a>BOOTMGR.EFI</h1><div class="note warning modern"><p>这个部分因为某些原因，尚未通过测试(不加载)，请谨慎修改。</p>
 </div>
-<h3 id="修改-BCD-位置"><a href="#修改-BCD-位置" class="headerlink" title="修改 BCD 位置"></a>修改 BCD 位置</h3><p>这里这修改 [EFI_DISK]\bootmgr.efi</p>
+<p>##+<br> 修改 BCD 位置<br>这里这修改 [EFI_DISK]\bootmgr.efi</p>
 <p>打开 WinHex，然后打开你的 bootmgr.efi</p>
 <p>之后转到偏移量 <code>00001E50</code> 的位置</p>
 <p>到右边的文本编辑区，你可以看到下面的内容</p>
@@ -213,7 +214,9 @@
 <h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><div class="note info modern"><p>BCD 需要禁止数字签名认证，否则无法正常启动，此外需要关闭 安全启动 </p>
 </div>
 <p>[^需要验证]</p>
-<p>关于 WinHex<br>&lt;&#x2F;zy&#x2F;app&#x2F;#WinHex&gt;</p>
+<p>关于 WinHex<br><a href="https://blog.admincmd.xyz/zy/app/#WinHex">https://blog.admincmd.xyz/zy/app/#WinHex</a></p>
+<p>这是什么：？</p>
+<p><img src="https://s2.loli.net/2024/09/17/xu78QlUowCdJY1X.png" alt="002.png"></p>
 ]]></content>
       <categories>
         <category>魔改</category>

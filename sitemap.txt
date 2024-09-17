@@ -1,9 +1,9 @@
 https://blog.admincmd.xyz/post/Windows-BOOTMGR(BIOS_EFI)-BCD-XG/index.html
+https://blog.admincmd.xyz/license/index.html
 https://blog.admincmd.xyz/zy/app/index.html
 https://blog.admincmd.xyz/toc.html
 https://blog.admincmd.xyz/post/hexo-butterfiy-cb-sgfs/index.html
 https://blog.admincmd.xyz/post/%E6%B5%8B%E8%AF%95/index.html
-https://blog.admincmd.xyz/license/index.html
 https://blog.admincmd.xyz/pp.html
 https://blog.admincmd.xyz/url.html
 https://blog.admincmd.xyz/log/index.html
