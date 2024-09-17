@@ -1109,4 +1109,36 @@ VolumeName  指定装入点的目标的卷名称。
         <tag>胡改</tag>
       </tags>
   </entry>
+  <entry>
+    <title>如何使用 Windows PE 安装操作系统(BIOS)</title>
+    <url>/post/Windows-BOOTMGR(BIOS_EFI)-BCD-XG/index.html</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近在搞 u 盘，想把不同的启动文件引到不同的 BCD 上，最开始以为引导的 BCD 是相对的<br>倒腾了半天，没倒腾出来</p>
+<p>后来又折腾几个小时，才搞出来<br>然后就有了这个东西</p>
+<div class="note default simple"><p>[EFI_DISK] 特指 EFI 引导卷</p>
+</div>
+
+<h1 id="EFI"><a href="#EFI" class="headerlink" title="EFI"></a>EFI</h1><p>关于 EFI ，这里这修改 [EFI_DISK]\efi\boot\bootx64.efi<br><strong>即计算机 BIOS 引导的文件</strong></p>
+<p>打开 WinHex，然后打开你的 bootx64.efi</p>
+<p>之后转到偏移量 <code>000047B0</code> 的位置</p>
+<p>到右边的文本编辑区，你可以看到下面的内容</p>
+<pre><code>  Offset | 0  1  2  3  4  5  6  7   8  9  A  B  C  D  E  |
+000047B0 | 5C 00 45 00 46 00 49 00  5C 00 4D 00 69 00 63 | \ E F I \ M i c
+000047C0 | 72 00 6F 00 73 00 6F 00  66 00 73 00 5C 00 42 | r o s o f s \ B
+000047D0 | 6F 00 6F 00 31 00 00 00  00 00 00 00 00 00 00 | o o 1
+
+...
+</code></pre>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>Windows 安装</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Windows 欲安装环境</tag>
+        <tag>安装 Windows</tag>
+        <tag>BIOS</tag>
+        <tag>Legacy</tag>
+      </tags>
+  </entry>
 </search>
