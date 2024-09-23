@@ -156,6 +156,35 @@
       </tags>
   </entry>
   <entry>
+    <title>瞎搞向 - 让一个文件夹里有多个“同名”文件（水）</title>
+    <url>/post/1b5d7e144ce7/index.html</url>
+    <content><![CDATA[<p>（水）</p>
+<h2 id="预览图"><a href="#预览图" class="headerlink" title="预览图"></a>预览图</h2><p><img src="https://s2.loli.net/2024/09/20/yho8A4PB6pSDFMW.png" alt="1.png"></p>
+<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p>首先，我们往一个文件夹丢几个文件<br>，这里以a.ini 、b.ini、c.ini替代</p>
+<p>然后，新建一个文本文件，名叫 desktop.ini</p>
+<h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p>写入以下内容</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="attr">a.ini</span>=d</span><br><span class="line"><span class="attr">b.ini</span>=d</span><br><span class="line"><span class="attr">c.ini</span>=d </span><br></pre></td></tr></table></figure>
+<p>语法</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="section">[原始文件名]</span>=<span class="section">[显示文件名]</span></span><br><span class="line"><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<p>注：原始文件名需包括扩展名，显示文件名不需<br>且无法修改显示文件名扩展名</p>
+<p>搞完后保存退出</p>
+<p>重启下资源管理器，或者电脑重启下，或者注销都行</p>
+<p>就可以看到效果了</p>
+<h2 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h2><p>这个只是更改你看到的，原始文件名不变</p>
+<p>例如：使用命令提示符执行<code>dir</code>可以看到</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> E:\一个有几个相同文件名的文件的文件夹 的目录</span><br><span class="line"></span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          .</span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          ..</span><br><span class="line">2024/08/21  09:20                 7 a.ini</span><br><span class="line">2024/08/21  09:21                 7 b.ini</span><br><span class="line">2024/08/21  09:21                 7 c.ini</span><br><span class="line">               3 个文件             21 字节</span><br><span class="line">               2 个目录 1,661,417,754,624 可用字节</span><br><span class="line"></span><br><span class="line">E:\一个有几个相同文件名的文件的文件夹&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>玩转系统</category>
+        <category>文件</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>文件</tag>
+        <tag>DESKTOP.INI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修改 BOOTX64.EFI、BOOTMGR.EFI 所使用 BCD 文件位置</title>
     <url>/post/46e8c3d8a231/index.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在搞 u 盘，想把不同的启动文件引到不同的 BCD 上，最开始以为引导的 BCD 是相对的<br><del>BOOTX64.EFI 位于 \EFI\BOOS\ So,BCD 在 \EFI\BOOS\MICOSOSFT\BCD</del><br>倒腾了半天，没倒腾出来</p>
@@ -237,35 +266,6 @@
         <tag>魔改</tag>
         <tag>EFI</tag>
         <tag>UEFI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>瞎搞向 - 让一个文件夹里有多个“同名”文件（水）</title>
-    <url>/post/1b5d7e144ce7/index.html</url>
-    <content><![CDATA[<p>（水）</p>
-<h2 id="预览图"><a href="#预览图" class="headerlink" title="预览图"></a>预览图</h2><p><img src="https://s2.loli.net/2024/09/20/yho8A4PB6pSDFMW.png" alt="1.png"></p>
-<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p>首先，我们往一个文件夹丢几个文件<br>，这里以a.ini 、b.ini、c.ini替代</p>
-<p>然后，新建一个文本文件，名叫 desktop.ini</p>
-<h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p>写入以下内容</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="attr">a.ini</span>=d</span><br><span class="line"><span class="attr">b.ini</span>=d</span><br><span class="line"><span class="attr">c.ini</span>=d </span><br></pre></td></tr></table></figure>
-<p>语法</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="section">[原始文件名]</span>=<span class="section">[显示文件名]</span></span><br><span class="line"><span class="comment">;</span></span><br></pre></td></tr></table></figure>
-
-<p>注：原始文件名需包括扩展名，显示文件名不需<br>且无法修改显示文件名扩展名</p>
-<p>搞完后保存退出</p>
-<p>重启下资源管理器，或者电脑重启下，或者注销都行</p>
-<p>就可以看到效果了</p>
-<h2 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h2><p>这个只是更改你看到的，原始文件名不变</p>
-<p>例如：使用命令提示符执行<code>dir</code>可以看到</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> E:\一个有几个相同文件名的文件的文件夹 的目录</span><br><span class="line"></span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          .</span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          ..</span><br><span class="line">2024/08/21  09:20                 7 a.ini</span><br><span class="line">2024/08/21  09:21                 7 b.ini</span><br><span class="line">2024/08/21  09:21                 7 c.ini</span><br><span class="line">               3 个文件             21 字节</span><br><span class="line">               2 个目录 1,661,417,754,624 可用字节</span><br><span class="line"></span><br><span class="line">E:\一个有几个相同文件名的文件的文件夹&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>玩转系统</category>
-        <category>文件</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>文件</tag>
-        <tag>DESKTOP.INI</tag>
       </tags>
   </entry>
   <entry>
@@ -743,7 +743,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#97;&#x6b;&#x65;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#x66;&#97;&#x6b;&#x65;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#107;&#x65;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;">&#102;&#x61;&#107;&#x65;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题

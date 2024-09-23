@@ -45,6 +45,8 @@ https://blog.admincmd.xyz/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/
 https://blog.admincmd.xyz/tags/Windows/
 https://blog.admincmd.xyz/tags/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/
 https://blog.admincmd.xyz/tags/%E7%89%A9%E7%90%86%E6%9C%BA/
+https://blog.admincmd.xyz/tags/%E6%96%87%E4%BB%B6/
+https://blog.admincmd.xyz/tags/DESKTOP-INI/
 https://blog.admincmd.xyz/tags/Windows-%E5%BC%95%E5%AF%BC/
 https://blog.admincmd.xyz/tags/BCD/
 https://blog.admincmd.xyz/tags/BOOTX64-EFI/
@@ -52,8 +54,6 @@ https://blog.admincmd.xyz/tags/BOOTMGR-EFI/
 https://blog.admincmd.xyz/tags/%E9%AD%94%E6%94%B9/
 https://blog.admincmd.xyz/tags/EFI/
 https://blog.admincmd.xyz/tags/UEFI/
-https://blog.admincmd.xyz/tags/%E6%96%87%E4%BB%B6/
-https://blog.admincmd.xyz/tags/DESKTOP-INI/
 https://blog.admincmd.xyz/tags/hexo/
 https://blog.admincmd.xyz/tags/Butterfly/
 https://blog.admincmd.xyz/tags/Windows-%E6%AC%B2%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83/
@@ -65,9 +65,9 @@ https://blog.admincmd.xyz/tags/tags/
 https://blog.admincmd.xyz/tags/windows/
 https://blog.admincmd.xyz/tags/%E8%83%A1%E6%94%B9/
 https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/
-https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/
 https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/
-https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/Windows-%E5%AE%89%E8%A3%85/
+https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/
 https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2/
-https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/Windows-%E5%BC%95%E5%AF%BC/
+https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/Windows-%E5%AE%89%E8%A3%85/
 https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6/
+https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/Windows-%E5%BC%95%E5%AF%BC/

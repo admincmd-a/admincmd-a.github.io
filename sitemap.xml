@@ -413,6 +413,20 @@
   </url>
   
   <url>
+    <loc>https://blog.admincmd.xyz/tags/%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2024-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/tags/DESKTOP-INI/</loc>
+    <lastmod>2024-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.admincmd.xyz/tags/Windows-%E5%BC%95%E5%AF%BC/</loc>
     <lastmod>2024-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -456,20 +470,6 @@
   
   <url>
     <loc>https://blog.admincmd.xyz/tags/UEFI/</loc>
-    <lastmod>2024-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.admincmd.xyz/tags/%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2024-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.admincmd.xyz/tags/DESKTOP-INI/</loc>
     <lastmod>2024-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -555,13 +555,6 @@
   </url>
   
   <url>
-    <loc>https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/</loc>
-    <lastmod>2024-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2024-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -569,7 +562,7 @@
   </url>
   
   <url>
-    <loc>https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/Windows-%E5%AE%89%E8%A3%85/</loc>
+    <loc>https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/</loc>
     <lastmod>2024-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -583,7 +576,7 @@
   </url>
   
   <url>
-    <loc>https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/Windows-%E5%BC%95%E5%AF%BC/</loc>
+    <loc>https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/Windows-%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2024-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -591,6 +584,13 @@
   
   <url>
     <loc>https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2024-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/Windows-%E5%BC%95%E5%AF%BC/</loc>
     <lastmod>2024-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
