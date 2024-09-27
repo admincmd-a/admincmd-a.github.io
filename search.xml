@@ -196,6 +196,8 @@
 </div>
 <div class="note warning modern"><p>魔改有风险，请注意备——份——！</p>
 </div>
+<div class="note danger modern"><p>因未提前备份造成计算机无法启动或出现问题，一切后果与我无关。</p>
+</div>
 
 <div class="note info modern"><p>这篇文章仅对 Windows 的 EFI 引导文件有效</p>
 <p>文章中的文件请在附件包中下载</p>
@@ -215,7 +217,7 @@
 <p>上面的东西有一些小修改，所以不同，只要大致长一样即可</p>
 <p><img src="https://s2.loli.net/2024/09/17/ZliKSF7NPyEGj5h.png" alt="0001.png"></p>
 <p>可以修改的内容<br> \Microsoft\ </p>
-<div class="note warning modern"><p>修改此内容你需要同时修改 \EFI\boot\ [语言] \bootx64.efi.mui</p>
+<div class="note info modern"><p>修改此内容你需要同时修改 \EFI\boot\ [语言] \bootx64.efi.mui</p>
 <p>否则只会留下 MUI 消息表，连 HTML 都出不来<br>就像这样:<br><img src="https://s2.loli.net/2024/09/17/Q6eoTzYxHStuR17.png" alt="0002.png"></p>
 </div>
 <p>，至于 \BOOT\ 这个就可以随便改，只要保证不超过 000047D0 的范围就行了</p>
@@ -1218,6 +1220,26 @@ VolumeName  指定装入点的目标的卷名称。
         <tag>tags</tag>
         <tag>windows</tag>
         <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>修改 BOOTX64.EFI、BOOTMGR.EFI 所使用 BCD 文件位置</title>
+    <url>/post/969f2c916461/index.html</url>
+    <content><![CDATA[<div class="note default modern"><p>default 提示块标签</p>
+</div>]]></content>
+      <categories>
+        <category>魔改</category>
+        <category>Windows 引导</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Windows 引导</tag>
+        <tag>BCD</tag>
+        <tag>BOOTX64.EFI</tag>
+        <tag>BOOTMGR.EFI</tag>
+        <tag>魔改</tag>
+        <tag>EFI</tag>
+        <tag>UEFI</tag>
       </tags>
   </entry>
 </search>
