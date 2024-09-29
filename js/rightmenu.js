@@ -123,6 +123,11 @@ rmf.switchReadMode = function () {
 //复制选中文字
 rmf.copySelect = function () {
     document.execCommand('Copy', false, null);
+    Snackbar.show({
+        text: '已复制成功！',
+        pos: 'top-right',
+        showAction: false
+    });
     //这里可以写点东西提示一下 已复制
 }
 
