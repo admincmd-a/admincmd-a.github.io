@@ -1,12 +1,7 @@
+//已废弃，请勿使用
 function browserTC() {
     btf.snackbarShow("");
     window.location.href = '/ie_error.html';
-    Snackbar.show({
-        text: 'WARE: 不支持老旧浏览器，请更新浏览器，如您坚持使用，网站可能无法正常显示。',
-        actionText: '关闭',
-        duration: '6000',
-        pos: 'bottom-right'
-    });
 }
 function browserVersion() {
     var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串

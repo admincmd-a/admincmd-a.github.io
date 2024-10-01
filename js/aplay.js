@@ -1,3 +1,4 @@
+//无效的脚本
 function doStuff() {
     var flag=0;
     try{

@@ -1,3 +1,4 @@
+//无效的脚本
 [
     {
         name: 'Grow Slowly',

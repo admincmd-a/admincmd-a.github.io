@@ -124,7 +124,7 @@ rmf.switchReadMode = function () {
 rmf.copySelect = function () {
     document.execCommand('Copy', false, null);
     Snackbar.show({
-        text: '已复制成功！',
+        text: '已占领剪贴板！',
         pos: 'top-right',
         showAction: false
     });
@@ -173,7 +173,7 @@ function popupMenu() {
         if (el.tagName == 'A') {
             $('#menu-to').show()
             rmf.open = function () {
-                if(el.href.indexOf("http://")==-1&&el.href.indexOf("https://")==-1||el.href.indexOf("yisous.xyz")!=-1){
+                if(el.href.indexOf("http://")==-1&&el.href.indexOf("https://")==-1||el.href.indexOf("blog.admincmd.xyz")!=-1){
                     pjax.loadUrl(el.href)
                 }
                 else{
@@ -242,6 +242,11 @@ function popupMenu() {
                                 console.log(text)
                                 insertAtCursor(el, text)
                             })
+                            Snackbar.show({
+                                text: '粘贴成功！',
+                                pos: 'top-right',
+                                showAction: false
+                            });
                         } else {
                             Snackbar.show({
                                 text: 'ERROR: 读取剪贴板失败，请允许访问剪贴板！',

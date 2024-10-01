@@ -1,3 +1,4 @@
+// 不使用此脚本
 //根据自己的需求定制
 function showWelcome() {
     if (!document.getElementById("welcome-info")) return
@@ -68,7 +69,7 @@ function showWelcome() {
                     break;
                 case "上海市":
                     pos = "上海市";
-                    posdesc = "众所周知，中国只有两个城市。";
+                    posdesc = "众所周知，中国只有三个城市。";
                     break;
                 case "江苏省":
                     switch (ipLoacation.result.ad_info.city) {

@@ -1,12 +1,13 @@
+// 已停用，请勿使用
 setTimeout(function () {
-    Snackbar.show({
-        text: '正在加载文件...',
-        pos: 'top-center',
-        actionText: "",
-        onActionClick: function (element) {
-            window.open("")
-        },
-    })
+    //Snackbar.show({
+    //    text: '正在加载文件...',
+    //    pos: 'top-center',
+    //    actionText: "",
+    //    onActionClick: function (element) {
+    //        window.open("")
+    //    },
+    //})
 }, 2500)// 延迟2.5秒
 if (document.referrer==undefined||document.referrer.indexOf("www.travellings.cn")!=-1||document.referrer.indexOf("www.travellings.cn")!=-1)
 {

@@ -158,37 +158,6 @@
       </tags>
   </entry>
   <entry>
-    <title>瞎搞向 - 让一个文件夹里有多个“同名”文件（水）</title>
-    <url>/post/1b5d7e144ce7/index.html</url>
-    <content><![CDATA[<meta name='description' content='（水）本文介绍了如何让一个文件夹里有多个“同名”文件。'>
-（水）
-
-<h2 id="预览图"><a href="#预览图" class="headerlink" title="预览图"></a>预览图</h2><p><img src="https://s2.loli.net/2024/09/20/yho8A4PB6pSDFMW.png" alt="1.png"></p>
-<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p>首先，我们往一个文件夹丢几个文件<br>，这里以a.ini 、b.ini、c.ini替代</p>
-<p>然后，新建一个文本文件，名叫 desktop.ini</p>
-<h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p>写入以下内容</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="attr">a.ini</span>=d</span><br><span class="line"><span class="attr">b.ini</span>=d</span><br><span class="line"><span class="attr">c.ini</span>=d </span><br></pre></td></tr></table></figure>
-<p>语法</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="section">[原始文件名]</span>=<span class="section">[显示文件名]</span></span><br><span class="line"><span class="comment">;</span></span><br></pre></td></tr></table></figure>
-
-<p>注：原始文件名需包括扩展名，显示文件名不需<br>且无法修改显示文件名扩展名</p>
-<p>搞完后保存退出</p>
-<p>重启下资源管理器，或者电脑重启下，或者注销都行</p>
-<p>就可以看到效果了</p>
-<h2 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h2><p>这个只是更改你看到的，原始文件名不变</p>
-<p>例如：使用命令提示符执行<code>dir</code>可以看到</p>
-<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> E:\一个有几个相同文件名的文件的文件夹 的目录</span><br><span class="line"></span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          .</span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          ..</span><br><span class="line">2024/08/21  09:20                 7 a.ini</span><br><span class="line">2024/08/21  09:21                 7 b.ini</span><br><span class="line">2024/08/21  09:21                 7 c.ini</span><br><span class="line">               3 个文件             21 字节</span><br><span class="line">               2 个目录 1,661,417,754,624 可用字节</span><br><span class="line"></span><br><span class="line">E:\一个有几个相同文件名的文件的文件夹&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>玩转系统</category>
-        <category>文件</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>文件</tag>
-        <tag>DESKTOP.INI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>修改 BOOTX64.EFI、BOOTMGR.EFI 所使用 BCD 文件位置</title>
     <url>/post/46e8c3d8a231/index.html</url>
     <content><![CDATA[<meta name='description' content='本文介绍如何修改 EFI 启动的 Windows 10 系统的 BOOTX64.EFI、BOOTMGR.EFI 所使用 BCD 文件位置'>
@@ -277,6 +246,37 @@
       </tags>
   </entry>
   <entry>
+    <title>瞎搞向 - 让一个文件夹里有多个“同名”文件（水）</title>
+    <url>/post/1b5d7e144ce7/index.html</url>
+    <content><![CDATA[<meta name='description' content='（水）本文介绍了如何让一个文件夹里有多个“同名”文件。'>
+（水）
+
+<h2 id="预览图"><a href="#预览图" class="headerlink" title="预览图"></a>预览图</h2><p><img src="https://s2.loli.net/2024/09/20/yho8A4PB6pSDFMW.png" alt="1.png"></p>
+<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><p>首先，我们往一个文件夹丢几个文件<br>，这里以a.ini 、b.ini、c.ini替代</p>
+<p>然后，新建一个文本文件，名叫 desktop.ini</p>
+<h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p>写入以下内容</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="attr">a.ini</span>=d</span><br><span class="line"><span class="attr">b.ini</span>=d</span><br><span class="line"><span class="attr">c.ini</span>=d </span><br></pre></td></tr></table></figure>
+<p>语法</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[LocalizedFileNames]</span></span><br><span class="line"><span class="section">[原始文件名]</span>=<span class="section">[显示文件名]</span></span><br><span class="line"><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<p>注：原始文件名需包括扩展名，显示文件名不需<br>且无法修改显示文件名扩展名</p>
+<p>搞完后保存退出</p>
+<p>重启下资源管理器，或者电脑重启下，或者注销都行</p>
+<p>就可以看到效果了</p>
+<h2 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h2><p>这个只是更改你看到的，原始文件名不变</p>
+<p>例如：使用命令提示符执行<code>dir</code>可以看到</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"> E:\一个有几个相同文件名的文件的文件夹 的目录</span><br><span class="line"></span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          .</span><br><span class="line">2024/08/21  09:24    &lt;DIR&gt;          ..</span><br><span class="line">2024/08/21  09:20                 7 a.ini</span><br><span class="line">2024/08/21  09:21                 7 b.ini</span><br><span class="line">2024/08/21  09:21                 7 c.ini</span><br><span class="line">               3 个文件             21 字节</span><br><span class="line">               2 个目录 1,661,417,754,624 可用字节</span><br><span class="line"></span><br><span class="line">E:\一个有几个相同文件名的文件的文件夹&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>玩转系统</category>
+        <category>文件</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>文件</tag>
+        <tag>DESKTOP.INI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为你的博客添加一个时光飞逝的页面</title>
     <url>/post/d27b21b27a53/index.html</url>
     <content><![CDATA[<meta name='description' content='在Butterfly主题的基础上添加一个时光飞逝的页面，显示现在的年度、月度、日度、小时的过度情况。'>
@@ -288,7 +288,8 @@
 </div>
 <div class="note info modern"><p>%ThemeSource%<br>位于<code>~\themes\Butterfly\source\</code><br>%Source%<br>位于<code>~\source\</code><br>%ThemeLayout%<br>位于<code>~\themes\Butterfly\layout\</code></p>
 </div>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>侧边栏里就有，手机到最后</p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Progress Tracker</title><link rel="stylesheet" href="/favi/qq.css"><div class="progress-container"><div class="progress-label">本年过了 <span id="year-progress">74.81801%</span></div><div class="progress-bar"><div class="progress-bar-inner" id="year-progress-bar" style="width: 74.818%;"></div></div></div><div class="progress-container"><div class="progress-label">本月过了 <span id="month-progress">99.44633%</span></div><div class="progress-bar"><div class="progress-bar-inner" id="month-progress-bar" style="width: 99.4463%;"></div></div></div><div class="progress-container"><div class="progress-label">本天过了 <span id="day-progress">83.38992%</span></div><div class="progress-bar"><div class="progress-bar-inner" id="day-progress-bar" style="width: 83.3899%;"></div></div></div><div class="progress-container"><div class="progress-label">本小时过了 <span id="hour-progress">1.35817%</span></div><div class="progress-bar"><div class="progress-bar-inner" id="hour-progress-bar" style="width: 1.35817%;"></div></div></div><div class="progress-container"><div class="progress-label">本分钟过了 <span id="minute-progress">80.00000%</span></div><div class="progress-bar"><div class="progress-bar-inner" id="minute-progress-bar" style="width: 80%;"></div></div></div><script src="/favi/qq.js"></script><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/admincmd-a/Time-flies/">查看代码</a>
+
 <p>单独页面</p>
 <p><a href="https://blog.admincmd.xyz/url.html?url=https://blog.admincmd.xyz/favi/">https://blog.admincmd.xyz/favi/</a></p>
 <p>Github 仓库<br><a href="https://blog.admincmd.xyz/url.html?url=https://github.com/admincmd-a/Time-flies">https://github.com/admincmd-a/Time-flies</a></p>
@@ -326,7 +327,7 @@
   <entry>
     <title>如何使用 Windows PE 安装操作系统(BIOS)</title>
     <url>/post/ca2d8449e095/index.html</url>
-    <content><![CDATA[<meta name='description' content='本文将介绍在 Legacy 启动方式下，如何使用 Windows PE (Windows 预安装环境) 安装操作系统'>
+    <content><![CDATA[<meta name='description' content='本文将介绍在 Legacy 启动方式下，如何使用 Windows PE (Windows 预安装环境) 安装 Windows 操作系统,包括分区、添加引导文件'>
 
 <p>本文中所使用的系统为 Windows PE(Windows 预安装环境)，安装系统为 Windows 10</p>
 <div class="note warning modern"><p>本文中所适用的启动方式为 BIOS (Legacy)</p>
@@ -762,7 +763,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;">&#102;&#97;&#x6b;&#x65;&#x40;&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#107;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#102;&#x61;&#107;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
 <div class="admonition note"><p class="admonition-title">这个个个个叫标题

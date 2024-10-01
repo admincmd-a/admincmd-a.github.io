@@ -1,3 +1,4 @@
+//不使用此脚本
 var d = new Date();
 m=d.getMonth()+1;
 dd=d.getDate();
