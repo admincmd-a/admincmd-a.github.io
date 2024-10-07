@@ -1,10 +1,11 @@
+https://blog.admincmd.xyz/post/19bd6d8ad52f/index.html
+https://blog.admincmd.xyz/help/index.html
 https://blog.admincmd.xyz/link/index.html
 https://blog.admincmd.xyz/favi/time.html
 https://blog.admincmd.xyz/favi/email.html
 https://blog.admincmd.xyz/favi/index.html
 https://blog.admincmd.xyz/post/d27b21b27a53/index.html
 https://blog.admincmd.xyz/post/ca2d8449e095/index.html
-https://blog.admincmd.xyz/help/index.html
 https://blog.admincmd.xyz/post/6ff572292268/index.html
 https://blog.admincmd.xyz/post/ebf577bf3c39/index.html
 https://blog.admincmd.xyz/post/cedfd1c6ff27/index.html
@@ -64,6 +65,8 @@ https://blog.admincmd.xyz/tags/%E6%95%99%E7%A8%8B/
 https://blog.admincmd.xyz/tags/tags/
 https://blog.admincmd.xyz/tags/windows/
 https://blog.admincmd.xyz/tags/%E8%83%A1%E6%94%B9/
+https://blog.admincmd.xyz/tags/Power-Shell/
+https://blog.admincmd.xyz/tags/WindowsApps/
 https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/
 https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/
 https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/
@@ -71,3 +74,4 @@ https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2/
 https://blog.admincmd.xyz/categories/%E6%95%99%E7%A8%8B/Windows-%E5%AE%89%E8%A3%85/
 https://blog.admincmd.xyz/categories/%E9%AD%94%E6%94%B9/Windows-%E5%BC%95%E5%AF%BC/
 https://blog.admincmd.xyz/categories/%E7%8E%A9%E8%BD%AC%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6/
+https://blog.admincmd.xyz/categories/Windows/

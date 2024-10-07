@@ -335,10 +335,7 @@
 <div class="note success modern"><p>本文中所使用安装系统可以为 Windows 7 、Windows 8 、Windows 8.1 、Windows 10  即 wim \ esd 映像的Windows操作系统。(需要支持 Legacy,但大部分操作系统都支持)</p>
 </div>
 
-<div class="admonition error"><p class="admonition-title">不支持的操作系统
-</p><p>该教程不适用于 Windows 11</p>
-</div>
-
+<p>!!! error “不支持的操作系统”<br>    该教程不适用于 Windows 11</p>
 <div class="note success modern"><p>建议你先将文章过一遍，这样可以更清楚的知道自己下一步要干什么。</p>
 <p>注意：本文大部配图与代码框内有出入，请以围栏代码框内为准</p>
 </div>
@@ -691,10 +688,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p>&lt;!–WIN10 11咋这么卡呀？–&gt;</p>
 <p>新建文件夹没有任何问题，Windows media player 因年份过高无法启动，系统基本应用程序正常运行。</p>
 <p>重启后系统时间退回至 1988 年</p>
-<div class="admonition note"><p class="admonition-title">推测
-</p><p>推测: 系统时间保存失败。</p>
-</div>
-
+<p>!!! note “推测”<br>    推测: 系统时间保存失败。</p>
 <p>对了，VMTool咋坏了？</p>
 <h2 id="调整方式（把系统时间调回明朝会发生什么？）"><a href="#调整方式（把系统时间调回明朝会发生什么？）" class="headerlink" title="调整方式（把系统时间调回明朝会发生什么？）"></a>调整方式（把系统时间调回明朝会发生什么？）</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;Windows.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	// 获取当前系统时间</span><br><span class="line">	SYSTEMTIME sysTime;</span><br><span class="line">	GetLocalTime(&amp;sysTime);</span><br><span class="line"></span><br><span class="line">	// 用户输入新的系统时间信息</span><br><span class="line">	std::cout &lt;&lt; &quot;请输入新的系统时间：&quot; &lt;&lt; std::endl;</span><br><span class="line">	std::cout &lt;&lt; &quot;年份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wYear;</span><br><span class="line">	std::cout &lt;&lt; &quot;月份: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMonth;</span><br><span class="line">	std::cout &lt;&lt; &quot;日期: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wDay;</span><br><span class="line">	std::cout &lt;&lt; &quot;小时: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wHour;</span><br><span class="line">	std::cout &lt;&lt; &quot;分钟: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMinute;</span><br><span class="line">	std::cout &lt;&lt; &quot;秒数: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wSecond;</span><br><span class="line">	std::cout &lt;&lt; &quot;毫秒: &quot;;</span><br><span class="line">	std::cin &gt;&gt; sysTime.wMilliseconds;</span><br><span class="line"></span><br><span class="line">	// 调用SetSystemTime函数设置系统时间</span><br><span class="line">	if (SetSystemTime(&amp;sysTime)) &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;系统时间已成功设置！&quot; &lt;&lt; std::endl;</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		std::cout &lt;&lt; &quot;设置系统时间失败！错误码：&quot; &lt;&lt; GetLastError() &lt;&lt; std::endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>!!! note “”<br>    这是一段 C++ 代码。</p>
@@ -702,10 +696,7 @@ VolumeName  指定装入点的目标的卷名称。
 <h4 id="编辑完成-1"><a href="#编辑完成-1" class="headerlink" title="编辑完成"></a>编辑完成</h4><p>在日期更为 1601 年时，系统不会发生太多错误 </p>
 <p>新建文件夹没有任何问题，Windows media player 正常运行，系统基本应用程序正常运行。</p>
 <p>重启后系统时间至 2024 年</p>
-<div class="admonition note"><p class="admonition-title">推测
-</p><p>推测: 系统时间保存失败，且系统与时间服务器同步。</p>
-</div>
-
+<p>!!! note “推测”<br>    推测: 系统时间保存失败，且系统与时间服务器同步。</p>
 <p>对了，VMTool双坏了？</p>
 ]]></content>
       <categories>
@@ -763,21 +754,12 @@ VolumeName  指定装入点的目标的卷名称。
 <p>分割线</p>
 <hr>
 <p>链接<br>这是一个链接 <a href="https://markdown.com.cn/">Markdown语法</a>。</p>
-<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#102;&#x61;&#107;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#102;&#x61;&#107;&#101;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>网址及邮箱地址<br><a href="https://markdown.com.cn/">https://markdown.com.cn</a><br><a href="mailto:&#x66;&#97;&#107;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;">&#x66;&#97;&#107;&#x65;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#x6d;</a></p>
 <p>不使用效果 *测试 ABCDEFG abcdefg 0123456789 ~_+{}:”&lt;&gt;?| &#96;-&#x3D;[];’,.&#x2F;!@#$%^&amp;*()</p>
 <p>(字符前插入反斜杠 \ )</p>
-<div class="admonition note"><p class="admonition-title">这个个个个叫标题
-</p><p>这是一段提示</p>
-</div>
-
-<div class="admonition warning"><p class="admonition-title">这个叫标题
-</p><p>这是一段警告</p>
-</div>
-
-<div class="admonition error"><p class="admonition-title">ERROR
-</p><p>这是个错误</p>
-</div>
-
+<p>!!! note “这个个个个叫标题”<br>    这是一段提示</p>
+<p>!!! warning “这个叫标题”<br>    这是一段警告</p>
+<p>!!! error “ERROR”<br>    这是个错误</p>
 <p>[该功能为 BUTTERFLY 等主题独有]</p>
 <div class="note simple"><p>默认 提示块标签</p>
 </div>
@@ -1207,12 +1189,7 @@ VolumeName  指定装入点的目标的卷名称。
 <p> <a href="https://admincmd.lanzout.com/iCiEf1muu1lg" title="Title">蓝奏云</a> </p>
 <p>使用此程序可以强制性修改计算机名</p>
 <p><img src="/IMG/3_0.PNG" alt=" File : /IMG/3_0.PNG"></p>
-<div class="admonition warning"><p class="admonition-title">警告
-</p><p>一定要用管理员启动！
-请在打开前关闭杀毒软件。
-在实体机上运行导致系统损坏，自行负责。</p>
-</div>
-
+<p>!!! warning 警告<br>    一定要用管理员启动！<br>    请在打开前关闭杀毒软件。<br>    在实体机上运行导致系统损坏，自行负责。</p>
 <h3 id="1-有特殊字符，不超过-15-字符限制"><a href="#1-有特殊字符，不超过-15-字符限制" class="headerlink" title="1 有特殊字符，不超过 15 字符限制"></a>1 有特殊字符，不超过 15 字符限制</h3><p>在修改后，计算机没有任何异常。</p>
 <p>重启试逝</p>
 <p>在 Windows 登录界面，出现’密码不正确’的提示。<br>但是这个用户没有设置密码</p>
@@ -1240,6 +1217,108 @@ VolumeName  指定装入点的目标的卷名称。
         <tag>tags</tag>
         <tag>windows</tag>
         <tag>胡改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用 PowerShell 管理 WindowsApps</title>
+    <url>/post/19bd6d8ad52f/index.html</url>
+    <content><![CDATA[<meta name='description' content='该页讲述了使用power shell删除、添加UWP应用，并说明了如何用两种方式查看应用程序包名称。'>
+
+<div class="note warning modern"><p>注意备份，尤其是列表。</p>
+</div>
+<div class="note danger modern"><p>不正确的操作可能造成应用缺失或无法使用,<br>因本文中的内容错误使用造成的系统损坏，一切后果与UP无关。</p>
+</div>
+
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前言</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>使用管理员打开 PowerShell，具体打开方式？</p>
+<details class="toggle" ><summary class="toggle-button" style="">启动PowerShell</summary><div class="toggle-content"><p>右键Windows菜单，单击搜索，然后输入<code>powershell</code></p>
+<p>然后在结果第一行的 Windows Power Shell 右键，选择<code>以管理员身份运行</code><br>点<code>是</code>,就好了。</p>
+</div></details>
+<h3 id="找应用程序包"><a href="#找应用程序包" class="headerlink" title="找应用程序包"></a>找应用程序包</h3><h4 id="第一种方法（知晓应用程序包发布名）"><a href="#第一种方法（知晓应用程序包发布名）" class="headerlink" title="第一种方法（知晓应用程序包发布名）"></a>第一种方法（知晓应用程序包发布名）</h4><p>首先要确定你要删什么应用，这里以 Windows 上自带的 Xbox 为例，</p>
+<p>粘贴运行下面的这个东东，</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AppxPackage</span> | <span class="built_in">Select</span> Name, PackageFullName</span><br><span class="line"><span class="comment"># 该命令输出了系统上已安装的 Windows 应用</span></span><br></pre></td></tr></table></figure>
+<p>然后系统就会输出类似下面的东西</p>
+<p>这里输出了系统里所有 UWP 应用，即可以删除、修改的</p>
+<pre><code>  Name                                        PackageFullName
+  ----                                        ---------------
+  1527c705-839a-4832-9118-54d4Bd6a0c89        1527c705-839a-4832-9118-54d4Bd6a0c89_10.0.19041.1023_neutral_neutral_cw5...
+  E2A4F912-2574-4A75-9BB0-0D023378592B        E2A4F912-2574-4A75-9BB0-0D023378592B_10.0.19041.1023_neutral_neutral_cw5...
+  F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE        F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.19041.1023_neutral_neutral_cw5...
+  Microsoft.AAD.BrokerPlugin                  Microsoft.AAD.BrokerPlugin_1000.19041.1023.0_neutral_neutral_cw5n1h2txyewy
+  Microsoft.AccountsControl                   Microsoft.AccountsControl_10.0.19041.1023_neutral__cw5n1h2txyewy
+  Microsoft.AsyncTextService                  Microsoft.AsyncTextService_10.0.19041.1023_neutral__8wekyb3d8bbwe
+  Microsoft.BioEnrollment                     Microsoft.BioEnrollment_10.0.19041.1023_neutral__cw5n1h2txyewy
+  Microsoft.CredDialogHost                    Microsoft.CredDialogHost_10.0.19041.1023_neutral__cw5n1h2txyewy
+  Microsoft.ECApp                             Microsoft.ECApp_10.0.19041.1023_neutral__8wekyb3d8bbwe
+  Microsoft.LockApp                           Microsoft.LockApp_10.0.19041.1023_neutral__cw5n1h2txyewy
+  ...
+</code></pre>
+<p><code>Name</code>指应用程序包的发布名，<code>PackageFullName</code>指应用程序包名。</p>
+<p>然后我们找 Xbox 有关的程序包，嫌麻烦可以右键标题栏,选择<code>编辑(&amp;E) &gt; 查找(&amp;F)</code>打开查找框</p>
+<p>这样可以查找到这些程序包</p>
+<pre><code>  Microsoft.Xbox.TCUI                         Microsoft.Xbox.TCUI_1.24.10001.0_x64__8wekyb3d8bbwe                        
+  Microsoft.XboxGameOverlay                   Microsoft.XboxGameOverlay_1.54.4001.0_x64__8wekyb3d8bbwe                   
+  Microsoft.XboxSpeechToTextOverlay           Microsoft.XboxSpeechToTextOverlay_1.21.13002.0_x64__8wekyb3d8bbwe 
+  Microsoft.XboxApp                           Microsoft.XboxApp_48.89.25001.0_x64__8wekyb3d8bbwe     
+  Microsoft.XboxGamingOverlay                 Microsoft.XboxGamingOverlay_5.822.10271.0_x64__8wekyb3d8bbwe               
+  Microsoft.XboxIdentityProvider              Microsoft.XboxIdentityProvider_12.95.3001.0_x64__8wekyb3d8bbwe 
+</code></pre>
+<h4 id="第二种方法（知晓应用程序）"><a href="#第二种方法（知晓应用程序）" class="headerlink" title="第二种方法（知晓应用程序）"></a>第二种方法（知晓应用程序）</h4><p>打开你要删的 UWP 应用，此处使用<code>电影和电视</code>举例</p>
+<p>右键任务栏，打开<code>任务管理器</code>,拉开详细信息，找到<code>电影和电视</code>(你要删什么应用就找什么)<br> <img src="https://unpkg.com/admincmd-blog-img-0@1.0.4/19bd6d8ad52f_0.png" alt="19bd6d8ad52f_0"></p>
+<p>展开<code>电影和电视</code>(你要删什么应用就找什么)，选中<code>电影和电视</code>(你要删什么应用就找什么)，选择<code>属性</code><br>找到<code>位置</code>,选中位于<code>C:\Program Files\WindowsApps\</code>后的所有文本，复制下来，这就是应用程序包名</p>
+<h3 id="删除应用"><a href="#删除应用" class="headerlink" title="删除应用"></a>删除应用</h3><h4 id="删除指定应用"><a href="#删除指定应用" class="headerlink" title="删除指定应用"></a>删除指定应用</h4><p>删除包的语法长这样：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Remove-AppxPackage</span> [<span class="type">PackageFullName</span>]</span><br></pre></td></tr></table></figure>
+<p><code>[PackageFullName]</code>指应用程序包名称</p>
+<div class="note info modern"><p>此处允许使用通配符。</p>
+</div>
+
+<div class="tabs" id="test1"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="test1-1">删除指定程序包</button><button type="button" class="tab " data-href="test1-2">删除指定通配符程序包</button></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><p>例如我们要删除名为 <code>Microsoft.Xbox.TCUI_1.24.10001.</code> 的程序包。<br>则传入以下命令</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Remove-AppxPackage</span> Microsoft.Xbox.TCUI_1.<span class="number">24.10001</span>.</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="test1-2"><p>或者说我们想把下面这些与<code>Xbox</code>有关程序包统统删除</p>
+<pre><code>  Microsoft.Xbox.TCUI                         Microsoft.Xbox.TCUI_1.24.10001.0_x64__8wekyb3d8bbwe                        
+  Microsoft.XboxGameOverlay                   Microsoft.XboxGameOverlay_1.54.4001.0_x64__8wekyb3d8bbwe                   
+  Microsoft.XboxSpeechToTextOverlay           Microsoft.XboxSpeechToTextOverlay_1.21.13002.0_x64__8wekyb3d8bbwe 
+  Microsoft.XboxApp                           Microsoft.XboxApp_48.89.25001.0_x64__8wekyb3d8bbwe     
+  Microsoft.XboxGamingOverlay                 Microsoft.XboxGamingOverlay_5.822.10271.0_x64__8wekyb3d8bbwe               
+  Microsoft.XboxIdentityProvider              Microsoft.XboxIdentityProvider_12.95.3001.0_x64__8wekyb3d8bbwe 
+</code></pre>
+<p>这些程序包内名称内均有<code>Xbox</code>关键词，可以使用通配符，需要传入以下命令</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Remove-AppxPackage</span> *Xbox*</span><br></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+<h4 id="删除所有-UWP-应用"><a href="#删除所有-UWP-应用" class="headerlink" title="删除所有 UWP 应用"></a>删除所有 UWP 应用</h4><div class="note info modern"><p>注意：某些 UWP 无法正常删除，列如 Windows 自带的杀毒，这种东西需要别的方法来移除。</p>
+</div>
+
+<div class="tabs" id="test3"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="test3-1">卸载当前用户所有 UWP 应用</button><button type="button" class="tab " data-href="test3-2">卸载指定用户所有 UWP 应用</button><button type="button" class="tab " data-href="test3-3">卸载所有账户所有 UWP 应用</button></ul><div class="tab-contents"><div class="tab-item-content active" id="test3-1"><p>若想要删除当前用户的 UWP 应用，则传入以下命令</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AppXPackage</span> | <span class="built_in">Remove-AppxPackage</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="test3-2"><p>在Powershell中输入以下命令，回车即可卸载指定用户<code>[username]</code>的所有 UWP 应用。</p>
+<figure class="highlight powershell"><figcaption><span>无法直接运行</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AppXPackage</span> <span class="literal">-User</span> [<span class="type">username</span>] | <span class="built_in">Remove-AppxPackage</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>[username]</code>为指定的用户。</p>
+<p>列如要删除用户名为 <code>AdminCmd</code>的用户所有的 UWP 应用，可以传入下命令</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AppXPackage</span> <span class="literal">-User</span> AdminCmd | <span class="built_in">Remove-AppxPackage</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="test3-3"><p>传入下命令，可以卸载所有账户的所有 UWP 应用</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AppxPackage</span> <span class="literal">-AllUsers</span> | <span class="built_in">Remove-AppxPackage</span></span><br></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div>
+
+<h3 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h3><div class="note info modern"><p>此处仅演示系统原生应用安装，其他途径不在此处收录。</p>
+</div>
+
+<h4 id="安装所有默认-UWP-应用"><a href="#安装所有默认-UWP-应用" class="headerlink" title="安装所有默认 UWP 应用"></a>安装所有默认 UWP 应用</h4><p>传入下代码即可<br><code>[-AllUsers]</code> 是可选的，该参数决定是否应用与所有账户，若删除此参数，则为本账户执行此操作。</p>
+<figure class="highlight powershell"><figcaption><span>无法直接运行</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AppxPackage</span> [-<span class="type">AllUsers</span>] | <span class="keyword">foreach</span> &#123;<span class="built_in">Add-AppxPackage</span> <span class="literal">-register</span> <span class="string">&quot;<span class="variable">$</span>(<span class="variable">$_</span>.InstallLocation)\appxmanifest.xml&quot;</span> <span class="literal">-DisableDevelopmentMode</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装指定应用"><a href="#安装指定应用" class="headerlink" title="安装指定应用"></a>安装指定应用</h4><p>首先你要知道你要装的应用程序包名称，具体请见 2.1</p>
+<p>请将 <code>[PackageFullName]</code> 替换为应用程序包名</p>
+<figure class="highlight powershell"><figcaption><span>无法直接运行</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">Add-AppxPackage</span> <span class="literal">-register</span> <span class="string">&quot;C:\Program Files\WindowsApps\[PackageFullName]\appxmanifest.xml&quot;</span> <span class="literal">-DisableDevelopmentMode</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a href="https://blog.admincmd.xyz/url.html?url=https://learn.microsoft.com/en-us/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps">PackageManager Class</a></li>
+<li><a href="https://blog.admincmd.xyz/url.html?url=https://learn.microsoft.com/en-us/powershell/module/appx/add-appxpackage?view=windowsserver2022-ps">Add-AppxPackage</a></li>
+<li><a href="https://blog.admincmd.xyz/url.html?url=https://learn.microsoft.com/en-us/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps">Remove-AppxPackage</a></li>
+<li>Get-Help</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Power Shell</tag>
+        <tag>WindowsApps</tag>
       </tags>
   </entry>
 </search>
