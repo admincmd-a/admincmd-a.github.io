@@ -49,7 +49,8 @@ console.log(`
 ...................................................................................................................................................................
 ...................................................................................................................................................................
 `)
-        
+   
+
 
 // 用户跳过来弄过去改下标题
 // 修改标题
@@ -107,18 +108,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // HTTP透明端口转发：80 8080 8880 2052 2082 2086 2095
 // HTTPS隧道端口转发：443 2053 2083 2087 2096 8443
 // HTTP/HTTPS端口隧道转发，但以下端口禁用CDN缓存：2052 2053 2082 2083 2086 2087 2095 2096 8880 8443
-function setterror() {
-    console.log('error: 控制面板加载失败 错误代码: 0');
-    Snackbar.show({// 显示信息
-        text: 'WinBox.js Error: 0',
-        pos: 'bottom-right',
-        showAction: false
-    });
-}
-function win() {
-    var winbox = new WinBox({
-        title: "Set innerHTML",
-        html: "<h1>Lorem Ipsum</h1>"
-    });
-    winbox.attach();
-}
+
+// 找到所有具有 "post" 的 ID 的链接
+const links = document.querySelectorAll('a[id^="post"]');
+
+// 遍历每一个链接并修改其 href
+links.forEach(link => {
+    link.href = "https://blog.admincmd.xyz/url.html?url=" + encodeURIComponent(link.href);
+});

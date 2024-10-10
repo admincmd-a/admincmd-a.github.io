@@ -1,3 +1,4 @@
+
 // 已停用，请勿使用
 setTimeout(function () {
     //Snackbar.show({
@@ -16,7 +17,7 @@ if (document.referrer==undefined||document.referrer.indexOf("www.travellings.cn"
         pos: 'top-right',
         showAction: false,
     }
-    else{
+    else{}
 
 
 //首次访问弹窗
@@ -27,6 +28,7 @@ if (localStorage.getItem("popWelcomeWindow") != "0") {
             showAction: false,
             text: '欢迎访问本站！ 您正在使用 默认 部署源，如速度不合适，请 杂项 > 切源'
         })
+    }
     }else{
         if(document.referrer==undefined||document.referrer.indexOf("vercel-blog.admincmd.xyz")!=-1){
             Snackbar.show({

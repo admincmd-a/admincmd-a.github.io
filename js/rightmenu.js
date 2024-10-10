@@ -1,5 +1,7 @@
 //22.12.8 update：add mask
 //22.12.9 update: add search in this page
+
+// ------
 function setMask(){//设置遮罩层
     if(document.getElementsByClassName("rmMask")[0]!=undefined){
         return document.getElementsByClassName("rmMask")[0];
@@ -61,16 +63,18 @@ rmf.showRightMenu = function (isTrue, x = 0, y = 0) {
         $rightMenu.hide();
     }
 }
-rmf.switchDarkMode = function () {
+rmf.switchDarkMode = function () { // 切换暗黑模式，执行位置
     const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
     if (nowMode === 'light') {
         activateDarkMode()
         saveToLocal.set('theme', 'dark', 2)
         GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night)
+        document.getElementById("travellings-logo").src = "https://www.travellings.cn/assets/b.png";
     } else {
         activateLightMode()
         saveToLocal.set('theme', 'light', 2)
         GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day)
+        document.getElementById("travellings-logo").src = "https://www.travellings.cn/assets/w.png";
     }
     // handle some cases
     typeof utterancesTheme === 'function' && utterancesTheme()

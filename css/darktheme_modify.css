@@ -1,0 +1,9 @@
+/*顶部的网站图标*/
+/* [data-theme='dark'] img.site-icon {
+    content: url();
+} */
+
+/* 开往的底部小logo */
+[data-theme='dark'] img.travellings-logo {
+    content: url(https://www.travellings.cn/assets/b.png);
+}
