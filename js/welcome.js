@@ -1,15 +1,6 @@
 
 // 已停用，请勿使用
-setTimeout(function () {
-    //Snackbar.show({
-    //    text: '正在加载文件...',
-    //    pos: 'top-center',
-    //    actionText: "",
-    //    onActionClick: function (element) {
-    //        window.open("")
-    //    },
-    //})
-}, 2500)// 延迟2.5秒
+
 if (document.referrer==undefined||document.referrer.indexOf("www.travellings.cn")!=-1||document.referrer.indexOf("www.travellings.cn")!=-1)
 {
     Snackbar.show({
@@ -17,9 +8,7 @@ if (document.referrer==undefined||document.referrer.indexOf("www.travellings.cn"
         pos: 'top-right',
         showAction: false,
     }
-    else{}
-
-
+}    
 //首次访问弹窗
 if (localStorage.getItem("popWelcomeWindow") != "0") {
     if(document.referrer==undefined||document.referrer.indexOf("blog.admincmd.xyz")!=-1||document.referrer.indexOf("blog.admincmd.xyz")!=-1){ //改成自己域名，注意是referrer!!! qwq
@@ -29,37 +18,38 @@ if (localStorage.getItem("popWelcomeWindow") != "0") {
             text: '欢迎访问本站！ 您正在使用 默认 部署源，如速度不合适，请 杂项 > 切源'
         })
     }
-    }else{
-        if(document.referrer==undefined||document.referrer.indexOf("vercel-blog.admincmd.xyz")!=-1){
-            Snackbar.show({
-                pos: "top-right",
-                showAction: false,
-                text: '欢迎访问本站！ 您正在使用 Vercel 部署源，如速度不合适，请 杂项 > 切源'
-            })
-        }else{
-            if(document.referrer==undefined||document.referrer.indexOf("netlify-blog.admincmd.xyz")!=-1){
-                Snackbar.show({
-                    pos: "top-right",
-                    showAction: false,
-                    text: '欢迎访问本站！ 您正在使用 Netlify 部署源，如速度不合适，请 杂项 > 切源'
-                })
-            }else{
-                if(document.referrer==undefined||document.referrer.indexOf("localhost:4000")!=-1){
-                    Snackbar.show({
-                        pos: "top-right",
-                        showAction: false,
-                        text: '您正在使用调试环境'
-                    })
-                }else{
-                    Snackbar.show({
-                            pos: "top-right",
-                            showAction: false,
-                            text: `欢迎从来自${document.referrer.split("://")[1].split("")[0]}的访问本站！`
-                        })
-    localStorage.setItem("popWelcomeWindow", "0");// 不再弹出欢迎窗口
-        }
-    }
 }
+//    }else{
+//        if(document.referrer==undefined||document.referrer.indexOf("vercel-blog.admincmd.xyz")!=-1){
+//            Snackbar.show({
+//                pos: "top-right",
+//                showAction: false,
+//                text: '欢迎访问本站！ 您正在使用 Vercel 部署源，如速度不合适，请 杂项 > 切源'
+//            })
+//        }else{
+//            if(document.referrer==undefined||document.referrer.indexOf("netlify-blog.admincmd.xyz")!=-1){
+//                Snackbar.show({
+//                    pos: "top-right",
+//                    showAction: false,
+//                    text: '欢迎访问本站！ 您正在使用 Netlify 部署源，如速度不合适，请 杂项 > 切源'
+//                })
+//            }else{
+//                if(document.referrer==undefined||document.referrer.indexOf("localhost:4000")!=-1){
+//                    Snackbar.show({
+//                        pos: "top-right",
+//                        showAction: false,
+//                        text: '您正在使用调试环境'
+//                    })
+//                }else{
+//                    Snackbar.show({
+//                            pos: "top-right",
+//                            showAction: false,
+//                            text: `欢迎从来自${document.referrer.split("://")[1].split("")[0]}的访问本站！`
+//                        })
+    //localStorage.setItem("popWelcomeWindow", "0");// 不再弹出欢迎窗口
+//        }
+//    }
+//}
 if (sessionStorage.getItem("popCookieWindow") != "0") {
     setTimeout(function () {
         Snackbar.show({
