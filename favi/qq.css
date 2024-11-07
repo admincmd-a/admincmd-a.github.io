@@ -17,5 +17,5 @@ body
   text-align: center;
   color: white;/*背景颜色*/
   line-height: 20px;
-  transition: width 1.5s;/*一次到目标位置的速度*/
+  transition: width 1s;/*一次到目标位置的速度*/
 }
